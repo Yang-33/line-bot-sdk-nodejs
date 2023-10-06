@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-c5961026","path":"/apidocs/modules/manageAudience.AudienceGroupJob.html","title":"Namespace: AudienceGroupJob","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"apidocs/modules/manageAudience.AudienceGroupJob.md"}');export{e as data};

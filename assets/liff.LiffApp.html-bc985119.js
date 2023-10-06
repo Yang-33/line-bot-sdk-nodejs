@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-8bf3b36a","path":"/apidocs/modules/liff.LiffApp.html","title":"Namespace: LiffApp","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"apidocs/modules/liff.LiffApp.md"}');export{e as data};

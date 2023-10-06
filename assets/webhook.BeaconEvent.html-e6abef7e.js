@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-78248b95","path":"/apidocs/modules/webhook.BeaconEvent.html","title":"Namespace: BeaconEvent","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"apidocs/modules/webhook.BeaconEvent.md"}');export{e as data};

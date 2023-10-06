@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-16b81ed0","path":"/apidocs/modules/webhook.PostbackEvent.html","title":"Namespace: PostbackEvent","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"apidocs/modules/webhook.PostbackEvent.md"}');export{e as data};

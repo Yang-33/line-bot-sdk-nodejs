@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-7b793ac6","path":"/apidocs/modules/webhook.DeactivatedEvent.html","title":"Namespace: DeactivatedEvent","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"apidocs/modules/webhook.DeactivatedEvent.md"}');export{e as data};

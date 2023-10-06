@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-4e09df56","path":"/apidocs/modules/webhook.VideoPlayCompleteEvent.html","title":"Namespace: VideoPlayCompleteEvent","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"apidocs/modules/webhook.VideoPlayCompleteEvent.md"}');export{e as data};

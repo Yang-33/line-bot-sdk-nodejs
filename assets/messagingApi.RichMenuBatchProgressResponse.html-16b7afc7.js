@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-502aace9","path":"/apidocs/modules/messagingApi.RichMenuBatchProgressResponse.html","title":"Namespace: RichMenuBatchProgressResponse","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"apidocs/modules/messagingApi.RichMenuBatchProgressResponse.md"}');export{e as data};

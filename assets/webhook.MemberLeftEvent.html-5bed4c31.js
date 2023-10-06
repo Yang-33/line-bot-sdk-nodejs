@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-2fd55fd2","path":"/apidocs/modules/webhook.MemberLeftEvent.html","title":"Namespace: MemberLeftEvent","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"apidocs/modules/webhook.MemberLeftEvent.md"}');export{e as data};

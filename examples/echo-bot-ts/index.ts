@@ -1,6 +1,7 @@
 // Import all dependencies, mostly using destructuring for better view.
 import {
   ClientConfig,
+  LINE_REQUEST_ID_HTTP_HEADER_NAME,
   MessageAPIResponseBase,
   messagingApi,
   middleware,
@@ -8,6 +9,7 @@ import {
   webhook,
 } from '@line/bot-sdk';
 import express, {Application, Request, Response} from 'express';
+import { MessageContent } from '../../dist/webhook/api';
 
 // Setup all LINE client and Express configurations.
 const clientConfig: ClientConfig = {
@@ -30,20 +32,25 @@ const app: Application = express();
 // Function handler to receive the text.
 const textEventHandler = async (event: webhook.Event): Promise<MessageAPIResponseBase | undefined> => {
   // Process all variables here.
-  if (event.type !== 'message' || !event.message || event.message.type !== 'text') {
+  if (event.type !== 'message' || !event.message) {
+    return;
+  }
+  const messageContent = event.message as MessageContent
+  if (messageContent.type !== 'text') {
     return;
   }
 
   // Process all message related variables here.
   // Create a new message.
   // Reply to the user.
-  await client.replyMessage({
+  const response = await client.replyMessage({
     replyToken: event.replyToken as string,
     messages: [{
       type: 'text',
-      text: event.message.text,
+      text: messageContent.text,
     }],
   });
+  console.log(`request id is ${response[LINE_REQUEST_ID_HTTP_HEADER_NAME]}`);
 };
 
 // Register the LINE middleware.

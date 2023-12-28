@@ -42,6 +42,7 @@ describe("ManageAudienceBlobClient", () => {
           request.headers.get("Authorization"),
           `Bearer ${channel_access_token}`,
         );
+
         equal(request.headers.get("User-Agent"), `${pkg.name}/${pkg.version}`);
 
         return HttpResponse.json({});
@@ -76,6 +77,7 @@ describe("ManageAudienceBlobClient", () => {
           request.headers.get("Authorization"),
           `Bearer ${channel_access_token}`,
         );
+
         equal(request.headers.get("User-Agent"), `${pkg.name}/${pkg.version}`);
 
         return HttpResponse.json({});

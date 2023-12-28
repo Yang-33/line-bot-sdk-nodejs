@@ -40,7 +40,9 @@ import { AxiosResponse } from "axios";
 
 interface httpClientConfig {
   baseURL?: string;
+
   channelAccessToken: string;
+
   // TODO support defaultHeaders?
 }
 

@@ -27,7 +27,7 @@ describe("InsightClient", () => {
   });
 
   const client = new InsightClient({
-    channelAccessToken: string,
+    channelAccessToken: channel_access_token,
   });
 
   it("getFriendsDemographics", async () => {

@@ -23,7 +23,7 @@ describe("ShopClient", () => {
   });
 
   const client = new ShopClient({
-    channelAccessToken: string,
+    channelAccessToken: channel_access_token,
   });
 
   it("missionStickerV3", async () => {

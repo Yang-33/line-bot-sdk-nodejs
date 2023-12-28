@@ -25,7 +25,7 @@ describe("LineModuleClient", () => {
   });
 
   const client = new LineModuleClient({
-    channelAccessToken: string,
+    channelAccessToken: channel_access_token,
   });
 
   it("acquireChatControl", async () => {

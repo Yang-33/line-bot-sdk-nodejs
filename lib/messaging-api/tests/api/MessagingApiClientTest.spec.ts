@@ -66,7 +66,7 @@ describe("MessagingApiClient", () => {
   });
 
   const client = new MessagingApiClient({
-    channelAccessToken: string,
+    channelAccessToken: channel_access_token,
   });
 
   it("audienceMatch", async () => {

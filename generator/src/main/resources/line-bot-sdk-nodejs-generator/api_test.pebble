@@ -25,7 +25,7 @@ describe("{{operations.classname}}", () => {
     {% if authMethods != null -%}
       {% for authMethod in authMethods %}
         {% if authMethod.isBasicBearer %}
-          channelAccessToken: string,
+          channelAccessToken: channel_access_token,
         {% else %}
         {% endif %}
       {% endfor %}

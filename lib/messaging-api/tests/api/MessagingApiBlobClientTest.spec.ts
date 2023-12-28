@@ -23,7 +23,7 @@ describe("MessagingApiBlobClient", () => {
   });
 
   const client = new MessagingApiBlobClient({
-    channelAccessToken: string,
+    channelAccessToken: channel_access_token,
   });
 
   it("getMessageContent", async () => {

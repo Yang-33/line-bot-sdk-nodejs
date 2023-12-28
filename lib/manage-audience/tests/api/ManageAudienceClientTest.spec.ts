@@ -37,7 +37,7 @@ describe("ManageAudienceClient", () => {
   });
 
   const client = new ManageAudienceClient({
-    channelAccessToken: string,
+    channelAccessToken: channel_access_token,
   });
 
   it("activateAudienceGroup", async () => {

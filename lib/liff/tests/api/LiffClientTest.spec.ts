@@ -26,7 +26,7 @@ describe("LiffClient", () => {
   });
 
   const client = new LiffClient({
-    channelAccessToken: string,
+    channelAccessToken: channel_access_token,
   });
 
   it("addLIFFApp", async () => {

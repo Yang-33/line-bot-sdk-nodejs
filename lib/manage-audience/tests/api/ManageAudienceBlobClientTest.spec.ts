@@ -23,7 +23,7 @@ describe("ManageAudienceBlobClient", () => {
   });
 
   const client = new ManageAudienceBlobClient({
-    channelAccessToken: string,
+    channelAccessToken: channel_access_token,
   });
 
   it("addUserIdsToAudience", async () => {

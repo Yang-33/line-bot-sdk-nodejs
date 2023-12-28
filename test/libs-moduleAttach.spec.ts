@@ -24,7 +24,7 @@ describe("moduleAttach", () => {
     server.use(
       http.post(
         "https://manager.line.biz/module/auth/v1/token",
-        ({ request, params, cookies }) => {
+        async ({ request, params, cookies }) => {
           requestCount++;
 
           equal(
@@ -40,8 +40,11 @@ describe("moduleAttach", () => {
             request.headers.get("content-type"),
             "application/x-www-form-urlencoded",
           );
-          const body = new URLSearchParams(request.body);
-          equal(body.get("clientId"), "ClientId", "clientId should match");
+          const expectedBody = "grant_type=authorization_code&code=Code&redirect_uri=https%3A%2F%2Fexample.com&code_verifier=CodeVerifier&client_id=ClientId&client_secret=ClientSecret&region=Region&basic_search_id=BasicSearchId&scope=Scope&brand_type=BrandType";
+          equal(
+            await request.text(),
+            expectedBody,
+          );
 
           return HttpResponse.json({});
         },

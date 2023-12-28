@@ -67,7 +67,9 @@ export class InsightClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-demographic"> Documentation</a>
    */
-  public async getFriendsDemographics(): Promise<GetFriendsDemographicsResponse> {
+  public async getFriendsDemographics(): Promise<
+    GetFriendsDemographicsResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<GetFriendsDemographicsResponse>(
       "/v2/bot/insight/demographic",
     );
@@ -82,7 +84,7 @@ export class InsightClient {
    */
   public async getMessageEvent(
     requestId: string,
-  ): Promise<GetMessageEventResponse> {
+  ): Promise<GetMessageEventResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       requestId: requestId,
     };
@@ -102,7 +104,7 @@ export class InsightClient {
    */
   public async getNumberOfFollowers(
     date?: string,
-  ): Promise<GetNumberOfFollowersResponse> {
+  ): Promise<GetNumberOfFollowersResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       date: date,
     };
@@ -122,7 +124,9 @@ export class InsightClient {
    */
   public async getNumberOfMessageDeliveries(
     date: string,
-  ): Promise<GetNumberOfMessageDeliveriesResponse> {
+  ): Promise<
+    GetNumberOfMessageDeliveriesResponse & Types.MessageAPIResponseBase
+  > {
     const queryParams = {
       date: date,
     };
@@ -145,7 +149,7 @@ export class InsightClient {
     customAggregationUnit: string,
     from: string,
     to: string,
-  ): Promise<GetStatisticsPerUnitResponse> {
+  ): Promise<GetStatisticsPerUnitResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       customAggregationUnit: customAggregationUnit,
       from: from,

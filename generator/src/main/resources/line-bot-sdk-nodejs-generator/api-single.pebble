@@ -74,7 +74,7 @@ export class {{operations.classname}} {
      * @see <a href="{{op.externalDocs.url}}">{{op.summary}} Documentation</a>
     {% endif -%}
      */
-    public async {{op.nickname}}({% for param in op.allParams %}{{param.paramName}}{% if not param.required %}?{% endif %}: {{param.dataType}}, {% endfor %}) : Promise<{% if op.returnType %}{{ op.returnType }}{% else %}Types.MessageAPIResponseBase{% endif %}> {
+    public async {{op.nickname}}({% for param in op.allParams %}{{param.paramName}}{% if not param.required %}?{% endif %}: {{param.dataType}}, {% endfor %}) : Promise<{% if op.returnType %}{{ op.returnType }}&{% endif %}Types.MessageAPIResponseBase> {
     {% if op.isMultipart %}
         {% include "./apiBody/multipart.pebble" %}
     {% else %}

@@ -70,7 +70,7 @@ export class ChannelAccessTokenClient {
   public async getsAllValidChannelAccessTokenKeyIds(
     clientAssertionType: string,
     clientAssertion: string,
-  ): Promise<ChannelAccessTokenKeyIdsResponse> {
+  ): Promise<ChannelAccessTokenKeyIdsResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       clientAssertionType: clientAssertionType,
       clientAssertion: clientAssertion,
@@ -94,7 +94,9 @@ export class ChannelAccessTokenClient {
     grantType?: string,
     clientId?: string,
     clientSecret?: string,
-  ): Promise<IssueShortLivedChannelAccessTokenResponse> {
+  ): Promise<
+    IssueShortLivedChannelAccessTokenResponse & Types.MessageAPIResponseBase
+  > {
     const formParams = {
       grant_type: grantType,
       client_id: clientId,
@@ -125,7 +127,7 @@ export class ChannelAccessTokenClient {
     grantType?: string,
     clientAssertionType?: string,
     clientAssertion?: string,
-  ): Promise<IssueChannelAccessTokenResponse> {
+  ): Promise<IssueChannelAccessTokenResponse & Types.MessageAPIResponseBase> {
     const formParams = {
       grant_type: grantType,
       client_assertion_type: clientAssertionType,
@@ -159,7 +161,9 @@ export class ChannelAccessTokenClient {
     clientAssertion?: string,
     clientId?: string,
     clientSecret?: string,
-  ): Promise<IssueStatelessChannelAccessTokenResponse> {
+  ): Promise<
+    IssueStatelessChannelAccessTokenResponse & Types.MessageAPIResponseBase
+  > {
     const formParams = {
       grant_type: grantType,
       client_assertion_type: clientAssertionType,
@@ -236,7 +240,7 @@ export class ChannelAccessTokenClient {
    */
   public async verifyChannelToken(
     accessToken?: string,
-  ): Promise<VerifyChannelAccessTokenResponse> {
+  ): Promise<VerifyChannelAccessTokenResponse & Types.MessageAPIResponseBase> {
     const formParams = {
       access_token: accessToken,
     };
@@ -260,7 +264,7 @@ export class ChannelAccessTokenClient {
    */
   public async verifyChannelTokenByJWT(
     accessToken: string,
-  ): Promise<VerifyChannelAccessTokenResponse> {
+  ): Promise<VerifyChannelAccessTokenResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       accessToken: accessToken,
     };

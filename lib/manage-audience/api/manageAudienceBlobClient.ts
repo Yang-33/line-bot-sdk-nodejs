@@ -96,7 +96,7 @@ export class ManageAudienceBlobClient {
     description?: string,
     isIfaAudience?: boolean,
     uploadDescription?: string,
-  ): Promise<CreateAudienceGroupResponse> {
+  ): Promise<CreateAudienceGroupResponse & Types.MessageAPIResponseBase> {
     const form = new FormData();
     form.append("description", String(description));
     form.append("isIfaAudience", String(isIfaAudience));

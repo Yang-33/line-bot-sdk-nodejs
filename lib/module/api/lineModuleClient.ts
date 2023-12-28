@@ -106,7 +106,7 @@ export class LineModuleClient {
   public async getModules(
     start?: string,
     limit?: number,
-  ): Promise<GetModulesResponse> {
+  ): Promise<GetModulesResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       start: start,
       limit: limit,

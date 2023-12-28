@@ -125,7 +125,7 @@ export class MessagingApiClient {
   public async broadcast(
     broadcastRequest: BroadcastRequest,
     xLineRetryKey?: string,
-  ): Promise<object> {
+  ): Promise<object & Types.MessageAPIResponseBase> {
     const params = broadcastRequest;
 
     const headerParams = {
@@ -157,7 +157,7 @@ export class MessagingApiClient {
    */
   public async createRichMenu(
     richMenuRequest: RichMenuRequest,
-  ): Promise<RichMenuIdResponse> {
+  ): Promise<RichMenuIdResponse & Types.MessageAPIResponseBase> {
     const params = richMenuRequest;
 
     const res = this.httpClient.post<RichMenuIdResponse>(
@@ -222,7 +222,7 @@ export class MessagingApiClient {
    */
   public async getAdPhoneMessageStatistics(
     date: string,
-  ): Promise<NumberOfMessagesResponse> {
+  ): Promise<NumberOfMessagesResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       date: date,
     };
@@ -243,7 +243,9 @@ export class MessagingApiClient {
   public async getAggregationUnitNameList(
     limit?: string,
     start?: string,
-  ): Promise<GetAggregationUnitNameListResponse> {
+  ): Promise<
+    GetAggregationUnitNameListResponse & Types.MessageAPIResponseBase
+  > {
     const queryParams = {
       limit: limit,
       start: start,
@@ -260,7 +262,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-number-of-units-used-this-month"> Documentation</a>
    */
-  public async getAggregationUnitUsage(): Promise<GetAggregationUnitUsageResponse> {
+  public async getAggregationUnitUsage(): Promise<
+    GetAggregationUnitUsageResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<GetAggregationUnitUsageResponse>(
       "/v2/bot/message/aggregation/info",
     );
@@ -271,7 +275,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-bot-info"> Documentation</a>
    */
-  public async getBotInfo(): Promise<BotInfoResponse> {
+  public async getBotInfo(): Promise<
+    BotInfoResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<BotInfoResponse>("/v2/bot/info");
     return ensureJSON(res);
   }
@@ -280,7 +286,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-default-rich-menu-id"> Documentation</a>
    */
-  public async getDefaultRichMenuId(): Promise<RichMenuIdResponse> {
+  public async getDefaultRichMenuId(): Promise<
+    RichMenuIdResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<RichMenuIdResponse>(
       "/v2/bot/user/all/richmenu",
     );
@@ -296,7 +304,7 @@ export class MessagingApiClient {
   public async getFollowers(
     start?: string,
     limit?: number,
-  ): Promise<GetFollowersResponse> {
+  ): Promise<GetFollowersResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       start: start,
       limit: limit,
@@ -316,7 +324,7 @@ export class MessagingApiClient {
    */
   public async getGroupMemberCount(
     groupId: string,
-  ): Promise<GroupMemberCountResponse> {
+  ): Promise<GroupMemberCountResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<GroupMemberCountResponse>(
       "/v2/bot/group/{groupId}/members/count".replace(
         "{groupId}",
@@ -335,7 +343,7 @@ export class MessagingApiClient {
   public async getGroupMemberProfile(
     groupId: string,
     userId: string,
-  ): Promise<GroupUserProfileResponse> {
+  ): Promise<GroupUserProfileResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<GroupUserProfileResponse>(
       "/v2/bot/group/{groupId}/member/{userId}"
 
@@ -355,7 +363,7 @@ export class MessagingApiClient {
   public async getGroupMembersIds(
     groupId: string,
     start?: string,
-  ): Promise<MembersIdsResponse> {
+  ): Promise<MembersIdsResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       start: start,
     };
@@ -375,7 +383,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-group-summary"> Documentation</a>
    */
-  public async getGroupSummary(groupId: string): Promise<GroupSummaryResponse> {
+  public async getGroupSummary(
+    groupId: string,
+  ): Promise<GroupSummaryResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<GroupSummaryResponse>(
       "/v2/bot/group/{groupId}/summary".replace("{groupId}", String(groupId)),
     );
@@ -386,7 +396,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-quota"> Documentation</a>
    */
-  public async getMessageQuota(): Promise<MessageQuotaResponse> {
+  public async getMessageQuota(): Promise<
+    MessageQuotaResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<MessageQuotaResponse>(
       "/v2/bot/message/quota",
     );
@@ -397,7 +409,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-consumption"> Documentation</a>
    */
-  public async getMessageQuotaConsumption(): Promise<QuotaConsumptionResponse> {
+  public async getMessageQuotaConsumption(): Promise<
+    QuotaConsumptionResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<QuotaConsumptionResponse>(
       "/v2/bot/message/quota/consumption",
     );
@@ -411,7 +425,7 @@ export class MessagingApiClient {
    */
   public async getNarrowcastProgress(
     requestId: string,
-  ): Promise<NarrowcastProgressResponse> {
+  ): Promise<NarrowcastProgressResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       requestId: requestId,
     };
@@ -430,7 +444,7 @@ export class MessagingApiClient {
    */
   public async getNumberOfSentBroadcastMessages(
     date: string,
-  ): Promise<NumberOfMessagesResponse> {
+  ): Promise<NumberOfMessagesResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       date: date,
     };
@@ -449,7 +463,7 @@ export class MessagingApiClient {
    */
   public async getNumberOfSentMulticastMessages(
     date: string,
-  ): Promise<NumberOfMessagesResponse> {
+  ): Promise<NumberOfMessagesResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       date: date,
     };
@@ -468,7 +482,7 @@ export class MessagingApiClient {
    */
   public async getNumberOfSentPushMessages(
     date: string,
-  ): Promise<NumberOfMessagesResponse> {
+  ): Promise<NumberOfMessagesResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       date: date,
     };
@@ -487,7 +501,7 @@ export class MessagingApiClient {
    */
   public async getNumberOfSentReplyMessages(
     date: string,
-  ): Promise<NumberOfMessagesResponse> {
+  ): Promise<NumberOfMessagesResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       date: date,
     };
@@ -506,7 +520,7 @@ export class MessagingApiClient {
    */
   public async getPNPMessageStatistics(
     date: string,
-  ): Promise<NumberOfMessagesResponse> {
+  ): Promise<NumberOfMessagesResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       date: date,
     };
@@ -523,7 +537,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-profile"> Documentation</a>
    */
-  public async getProfile(userId: string): Promise<UserProfileResponse> {
+  public async getProfile(
+    userId: string,
+  ): Promise<UserProfileResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<UserProfileResponse>(
       "/v2/bot/profile/{userId}".replace("{userId}", String(userId)),
     );
@@ -535,7 +551,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-rich-menu"> Documentation</a>
    */
-  public async getRichMenu(richMenuId: string): Promise<RichMenuResponse> {
+  public async getRichMenu(
+    richMenuId: string,
+  ): Promise<RichMenuResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<RichMenuResponse>(
       "/v2/bot/richmenu/{richMenuId}".replace(
         "{richMenuId}",
@@ -552,7 +570,7 @@ export class MessagingApiClient {
    */
   public async getRichMenuAlias(
     richMenuAliasId: string,
-  ): Promise<RichMenuAliasResponse> {
+  ): Promise<RichMenuAliasResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<RichMenuAliasResponse>(
       "/v2/bot/richmenu/alias/{richMenuAliasId}".replace(
         "{richMenuAliasId}",
@@ -566,7 +584,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-rich-menu-alias-list"> Documentation</a>
    */
-  public async getRichMenuAliasList(): Promise<RichMenuAliasListResponse> {
+  public async getRichMenuAliasList(): Promise<
+    RichMenuAliasListResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<RichMenuAliasListResponse>(
       "/v2/bot/richmenu/alias/list",
     );
@@ -580,7 +600,7 @@ export class MessagingApiClient {
    */
   public async getRichMenuBatchProgress(
     requestId: string,
-  ): Promise<RichMenuBatchProgressResponse> {
+  ): Promise<RichMenuBatchProgressResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       requestId: requestId,
     };
@@ -599,7 +619,7 @@ export class MessagingApiClient {
    */
   public async getRichMenuIdOfUser(
     userId: string,
-  ): Promise<RichMenuIdResponse> {
+  ): Promise<RichMenuIdResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<RichMenuIdResponse>(
       "/v2/bot/user/{userId}/richmenu".replace("{userId}", String(userId)),
     );
@@ -610,7 +630,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-rich-menu-list"> Documentation</a>
    */
-  public async getRichMenuList(): Promise<RichMenuListResponse> {
+  public async getRichMenuList(): Promise<
+    RichMenuListResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<RichMenuListResponse>(
       "/v2/bot/richmenu/list",
     );
@@ -624,7 +646,7 @@ export class MessagingApiClient {
    */
   public async getRoomMemberCount(
     roomId: string,
-  ): Promise<RoomMemberCountResponse> {
+  ): Promise<RoomMemberCountResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<RoomMemberCountResponse>(
       "/v2/bot/room/{roomId}/members/count".replace("{roomId}", String(roomId)),
     );
@@ -640,7 +662,7 @@ export class MessagingApiClient {
   public async getRoomMemberProfile(
     roomId: string,
     userId: string,
-  ): Promise<RoomUserProfileResponse> {
+  ): Promise<RoomUserProfileResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<RoomUserProfileResponse>(
       "/v2/bot/room/{roomId}/member/{userId}"
 
@@ -660,7 +682,7 @@ export class MessagingApiClient {
   public async getRoomMembersIds(
     roomId: string,
     start?: string,
-  ): Promise<MembersIdsResponse> {
+  ): Promise<MembersIdsResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       start: start,
     };
@@ -676,7 +698,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-webhook-endpoint-information"> Documentation</a>
    */
-  public async getWebhookEndpoint(): Promise<GetWebhookEndpointResponse> {
+  public async getWebhookEndpoint(): Promise<
+    GetWebhookEndpointResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<GetWebhookEndpointResponse>(
       "/v2/bot/channel/webhook/endpoint",
     );
@@ -688,7 +712,9 @@ export class MessagingApiClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#issue-link-token"> Documentation</a>
    */
-  public async issueLinkToken(userId: string): Promise<IssueLinkTokenResponse> {
+  public async issueLinkToken(
+    userId: string,
+  ): Promise<IssueLinkTokenResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.post<IssueLinkTokenResponse>(
       "/v2/bot/user/{userId}/linkToken".replace("{userId}", String(userId)),
     );
@@ -780,7 +806,7 @@ export class MessagingApiClient {
   public async multicast(
     multicastRequest: MulticastRequest,
     xLineRetryKey?: string,
-  ): Promise<object> {
+  ): Promise<object & Types.MessageAPIResponseBase> {
     const params = multicastRequest;
 
     const headerParams = {
@@ -805,7 +831,7 @@ export class MessagingApiClient {
   public async narrowcast(
     narrowcastRequest: NarrowcastRequest,
     xLineRetryKey?: string,
-  ): Promise<object> {
+  ): Promise<object & Types.MessageAPIResponseBase> {
     const params = narrowcastRequest;
 
     const headerParams = {
@@ -830,7 +856,7 @@ export class MessagingApiClient {
   public async pushMessage(
     pushMessageRequest: PushMessageRequest,
     xLineRetryKey?: string,
-  ): Promise<PushMessageResponse> {
+  ): Promise<PushMessageResponse & Types.MessageAPIResponseBase> {
     const params = pushMessageRequest;
 
     const headerParams = {
@@ -880,7 +906,7 @@ export class MessagingApiClient {
    */
   public async replyMessage(
     replyMessageRequest: ReplyMessageRequest,
-  ): Promise<ReplyMessageResponse> {
+  ): Promise<ReplyMessageResponse & Types.MessageAPIResponseBase> {
     const params = replyMessageRequest;
 
     const res = this.httpClient.post<ReplyMessageResponse>(
@@ -942,7 +968,7 @@ export class MessagingApiClient {
    */
   public async testWebhookEndpoint(
     testWebhookEndpointRequest?: TestWebhookEndpointRequest,
-  ): Promise<TestWebhookEndpointResponse> {
+  ): Promise<TestWebhookEndpointResponse & Types.MessageAPIResponseBase> {
     const params = testWebhookEndpointRequest;
 
     const res = this.httpClient.post<TestWebhookEndpointResponse>(

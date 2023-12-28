@@ -84,7 +84,7 @@ export class LineModuleAttachClient {
     basicSearchId?: string,
     scope?: string,
     brandType?: string,
-  ): Promise<AttachModuleResponse> {
+  ): Promise<AttachModuleResponse & Types.MessageAPIResponseBase> {
     const formParams = {
       grant_type: grantType,
       code: code,

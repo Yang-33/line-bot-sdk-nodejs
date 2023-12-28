@@ -64,7 +64,9 @@ export class MessagingApiBlobClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-content"> Documentation</a>
    */
-  public async getMessageContent(messageId: string): Promise<Readable> {
+  public async getMessageContent(
+    messageId: string,
+  ): Promise<Readable & Types.MessageAPIResponseBase> {
     return this.httpClient.getStream(
       "/v2/bot/message/{messageId}/content".replace(
         "{" + "messageId" + "}",
@@ -78,7 +80,9 @@ export class MessagingApiBlobClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-image-or-video-preview"> Documentation</a>
    */
-  public async getMessageContentPreview(messageId: string): Promise<Readable> {
+  public async getMessageContentPreview(
+    messageId: string,
+  ): Promise<Readable & Types.MessageAPIResponseBase> {
     return this.httpClient.getStream(
       "/v2/bot/message/{messageId}/content/preview".replace(
         "{" + "messageId" + "}",
@@ -94,7 +98,9 @@ export class MessagingApiBlobClient {
    */
   public async getMessageContentTranscodingByMessageId(
     messageId: string,
-  ): Promise<GetMessageContentTranscodingResponse> {
+  ): Promise<
+    GetMessageContentTranscodingResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<GetMessageContentTranscodingResponse>(
       "/v2/bot/message/{messageId}/content/transcoding".replace(
         "{messageId}",
@@ -109,7 +115,9 @@ export class MessagingApiBlobClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#download-rich-menu-image"> Documentation</a>
    */
-  public async getRichMenuImage(richMenuId: string): Promise<Readable> {
+  public async getRichMenuImage(
+    richMenuId: string,
+  ): Promise<Readable & Types.MessageAPIResponseBase> {
     return this.httpClient.getStream(
       "/v2/bot/richmenu/{richMenuId}/content".replace(
         "{" + "richMenuId" + "}",

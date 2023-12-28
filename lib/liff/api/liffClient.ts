@@ -69,7 +69,7 @@ export class LiffClient {
    */
   public async addLIFFApp(
     addLiffAppRequest: AddLiffAppRequest,
-  ): Promise<AddLiffAppResponse> {
+  ): Promise<AddLiffAppResponse & Types.MessageAPIResponseBase> {
     const params = addLiffAppRequest;
 
     const res = this.httpClient.post<AddLiffAppResponse>(
@@ -99,7 +99,9 @@ export class LiffClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/liff-server/#get-all-liff-apps">Get all LIFF apps Documentation</a>
    */
-  public async getAllLIFFApps(): Promise<GetAllLiffAppsResponse> {
+  public async getAllLIFFApps(): Promise<
+    GetAllLiffAppsResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<GetAllLiffAppsResponse>("/liff/v1/apps");
     return ensureJSON(res);
   }

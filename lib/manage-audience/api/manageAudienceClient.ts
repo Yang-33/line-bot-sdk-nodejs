@@ -111,7 +111,7 @@ export class ManageAudienceClient {
    */
   public async createAudienceGroup(
     createAudienceGroupRequest: CreateAudienceGroupRequest,
-  ): Promise<CreateAudienceGroupResponse> {
+  ): Promise<CreateAudienceGroupResponse & Types.MessageAPIResponseBase> {
     const params = createAudienceGroupRequest;
 
     const res = this.httpClient.post<CreateAudienceGroupResponse>(
@@ -128,7 +128,9 @@ export class ManageAudienceClient {
    */
   public async createClickBasedAudienceGroup(
     createClickBasedAudienceGroupRequest: CreateClickBasedAudienceGroupRequest,
-  ): Promise<CreateClickBasedAudienceGroupResponse> {
+  ): Promise<
+    CreateClickBasedAudienceGroupResponse & Types.MessageAPIResponseBase
+  > {
     const params = createClickBasedAudienceGroupRequest;
 
     const res = this.httpClient.post<CreateClickBasedAudienceGroupResponse>(
@@ -145,7 +147,9 @@ export class ManageAudienceClient {
    */
   public async createImpBasedAudienceGroup(
     createImpBasedAudienceGroupRequest: CreateImpBasedAudienceGroupRequest,
-  ): Promise<CreateImpBasedAudienceGroupResponse> {
+  ): Promise<
+    CreateImpBasedAudienceGroupResponse & Types.MessageAPIResponseBase
+  > {
     const params = createImpBasedAudienceGroupRequest;
 
     const res = this.httpClient.post<CreateImpBasedAudienceGroupResponse>(
@@ -179,7 +183,7 @@ export class ManageAudienceClient {
    */
   public async getAudienceData(
     audienceGroupId: number,
-  ): Promise<GetAudienceDataResponse> {
+  ): Promise<GetAudienceDataResponse & Types.MessageAPIResponseBase> {
     const res = this.httpClient.get<GetAudienceDataResponse>(
       "/v2/bot/audienceGroup/{audienceGroupId}".replace(
         "{audienceGroupId}",
@@ -193,7 +197,9 @@ export class ManageAudienceClient {
    *
    * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-authority-level"> Documentation</a>
    */
-  public async getAudienceGroupAuthorityLevel(): Promise<GetAudienceGroupAuthorityLevelResponse> {
+  public async getAudienceGroupAuthorityLevel(): Promise<
+    GetAudienceGroupAuthorityLevelResponse & Types.MessageAPIResponseBase
+  > {
     const res = this.httpClient.get<GetAudienceGroupAuthorityLevelResponse>(
       "/v2/bot/audienceGroup/authorityLevel",
     );
@@ -217,7 +223,7 @@ export class ManageAudienceClient {
     size?: number,
     includesExternalPublicGroups?: boolean,
     createRoute?: AudienceGroupCreateRoute,
-  ): Promise<GetAudienceGroupsResponse> {
+  ): Promise<GetAudienceGroupsResponse & Types.MessageAPIResponseBase> {
     const queryParams = {
       page: page,
       description: description,

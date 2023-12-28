@@ -21,7 +21,12 @@ import {AxiosResponse} from "axios";
 interface httpClientConfig {
     baseURL?: string;
     {% if authMethods != null -%}
-    channelAccessToken: string;
+      {% for authMethod in authMethods %}
+        {% if authMethod.isBasicBearer %}
+          channelAccessToken: string;
+        {% else %}
+        {% endif %}
+      {% endfor %}
     {% endif -%}
     // TODO support defaultHeaders?
 }
@@ -37,7 +42,12 @@ export class {{operations.classname}} {
         this.httpClient = new HTTPClient({
             defaultHeaders: {
                 {% if authMethods != null -%}
-                Authorization: "Bearer " + config.channelAccessToken,
+                  {% for authMethod in authMethods %}
+                    {% if authMethod.isBasicBearer %}
+                      Authorization: "Bearer " + config.channelAccessToken,
+                    {% else %}
+                    {% endif %}
+                  {% endfor %}
                 {% endif -%}
             },
             responseParser: this.parseHTTPResponse.bind(this),

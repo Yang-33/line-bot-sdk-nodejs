@@ -30,13 +30,16 @@ describe("moduleAttach", () => {
           equal(
             request.headers.has("Authorization"),
             false,
-            "Authorization header should not be present"
+            "Authorization header should not be present",
           );
           equal(
             request.headers.get("User-Agent"),
             `${pkg.name}/${pkg.version}`,
           );
-          equal(request.headers.get("content-type"), "application/x-www-form-urlencoded");
+          equal(
+            request.headers.get("content-type"),
+            "application/x-www-form-urlencoded",
+          );
           const body = new URLSearchParams(request.body);
           equal(body.get("clientId"), "ClientId", "clientId should match");
 
@@ -55,7 +58,7 @@ describe("moduleAttach", () => {
       "Region",
       "BasicSearchId",
       "Scope",
-      "BrandType"
+      "BrandType",
     );
     equal(requestCount, 1);
     deepEqual(res, {});

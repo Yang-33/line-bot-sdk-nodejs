@@ -22,9 +22,7 @@ describe("LineModuleAttachClient", () => {
     server.resetHandlers();
   });
 
-  const client = new LineModuleAttachClient({
-    channelAccessToken: channel_access_token,
-  });
+  const client = new LineModuleAttachClient({});
 
   it("attachModule", async () => {
     let requestCount = 0;
@@ -46,9 +44,11 @@ describe("LineModuleAttachClient", () => {
         requestCount++;
 
         equal(
-          request.headers.get("Authorization"),
-          `Bearer ${channel_access_token}`,
+          request.headers.has("Authorization"),
+          false,
+          "Authorization header should not be present",
         );
+
         equal(request.headers.get("User-Agent"), `${pkg.name}/${pkg.version}`);
 
         return HttpResponse.json({});

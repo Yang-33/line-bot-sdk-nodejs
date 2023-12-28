@@ -23,7 +23,12 @@ describe("{{operations.classname}}", () => {
 
   const client = new {{operations.classname}}({
     {% if authMethods != null -%}
-    channelAccessToken: channel_access_token,
+      {% for authMethod in authMethods %}
+        {% if authMethod.isBasicBearer %}
+          channelAccessToken: string,
+        {% else %}
+        {% endif %}
+      {% endfor %}
     {% endif -%}
   });
 
@@ -48,10 +53,20 @@ describe("{{operations.classname}}", () => {
           requestCount++;
 
           {% if authMethods != null -%}
-          equal(
-            request.headers.get("Authorization"),
-            `Bearer ${channel_access_token}`,
-          );
+            {% for authMethod in authMethods %}
+              {% if authMethod.isBasicBearer %}
+                equal(
+                  request.headers.get("Authorization"),
+                  `Bearer ${channel_access_token}`,
+                );
+              {% else %}
+                equal(
+                  request.headers.has("Authorization"),
+                  false,
+                  "Authorization header should not be present"
+                );
+              {% endif %}
+            {% endfor %}
           {% endif -%}
           equal(
             request.headers.get("User-Agent"),

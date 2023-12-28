@@ -25,7 +25,7 @@ describe("LineModuleClient", () => {
   });
 
   const client = new LineModuleClient({
-    channelAccessToken: channel_access_token,
+    channelAccessToken: string,
   });
 
   it("acquireChatControl", async () => {
@@ -45,6 +45,7 @@ describe("LineModuleClient", () => {
           request.headers.get("Authorization"),
           `Bearer ${channel_access_token}`,
         );
+
         equal(request.headers.get("User-Agent"), `${pkg.name}/${pkg.version}`);
 
         return HttpResponse.json({});
@@ -74,6 +75,7 @@ describe("LineModuleClient", () => {
           request.headers.get("Authorization"),
           `Bearer ${channel_access_token}`,
         );
+
         equal(request.headers.get("User-Agent"), `${pkg.name}/${pkg.version}`);
 
         return HttpResponse.json({});
@@ -103,6 +105,7 @@ describe("LineModuleClient", () => {
           request.headers.get("Authorization"),
           `Bearer ${channel_access_token}`,
         );
+
         equal(request.headers.get("User-Agent"), `${pkg.name}/${pkg.version}`);
 
         return HttpResponse.json({});
@@ -136,6 +139,7 @@ describe("LineModuleClient", () => {
           request.headers.get("Authorization"),
           `Bearer ${channel_access_token}`,
         );
+
         equal(request.headers.get("User-Agent"), `${pkg.name}/${pkg.version}`);
 
         return HttpResponse.json({});

@@ -47,7 +47,7 @@ export default function middleware(config: Types.MiddlewareConfig): Middleware {
         // body may not be parsed yet, parse it to a buffer
         return new Promise<Buffer>((resolve, reject) =>
           raw({ type: "*/*" })(req as any, res as any, (error: Error) =>
-            error ? reject(error) : resolve(req.body),
+            error ? reject(error) : reject(error),
           ),
         );
       }

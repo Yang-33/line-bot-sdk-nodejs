@@ -88,7 +88,10 @@
     "instrument": true
   },
   "mocha": {
-    "require": "ts-node/register",
+    "node-option": [
+      "experimental-specifier-resolution=node",
+      "loader=ts-node/esm"
+    ],
     "spec": [
       "test/**/*.spec.ts",
       "lib/**/tests/**/*.spec.ts"

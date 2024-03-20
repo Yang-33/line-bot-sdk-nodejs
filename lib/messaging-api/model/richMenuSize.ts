@@ -10,16 +10,29 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Rich menu size
  */
-export type RichMenuSize = {
-  /**
-   * width
-   */
-  width?: number /**/;
-  /**
-   * height
-   */
-  height?: number /**/;
-};
+export type RichMenuSize =  { 
+        /**
+            * width
+            */
+    'width'?: number/**/;
+        /**
+            * height
+            */
+    'height'?: number/**/;
+        
+}
+    
+
+    
+
+    
+
+

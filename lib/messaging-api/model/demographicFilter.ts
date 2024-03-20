@@ -10,32 +10,47 @@
  * Do not edit the class manually.
  */
 
-import { AgeDemographicFilter } from "./models";
-import { AppTypeDemographicFilter } from "./models";
-import { AreaDemographicFilter } from "./models";
-import { GenderDemographicFilter } from "./models";
-import { OperatorDemographicFilter } from "./models";
-import { SubscriptionPeriodDemographicFilter } from "./models";
+
+
+    
+
+    
+        import { AgeDemographicFilter } from './models.js';
+        import { AppTypeDemographicFilter } from './models.js';
+        import { AreaDemographicFilter } from './models.js';
+        import { GenderDemographicFilter } from './models.js';
+        import { OperatorDemographicFilter } from './models.js';
+        import { SubscriptionPeriodDemographicFilter } from './models.js';
+        
 
 export type DemographicFilter =
-  | AgeDemographicFilter // age
-  | AppTypeDemographicFilter // appType
-  | AreaDemographicFilter // area
-  | GenderDemographicFilter // gender
-  | OperatorDemographicFilter // operator
-  | SubscriptionPeriodDemographicFilter // subscriptionPeriod
-  | UnknownDemographicFilter;
+        | AgeDemographicFilter // age
+        | AppTypeDemographicFilter // appType
+        | AreaDemographicFilter // area
+        | GenderDemographicFilter // gender
+        | OperatorDemographicFilter // operator
+        | SubscriptionPeriodDemographicFilter // subscriptionPeriod
+        | UnknownDemographicFilter
+;
 
 export type UnknownDemographicFilter = DemographicFilterBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
-
+    
 /**
  * Demographic filter
  */
-export type DemographicFilterBase = {
-  /**
-   * Type of demographic filter
-   */
-  type?: string /**/;
-};
+export type DemographicFilterBase =  { 
+        /**
+            * Type of demographic filter
+            */
+    'type'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

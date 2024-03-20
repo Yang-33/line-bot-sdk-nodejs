@@ -10,19 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { AgeDemographic } from "./ageDemographic";
-import { DemographicFilter } from "./demographicFilter";
 
-import { DemographicFilterBase } from "./models";
 
-export type AgeDemographicFilter = DemographicFilterBase & {
-  type: "age";
-  /**
-   */
-  gte?: AgeDemographic /**/;
-  /**
-   */
-  lt?: AgeDemographic /**/;
-};
+    import { AgeDemographic } from './ageDemographic.js';import { DemographicFilter } from './demographicFilter.js';
 
-export namespace AgeDemographicFilter {}
+    
+import { DemographicFilterBase } from './models.js';
+
+        
+export type AgeDemographicFilter = DemographicFilterBase &  { 
+type: "age",
+        /**
+            */
+    'gte'?: AgeDemographic/**/;
+        /**
+            */
+    'lt'?: AgeDemographic/**/;
+        
+}
+    
+
+    
+export namespace AgeDemographicFilter {
+        
+        
+        
+}
+    
+
+    
+
+

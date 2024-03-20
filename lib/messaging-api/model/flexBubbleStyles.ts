@@ -10,19 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { FlexBlockStyle } from "./flexBlockStyle";
 
-export type FlexBubbleStyles = {
-  /**
-   */
-  header?: FlexBlockStyle /**/;
-  /**
-   */
-  hero?: FlexBlockStyle /**/;
-  /**
-   */
-  body?: FlexBlockStyle /**/;
-  /**
-   */
-  footer?: FlexBlockStyle /**/;
-};
+
+    import { FlexBlockStyle } from './flexBlockStyle.js';
+
+    
+export type FlexBubbleStyles =  { 
+        /**
+            */
+    'header'?: FlexBlockStyle/**/;
+        /**
+            */
+    'hero'?: FlexBlockStyle/**/;
+        /**
+            */
+    'body'?: FlexBlockStyle/**/;
+        /**
+            */
+    'footer'?: FlexBlockStyle/**/;
+        
+}
+    
+
+    
+
+    
+
+

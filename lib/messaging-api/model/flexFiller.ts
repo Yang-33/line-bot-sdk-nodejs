@@ -10,13 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { FlexComponent } from "./flexComponent";
 
-import { FlexComponentBase } from "./models";
 
-export type FlexFiller = FlexComponentBase & {
-  type: "filler";
-  /**
-   */
-  flex?: number /**/;
-};
+    import { FlexComponent } from './flexComponent.js';
+
+    
+import { FlexComponentBase } from './models.js';
+
+        
+export type FlexFiller = FlexComponentBase &  { 
+type: "filler",
+        /**
+            */
+    'flex'?: number/**/;
+        
+}
+    
+
+    
+
+    
+
+

@@ -10,33 +10,54 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
 
-import { ActionBase } from "./models";
 
-export type PostbackAction = ActionBase & {
-  type: "postback";
-  /**
-   */
-  data?: string /**/;
-  /**
-   */
-  displayText?: string /**/;
-  /**
-   */
-  text?: string /**/;
-  /**
-   */
-  inputOption?: PostbackAction.InputOptionEnum /**/;
-  /**
-   */
-  fillInText?: string /**/;
-};
+    import { Action } from './action.js';
 
-export namespace PostbackAction {
-  export type InputOptionEnum =
-    | "closeRichMenu"
-    | "openRichMenu"
-    | "openKeyboard"
-    | "openVoice";
+    
+import { ActionBase } from './models.js';
+
+        
+export type PostbackAction = ActionBase &  { 
+type: "postback",
+        /**
+            */
+    'data'?: string/**/;
+        /**
+            */
+    'displayText'?: string/**/;
+        /**
+            */
+    'text'?: string/**/;
+        /**
+            */
+    'inputOption'?: PostbackAction.InputOptionEnum/**/;
+        /**
+            */
+    'fillInText'?: string/**/;
+        
 }
+    
+
+    
+export namespace PostbackAction {
+        
+        
+        
+        export type InputOptionEnum =
+                'closeRichMenu'
+                    | 'openRichMenu'
+                    | 'openKeyboard'
+                    | 'openVoice'
+                    
+                
+    ;
+            
+        
+        
+}
+    
+
+    
+
+

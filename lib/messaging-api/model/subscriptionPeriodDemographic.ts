@@ -10,9 +10,22 @@
  * Do not edit the class manually.
  */
 
-export type SubscriptionPeriodDemographic =
-  | "day_7"
-  | "day_30"
-  | "day_90"
-  | "day_180"
-  | "day_365";
+
+
+    
+
+    
+
+    
+
+    export type SubscriptionPeriodDemographic =
+        'day_7'
+        | 'day_30'
+        | 'day_90'
+        | 'day_180'
+        | 'day_365'
+        
+;
+    
+
+

@@ -10,17 +10,28 @@
  * Do not edit the class manually.
  */
 
-import { ImagemapAction } from "./imagemapAction";
-import { ImagemapArea } from "./imagemapArea";
 
-import { ImagemapActionBase } from "./models";
 
-export type MessageImagemapAction = ImagemapActionBase & {
-  type: "message";
-  /**
-   */
-  text: string /**/;
-  /**
-   */
-  label?: string /**/;
-};
+    import { ImagemapAction } from './imagemapAction.js';import { ImagemapArea } from './imagemapArea.js';
+
+    
+import { ImagemapActionBase } from './models.js';
+
+        
+export type MessageImagemapAction = ImagemapActionBase &  { 
+type: "message",
+        /**
+            */
+    'text': string/**/;
+        /**
+            */
+    'label'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

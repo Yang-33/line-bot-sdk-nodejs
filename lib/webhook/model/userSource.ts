@@ -10,14 +10,26 @@
  * Do not edit the class manually.
  */
 
-import { Source } from "./source";
 
-import { SourceBase } from "./models";
 
-export type UserSource = SourceBase & {
-  type: "user";
-  /**
-   * ID of the source user
-   */
-  userId?: string /**/;
-};
+    import { Source } from './source.js';
+
+    
+import { SourceBase } from './models.js';
+
+        
+export type UserSource = SourceBase &  { 
+type: "user",
+        /**
+            * ID of the source user
+            */
+    'userId'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

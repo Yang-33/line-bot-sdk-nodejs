@@ -10,27 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { RichMenuArea } from "./richMenuArea";
-import { RichMenuSize } from "./richMenuSize";
 
-export type RichMenuRequest = {
-  /**
-   */
-  size?: RichMenuSize /**/;
-  /**
-   * `true` to display the rich menu by default. Otherwise, `false`.
-   */
-  selected?: boolean /**/;
-  /**
-   * Name of the rich menu. This value can be used to help manage your rich menus and is not displayed to users.
-   */
-  name?: string /**/;
-  /**
-   * Text displayed in the chat bar
-   */
-  chatBarText?: string /**/;
-  /**
-   * Array of area objects which define the coordinates and size of tappable areas
-   */
-  areas?: Array<RichMenuArea> /**/;
-};
+
+    import { RichMenuArea } from './richMenuArea.js';import { RichMenuSize } from './richMenuSize.js';
+
+    
+export type RichMenuRequest =  { 
+        /**
+            */
+    'size'?: RichMenuSize/**/;
+        /**
+            * `true` to display the rich menu by default. Otherwise, `false`.
+            */
+    'selected'?: boolean/**/;
+        /**
+            * Name of the rich menu. This value can be used to help manage your rich menus and is not displayed to users.
+            */
+    'name'?: string/**/;
+        /**
+            * Text displayed in the chat bar
+            */
+    'chatBarText'?: string/**/;
+        /**
+            * Array of area objects which define the coordinates and size of tappable areas
+            */
+    'areas'?: Array<RichMenuArea>/**/;
+        
+}
+    
+
+    
+
+    
+
+

@@ -10,22 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { ImagemapAction } from "./imagemapAction";
-import { ImagemapArea } from "./imagemapArea";
 
-import { ImagemapActionBase } from "./models";
 
-export type ClipboardImagemapAction = ImagemapActionBase & {
-  type: "clipboard";
-  /**
-   * Text that is copied to the clipboard. Max character limit: 1000
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-clipboard-action-object">clipboardText Documentation</a>
-   */
-  clipboardText: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-clipboard-action-object">label Documentation</a>
-   */
-  label?: string /**/;
-};
+    import { ImagemapAction } from './imagemapAction.js';import { ImagemapArea } from './imagemapArea.js';
+
+    
+import { ImagemapActionBase } from './models.js';
+
+        
+export type ClipboardImagemapAction = ImagemapActionBase &  { 
+type: "clipboard",
+        /**
+            * Text that is copied to the clipboard. Max character limit: 1000 
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-clipboard-action-object">clipboardText Documentation</a>
+            */
+    'clipboardText': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-clipboard-action-object">label Documentation</a>
+            */
+    'label'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

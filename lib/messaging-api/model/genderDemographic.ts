@@ -10,4 +10,19 @@
  * Do not edit the class manually.
  */
 
-export type GenderDemographic = "male" | "female";
+
+
+    
+
+    
+
+    
+
+    export type GenderDemographic =
+        'male'
+        | 'female'
+        
+;
+    
+
+

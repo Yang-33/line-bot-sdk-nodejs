@@ -10,23 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { LinkThingsContent } from "./models";
-import { ScenarioResultThingsContent } from "./models";
-import { UnlinkThingsContent } from "./models";
+
+
+    
+
+    
+        import { LinkThingsContent } from './models.js';
+        import { ScenarioResultThingsContent } from './models.js';
+        import { UnlinkThingsContent } from './models.js';
+        
 
 export type ThingsContent =
-  | LinkThingsContent // link
-  | ScenarioResultThingsContent // scenarioResult
-  | UnlinkThingsContent // unlink
-  | UnknownThingsContent;
+        | LinkThingsContent // link
+        | ScenarioResultThingsContent // scenarioResult
+        | UnlinkThingsContent // unlink
+        | UnknownThingsContent
+;
 
 export type UnknownThingsContent = ThingsContentBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
+    
+export type ThingsContentBase =  { 
+        /**
+            * Type
+            */
+    'type': string/**/;
+        
+}
+    
 
-export type ThingsContentBase = {
-  /**
-   * Type
-   */
-  type: string /**/;
-};
+    
+
+    
+
+

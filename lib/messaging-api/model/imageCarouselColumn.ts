@@ -10,13 +10,24 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
 
-export type ImageCarouselColumn = {
-  /**
-   */
-  imageUrl: string /**/;
-  /**
-   */
-  action: Action /**/;
-};
+
+    import { Action } from './action.js';
+
+    
+export type ImageCarouselColumn =  { 
+        /**
+            */
+    'imageUrl': string/**/;
+        /**
+            */
+    'action': Action/**/;
+        
+}
+    
+
+    
+
+    
+
+

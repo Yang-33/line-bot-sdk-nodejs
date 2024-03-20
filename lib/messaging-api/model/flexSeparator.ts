@@ -10,16 +10,28 @@
  * Do not edit the class manually.
  */
 
-import { FlexComponent } from "./flexComponent";
 
-import { FlexComponentBase } from "./models";
 
-export type FlexSeparator = FlexComponentBase & {
-  type: "separator";
-  /**
-   */
-  margin?: string /**/;
-  /**
-   */
-  color?: string /**/;
-};
+    import { FlexComponent } from './flexComponent.js';
+
+    
+import { FlexComponentBase } from './models.js';
+
+        
+export type FlexSeparator = FlexComponentBase &  { 
+type: "separator",
+        /**
+            */
+    'margin'?: string/**/;
+        /**
+            */
+    'color'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

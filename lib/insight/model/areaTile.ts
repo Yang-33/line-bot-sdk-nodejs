@@ -10,13 +10,26 @@
  * Do not edit the class manually.
  */
 
-export type AreaTile = {
-  /**
-   * users\' country and region
-   */
-  area?: string /**/;
-  /**
-   * Percentage
-   */
-  percentage?: number /**/;
-};
+
+
+    
+
+    
+export type AreaTile =  { 
+        /**
+            * users\' country and region
+            */
+    'area'?: string/**/;
+        /**
+            * Percentage
+            */
+    'percentage'?: number/**/;
+        
+}
+    
+
+    
+
+    
+
+

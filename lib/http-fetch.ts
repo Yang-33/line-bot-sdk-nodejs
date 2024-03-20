@@ -1,7 +1,10 @@
 import { Readable } from "node:stream";
-import { HTTPFetchError } from "./exceptions";
+import { HTTPFetchError } from "./exceptions.js";
 
-const pkg = require("../package.json");
+import module from "node:module";
+const requireModule = module.createRequire(import.meta.url);
+const pkg = requireModule("../package.json");
+
 export interface FetchRequestConfig {
   headers?: Record<string, string>;
 }

@@ -10,17 +10,31 @@
  * Do not edit the class manually.
  */
 
-import { AudienceGroupAuthorityLevel } from "./audienceGroupAuthorityLevel";
 
+
+    import { AudienceGroupAuthorityLevel } from './audienceGroupAuthorityLevel.js';
+
+    
 /**
  * Get the authority level of the audience
  */
-export type GetAudienceGroupAuthorityLevelResponse = {
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-authority-level">authorityLevel Documentation</a>
-   */
-  authorityLevel?: AudienceGroupAuthorityLevel /**/;
-};
+export type GetAudienceGroupAuthorityLevelResponse =  { 
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-authority-level">authorityLevel Documentation</a>
+            */
+    'authorityLevel'?: AudienceGroupAuthorityLevel/**/;
+        
+}
+    
 
-export namespace GetAudienceGroupAuthorityLevelResponse {}
+    
+export namespace GetAudienceGroupAuthorityLevelResponse {
+        
+        
+}
+    
+
+    
+
+

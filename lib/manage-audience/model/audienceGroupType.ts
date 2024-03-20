@@ -10,20 +10,32 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Audience group type
  */
 
-export type AudienceGroupType =
-  | "UPLOAD"
-  | "CLICK"
-  | "IMP"
-  | "CHAT_TAG"
-  | "FRIEND_PATH"
-  | "RESERVATION"
-  | "APP_EVENT"
-  | "VIDEO_VIEW"
-  | "WEBTRAFFIC"
-  | "IMAGE_CLICK"
-  | "RICHMENU_IMP"
-  | "RICHMENU_CLICK";
+    
+
+    export type AudienceGroupType =
+        'UPLOAD'
+        | 'CLICK'
+        | 'IMP'
+        | 'CHAT_TAG'
+        | 'FRIEND_PATH'
+        | 'RESERVATION'
+        | 'APP_EVENT'
+        | 'VIDEO_VIEW'
+        | 'WEBTRAFFIC'
+        | 'IMAGE_CLICK'
+        | 'RICHMENU_IMP'
+        | 'RICHMENU_CLICK'
+        
+;
+    
+
+

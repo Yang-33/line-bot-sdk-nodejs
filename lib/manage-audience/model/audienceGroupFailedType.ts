@@ -10,11 +10,23 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Failed type
  */
 
-export type AudienceGroupFailedType =
-  | "AUDIENCE_GROUP_AUDIENCE_INSUFFICIENT"
-  | "INTERNAL_ERROR"
-  | "null";
+    
+
+    export type AudienceGroupFailedType =
+        'AUDIENCE_GROUP_AUDIENCE_INSUFFICIENT'
+        | 'INTERNAL_ERROR'
+        | 'null'
+        
+;
+    
+
+

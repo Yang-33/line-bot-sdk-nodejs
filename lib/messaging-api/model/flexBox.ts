@@ -10,109 +10,164 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
-import { FlexBoxBackground } from "./flexBoxBackground";
-import { FlexComponent } from "./flexComponent";
 
-import { FlexComponentBase } from "./models";
 
-export type FlexBox = FlexComponentBase & {
-  type: "box";
-  /**
-   */
-  layout: FlexBox.LayoutEnum /**/;
-  /**
-   */
-  flex?: number /**/;
-  /**
-   */
-  contents: Array<FlexComponent> /**/;
-  /**
-   */
-  spacing?: string /**/;
-  /**
-   */
-  margin?: string /**/;
-  /**
-   */
-  position?: FlexBox.PositionEnum /**/;
-  /**
-   */
-  offsetTop?: string /**/;
-  /**
-   */
-  offsetBottom?: string /**/;
-  /**
-   */
-  offsetStart?: string /**/;
-  /**
-   */
-  offsetEnd?: string /**/;
-  /**
-   */
-  backgroundColor?: string /**/;
-  /**
-   */
-  borderColor?: string /**/;
-  /**
-   */
-  borderWidth?: string /**/;
-  /**
-   */
-  cornerRadius?: string /**/;
-  /**
-   */
-  width?: string /**/;
-  /**
-   */
-  maxWidth?: string /**/;
-  /**
-   */
-  height?: string /**/;
-  /**
-   */
-  maxHeight?: string /**/;
-  /**
-   */
-  paddingAll?: string /**/;
-  /**
-   */
-  paddingTop?: string /**/;
-  /**
-   */
-  paddingBottom?: string /**/;
-  /**
-   */
-  paddingStart?: string /**/;
-  /**
-   */
-  paddingEnd?: string /**/;
-  /**
-   */
-  action?: Action /**/;
-  /**
-   */
-  justifyContent?: FlexBox.JustifyContentEnum /**/;
-  /**
-   */
-  alignItems?: FlexBox.AlignItemsEnum /**/;
-  /**
-   */
-  background?: FlexBoxBackground /**/;
-};
+    import { Action } from './action.js';import { FlexBoxBackground } from './flexBoxBackground.js';import { FlexComponent } from './flexComponent.js';
 
-export namespace FlexBox {
-  export type LayoutEnum = "horizontal" | "vertical" | "baseline";
+    
+import { FlexComponentBase } from './models.js';
 
-  export type PositionEnum = "relative" | "absolute";
-
-  export type JustifyContentEnum =
-    | "center"
-    | "flex-start"
-    | "flex-end"
-    | "space-between"
-    | "space-around"
-    | "space-evenly";
-
-  export type AlignItemsEnum = "center" | "flex-start" | "flex-end";
+        
+export type FlexBox = FlexComponentBase &  { 
+type: "box",
+        /**
+            */
+    'layout': FlexBox.LayoutEnum/**/;
+        /**
+            */
+    'flex'?: number/**/;
+        /**
+            */
+    'contents': Array<FlexComponent>/**/;
+        /**
+            */
+    'spacing'?: string/**/;
+        /**
+            */
+    'margin'?: string/**/;
+        /**
+            */
+    'position'?: FlexBox.PositionEnum/**/;
+        /**
+            */
+    'offsetTop'?: string/**/;
+        /**
+            */
+    'offsetBottom'?: string/**/;
+        /**
+            */
+    'offsetStart'?: string/**/;
+        /**
+            */
+    'offsetEnd'?: string/**/;
+        /**
+            */
+    'backgroundColor'?: string/**/;
+        /**
+            */
+    'borderColor'?: string/**/;
+        /**
+            */
+    'borderWidth'?: string/**/;
+        /**
+            */
+    'cornerRadius'?: string/**/;
+        /**
+            */
+    'width'?: string/**/;
+        /**
+            */
+    'maxWidth'?: string/**/;
+        /**
+            */
+    'height'?: string/**/;
+        /**
+            */
+    'maxHeight'?: string/**/;
+        /**
+            */
+    'paddingAll'?: string/**/;
+        /**
+            */
+    'paddingTop'?: string/**/;
+        /**
+            */
+    'paddingBottom'?: string/**/;
+        /**
+            */
+    'paddingStart'?: string/**/;
+        /**
+            */
+    'paddingEnd'?: string/**/;
+        /**
+            */
+    'action'?: Action/**/;
+        /**
+            */
+    'justifyContent'?: FlexBox.JustifyContentEnum/**/;
+        /**
+            */
+    'alignItems'?: FlexBox.AlignItemsEnum/**/;
+        /**
+            */
+    'background'?: FlexBoxBackground/**/;
+        
 }
+    
+
+    
+export namespace FlexBox {
+        export type LayoutEnum =
+                'horizontal'
+                    | 'vertical'
+                    | 'baseline'
+                    
+                
+    ;
+            
+        
+        
+        
+        
+        export type PositionEnum =
+                'relative'
+                    | 'absolute'
+                    
+                
+    ;
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        export type JustifyContentEnum =
+                'center'
+                    | 'flex-start'
+                    | 'flex-end'
+                    | 'space-between'
+                    | 'space-around'
+                    | 'space-evenly'
+                    
+                
+    ;
+            
+        export type AlignItemsEnum =
+                'center'
+                    | 'flex-start'
+                    | 'flex-end'
+                    
+                
+    ;
+            
+        
+        
+}
+    
+
+    
+
+

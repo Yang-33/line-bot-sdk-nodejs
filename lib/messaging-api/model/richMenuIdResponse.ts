@@ -10,9 +10,22 @@
  * Do not edit the class manually.
  */
 
-export type RichMenuIdResponse = {
-  /**
-   * Rich menu ID
-   */
-  richMenuId: string /**/;
-};
+
+
+    
+
+    
+export type RichMenuIdResponse =  { 
+        /**
+            * Rich menu ID
+            */
+    'richMenuId': string/**/;
+        
+}
+    
+
+    
+
+    
+
+

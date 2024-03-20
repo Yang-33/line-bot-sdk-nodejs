@@ -10,17 +10,39 @@
  * Do not edit the class manually.
  */
 
-export type AppTypeTile = {
-  /**
-   * users\' OS
-   */
-  appType?: AppTypeTile.AppTypeEnum /**/;
-  /**
-   * Percentage
-   */
-  percentage?: number /**/;
-};
 
-export namespace AppTypeTile {
-  export type AppTypeEnum = "ios" | "android" | "others";
+
+    
+
+    
+export type AppTypeTile =  { 
+        /**
+            * users\' OS
+            */
+    'appType'?: AppTypeTile.AppTypeEnum/**/;
+        /**
+            * Percentage
+            */
+    'percentage'?: number/**/;
+        
 }
+    
+
+    
+export namespace AppTypeTile {
+        export type AppTypeEnum =
+                'ios'
+                    | 'android'
+                    | 'others'
+                    
+                
+    ;
+            
+        
+        
+}
+    
+
+    
+
+

@@ -10,12 +10,25 @@
  * Do not edit the class manually.
  */
 
-export type PostbackContent = {
-  /**
-   * Postback data
-   */
-  data: string /**/;
-  /**
-   */
-  params?: { [key: string]: string } /**/;
-};
+
+
+    
+
+    
+export type PostbackContent =  { 
+        /**
+            * Postback data
+            */
+    'data': string/**/;
+        /**
+            */
+    'params'?: { [key: string]: string; }/**/;
+        
+}
+    
+
+    
+
+    
+
+

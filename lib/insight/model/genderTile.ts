@@ -10,17 +10,39 @@
  * Do not edit the class manually.
  */
 
-export type GenderTile = {
-  /**
-   * users\' gender
-   */
-  gender?: GenderTile.GenderEnum /**/;
-  /**
-   * Percentage
-   */
-  percentage?: number /**/;
-};
 
-export namespace GenderTile {
-  export type GenderEnum = "male" | "female" | "unknown";
+
+    
+
+    
+export type GenderTile =  { 
+        /**
+            * users\' gender
+            */
+    'gender'?: GenderTile.GenderEnum/**/;
+        /**
+            * Percentage
+            */
+    'percentage'?: number/**/;
+        
 }
+    
+
+    
+export namespace GenderTile {
+        export type GenderEnum =
+                'male'
+                    | 'female'
+                    | 'unknown'
+                    
+                
+    ;
+            
+        
+        
+}
+    
+
+    
+
+

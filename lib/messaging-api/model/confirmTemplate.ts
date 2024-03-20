@@ -10,17 +10,28 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
-import { Template } from "./template";
 
-import { TemplateBase } from "./models";
 
-export type ConfirmTemplate = TemplateBase & {
-  type: "confirm";
-  /**
-   */
-  text: string /**/;
-  /**
-   */
-  actions: Array<Action> /**/;
-};
+    import { Action } from './action.js';import { Template } from './template.js';
+
+    
+import { TemplateBase } from './models.js';
+
+        
+export type ConfirmTemplate = TemplateBase &  { 
+type: "confirm",
+        /**
+            */
+    'text': string/**/;
+        /**
+            */
+    'actions': Array<Action>/**/;
+        
+}
+    
+
+    
+
+    
+
+

@@ -10,13 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { Recipient } from "./recipient";
 
-import { RecipientBase } from "./models";
 
-export type AudienceRecipient = RecipientBase & {
-  type: "audience";
-  /**
-   */
-  audienceGroupId?: number /**/;
-};
+    import { Recipient } from './recipient.js';
+
+    
+import { RecipientBase } from './models.js';
+
+        
+export type AudienceRecipient = RecipientBase &  { 
+type: "audience",
+        /**
+            */
+    'audienceGroupId'?: number/**/;
+        
+}
+    
+
+    
+
+    
+
+

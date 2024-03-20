@@ -2,9 +2,9 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { deepEqual, equal, ok, strictEqual } from "node:assert";
 import { URL } from "node:url";
-import Client, { OAuth } from "../lib/client";
-import * as Types from "../lib/types";
-import { getStreamData } from "./helpers/stream";
+import Client, { OAuth } from "../lib/client.js";
+import * as Types from "../lib/types.js";
+import { getStreamData } from "./helpers/stream.js";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import {
@@ -12,9 +12,17 @@ import {
   MESSAGING_API_PREFIX,
   OAUTH_BASE_PREFIX,
   OAUTH_BASE_PREFIX_V2_1,
-} from "../lib/endpoints";
+} from "../lib/endpoints.js";
 
-const pkg = require("../package.json");
+import module from "node:module";
+const requireModule = module.createRequire(import.meta.url);
+const pkg = requireModule("../package.json");
+
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const channelAccessToken = "test_channel_access_token";
 

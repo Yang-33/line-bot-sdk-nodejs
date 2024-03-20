@@ -10,59 +10,80 @@
  * Do not edit the class manually.
  */
 
-import { AudienceGroupCreateRoute } from "./audienceGroupCreateRoute";
-import { AudienceGroupFailedType } from "./audienceGroupFailedType";
-import { AudienceGroupPermission } from "./audienceGroupPermission";
-import { AudienceGroupStatus } from "./audienceGroupStatus";
-import { AudienceGroupType } from "./audienceGroupType";
 
+
+    import { AudienceGroupCreateRoute } from './audienceGroupCreateRoute.js';import { AudienceGroupFailedType } from './audienceGroupFailedType.js';import { AudienceGroupPermission } from './audienceGroupPermission.js';import { AudienceGroupStatus } from './audienceGroupStatus.js';import { AudienceGroupType } from './audienceGroupType.js';
+
+    
 /**
  * Audience group
  */
-export type AudienceGroup = {
-  /**
-   * The audience ID.
-   */
-  audienceGroupId?: number /**/;
-  /**
-   */
-  type?: AudienceGroupType /**/;
-  /**
-   * The audience\'s name.
-   */
-  description?: string /**/;
-  /**
-   */
-  status?: AudienceGroupStatus /**/;
-  /**
-   */
-  failedType?: AudienceGroupFailedType | null /**/;
-  /**
-   * The number of users included in the audience.
-   */
-  audienceCount?: number /**/;
-  /**
-   * When the audience was created (in UNIX time).
-   */
-  created?: number /**/;
-  /**
-   * The request ID that was specified when the audience was created. This is only included when `audienceGroup.type` is CLICK or IMP.
-   */
-  requestId?: string /**/;
-  /**
-   * The URL that was specified when the audience was created. This is only included when `audienceGroup.type` is CLICK and link URL is specified.
-   */
-  clickUrl?: string /**/;
-  /**
-   * The value indicating the type of account to be sent, as specified when creating the audience for uploading user IDs.
-   */
-  isIfaAudience?: boolean /**/;
-  /**
-   */
-  permission?: AudienceGroupPermission /**/;
-  /**
-   */
-  createRoute?: AudienceGroupCreateRoute /**/;
-};
+export type AudienceGroup =  { 
+        /**
+            * The audience ID.
+            */
+    'audienceGroupId'?: number/**/;
+        /**
+            */
+    'type'?: AudienceGroupType/**/;
+        /**
+            * The audience\'s name.
+            */
+    'description'?: string/**/;
+        /**
+            */
+    'status'?: AudienceGroupStatus/**/;
+        /**
+            */
+    'failedType'?: AudienceGroupFailedType | null/**/;
+        /**
+            * The number of users included in the audience.
+            */
+    'audienceCount'?: number/**/;
+        /**
+            * When the audience was created (in UNIX time).
+            */
+    'created'?: number/**/;
+        /**
+            * The request ID that was specified when the audience was created. This is only included when `audienceGroup.type` is CLICK or IMP. 
+            */
+    'requestId'?: string/**/;
+        /**
+            * The URL that was specified when the audience was created. This is only included when `audienceGroup.type` is CLICK and link URL is specified. 
+            */
+    'clickUrl'?: string/**/;
+        /**
+            * The value indicating the type of account to be sent, as specified when creating the audience for uploading user IDs. 
+            */
+    'isIfaAudience'?: boolean/**/;
+        /**
+            */
+    'permission'?: AudienceGroupPermission/**/;
+        /**
+            */
+    'createRoute'?: AudienceGroupCreateRoute/**/;
+        
+}
+    
 
-export namespace AudienceGroup {}
+    
+export namespace AudienceGroup {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+}
+    
+
+    
+
+

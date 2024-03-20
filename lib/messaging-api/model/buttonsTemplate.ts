@@ -10,35 +10,46 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
-import { Template } from "./template";
 
-import { TemplateBase } from "./models";
 
-export type ButtonsTemplate = TemplateBase & {
-  type: "buttons";
-  /**
-   */
-  thumbnailImageUrl?: string /**/;
-  /**
-   */
-  imageAspectRatio?: string /**/;
-  /**
-   */
-  imageSize?: string /**/;
-  /**
-   */
-  imageBackgroundColor?: string /**/;
-  /**
-   */
-  title?: string /**/;
-  /**
-   */
-  text: string /**/;
-  /**
-   */
-  defaultAction?: Action /**/;
-  /**
-   */
-  actions: Array<Action> /**/;
-};
+    import { Action } from './action.js';import { Template } from './template.js';
+
+    
+import { TemplateBase } from './models.js';
+
+        
+export type ButtonsTemplate = TemplateBase &  { 
+type: "buttons",
+        /**
+            */
+    'thumbnailImageUrl'?: string/**/;
+        /**
+            */
+    'imageAspectRatio'?: string/**/;
+        /**
+            */
+    'imageSize'?: string/**/;
+        /**
+            */
+    'imageBackgroundColor'?: string/**/;
+        /**
+            */
+    'title'?: string/**/;
+        /**
+            */
+    'text': string/**/;
+        /**
+            */
+    'defaultAction'?: Action/**/;
+        /**
+            */
+    'actions': Array<Action>/**/;
+        
+}
+    
+
+    
+
+    
+
+

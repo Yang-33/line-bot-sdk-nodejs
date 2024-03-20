@@ -67,3 +67,5 @@ test/helpers/request.json
 .idea/
 
 git_push.sh
+/module/
+/lib/

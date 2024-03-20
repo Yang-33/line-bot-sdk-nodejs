@@ -10,34 +10,45 @@
  * Do not edit the class manually.
  */
 
-import { Audience } from "./audience";
 
+
+    import { Audience } from './audience.js';
+
+    
 /**
  * Create audience for uploading user IDs (by JSON)
  */
-export type CreateAudienceGroupRequest = {
-  /**
-   * The audience\'s name. This is case-insensitive, meaning AUDIENCE and audience are considered identical. Max character limit: 120
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#create-upload-audience-group">description Documentation</a>
-   */
-  description?: string /**/;
-  /**
-   * To specify recipients by IFAs: set true. To specify recipients by user IDs: set false or omit isIfaAudience property.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#create-upload-audience-group">isIfaAudience Documentation</a>
-   */
-  isIfaAudience?: boolean /**/;
-  /**
-   * The description to register for the job (in jobs[].description).
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#create-upload-audience-group">uploadDescription Documentation</a>
-   */
-  uploadDescription?: string /**/;
-  /**
-   * An array of user IDs or IFAs. Max number: 10,000
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#create-upload-audience-group">audiences Documentation</a>
-   */
-  audiences?: Array<Audience> /**/;
-};
+export type CreateAudienceGroupRequest =  { 
+        /**
+            * The audience\'s name. This is case-insensitive, meaning AUDIENCE and audience are considered identical. Max character limit: 120 
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#create-upload-audience-group">description Documentation</a>
+            */
+    'description'?: string/**/;
+        /**
+            * To specify recipients by IFAs: set true. To specify recipients by user IDs: set false or omit isIfaAudience property. 
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#create-upload-audience-group">isIfaAudience Documentation</a>
+            */
+    'isIfaAudience'?: boolean/**/;
+        /**
+            * The description to register for the job (in jobs[].description). 
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#create-upload-audience-group">uploadDescription Documentation</a>
+            */
+    'uploadDescription'?: string/**/;
+        /**
+            * An array of user IDs or IFAs. Max number: 10,000 
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#create-upload-audience-group">audiences Documentation</a>
+            */
+    'audiences'?: Array<Audience>/**/;
+        
+}
+    
+
+    
+
+    
+
+

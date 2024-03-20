@@ -10,17 +10,28 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
-import { AltUri } from "./altUri";
 
-import { ActionBase } from "./models";
 
-export type URIAction = ActionBase & {
-  type: "uri";
-  /**
-   */
-  uri?: string /**/;
-  /**
-   */
-  altUri?: AltUri /**/;
-};
+    import { Action } from './action.js';import { AltUri } from './altUri.js';
+
+    
+import { ActionBase } from './models.js';
+
+        
+export type URIAction = ActionBase &  { 
+type: "uri",
+        /**
+            */
+    'uri'?: string/**/;
+        /**
+            */
+    'altUri'?: AltUri/**/;
+        
+}
+    
+
+    
+
+    
+
+

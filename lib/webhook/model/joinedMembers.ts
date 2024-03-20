@@ -10,11 +10,22 @@
  * Do not edit the class manually.
  */
 
-import { UserSource } from "./userSource";
 
-export type JoinedMembers = {
-  /**
-   * Users who joined. Array of source user objects.
-   */
-  members: Array<UserSource> /**/;
-};
+
+    import { UserSource } from './userSource.js';
+
+    
+export type JoinedMembers =  { 
+        /**
+            * Users who joined. Array of source user objects.
+            */
+    'members': Array<UserSource>/**/;
+        
+}
+    
+
+    
+
+    
+
+

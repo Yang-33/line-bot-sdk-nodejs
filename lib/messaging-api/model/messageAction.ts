@@ -10,13 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
 
-import { ActionBase } from "./models";
 
-export type MessageAction = ActionBase & {
-  type: "message";
-  /**
-   */
-  text?: string /**/;
-};
+    import { Action } from './action.js';
+
+    
+import { ActionBase } from './models.js';
+
+        
+export type MessageAction = ActionBase &  { 
+type: "message",
+        /**
+            */
+    'text'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

@@ -10,8 +10,22 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Permission
  */
 
-export type AudienceGroupPermission = "READ" | "READ_WRITE";
+    
+
+    export type AudienceGroupPermission =
+        'READ'
+        | 'READ_WRITE'
+        
+;
+    
+
+

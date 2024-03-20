@@ -1,1 +1,3 @@
-export { LiffClient } from "./liffClient";
+
+export { LiffClient } from './liffClient.js';
+

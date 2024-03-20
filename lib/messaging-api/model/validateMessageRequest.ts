@@ -10,11 +10,22 @@
  * Do not edit the class manually.
  */
 
-import { Message } from "./message";
 
-export type ValidateMessageRequest = {
-  /**
-   * Array of message objects to validate
-   */
-  messages: Array<Message> /**/;
-};
+
+    import { Message } from './message.js';
+
+    
+export type ValidateMessageRequest =  { 
+        /**
+            * Array of message objects to validate
+            */
+    'messages': Array<Message>/**/;
+        
+}
+    
+
+    
+
+    
+
+

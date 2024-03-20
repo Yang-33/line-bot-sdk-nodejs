@@ -10,26 +10,39 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Issued short-lived channel access token
  */
-export type IssueShortLivedChannelAccessTokenResponse = {
-  /**
-   * A short-lived channel access token. Valid for 30 days. Note: Channel access tokens cannot be refreshed.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#issue-shortlived-channel-access-token">accessToken Documentation</a>
-   */
-  accessToken: string /**/;
-  /**
-   * Time until channel access token expires in seconds from time the token is issued.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#issue-shortlived-channel-access-token">expiresIn Documentation</a>
-   */
-  expiresIn: number /**/;
-  /**
-   * Token type. The value is always `Bearer`.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#issue-shortlived-channel-access-token">tokenType Documentation</a>
-   */
-  tokenType: string /* = 'Bearer'*/;
-};
+export type IssueShortLivedChannelAccessTokenResponse =  { 
+        /**
+            * A short-lived channel access token. Valid for 30 days. Note: Channel access tokens cannot be refreshed. 
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#issue-shortlived-channel-access-token">accessToken Documentation</a>
+            */
+    'accessToken': string/**/;
+        /**
+            * Time until channel access token expires in seconds from time the token is issued.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#issue-shortlived-channel-access-token">expiresIn Documentation</a>
+            */
+    'expiresIn': number/**/;
+        /**
+            * Token type. The value is always `Bearer`.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#issue-shortlived-channel-access-token">tokenType Documentation</a>
+            */
+    'tokenType': string/* = 'Bearer'*/;
+        
+}
+    
+
+    
+
+    
+
+

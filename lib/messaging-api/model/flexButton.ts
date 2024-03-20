@@ -10,65 +10,113 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
-import { FlexComponent } from "./flexComponent";
 
-import { FlexComponentBase } from "./models";
 
-export type FlexButton = FlexComponentBase & {
-  type: "button";
-  /**
-   */
-  flex?: number /**/;
-  /**
-   */
-  color?: string /**/;
-  /**
-   */
-  style?: FlexButton.StyleEnum /**/;
-  /**
-   */
-  action: Action /**/;
-  /**
-   */
-  gravity?: FlexButton.GravityEnum /**/;
-  /**
-   */
-  margin?: string /**/;
-  /**
-   */
-  position?: FlexButton.PositionEnum /**/;
-  /**
-   */
-  offsetTop?: string /**/;
-  /**
-   */
-  offsetBottom?: string /**/;
-  /**
-   */
-  offsetStart?: string /**/;
-  /**
-   */
-  offsetEnd?: string /**/;
-  /**
-   */
-  height?: FlexButton.HeightEnum /**/;
-  /**
-   */
-  adjustMode?: FlexButton.AdjustModeEnum /**/;
-  /**
-   */
-  scaling?: boolean /**/;
-};
+    import { Action } from './action.js';import { FlexComponent } from './flexComponent.js';
 
-export namespace FlexButton {
-  export type StyleEnum = "primary" | "secondary" | "link";
+    
+import { FlexComponentBase } from './models.js';
 
-  export type GravityEnum = "top" | "bottom" | "center";
-
-  export type PositionEnum = "relative" | "absolute";
-
-  export type HeightEnum = "md" | "sm";
-
-  export type AdjustModeEnum = "shrink-to-fit";
+        
+export type FlexButton = FlexComponentBase &  { 
+type: "button",
+        /**
+            */
+    'flex'?: number/**/;
+        /**
+            */
+    'color'?: string/**/;
+        /**
+            */
+    'style'?: FlexButton.StyleEnum/**/;
+        /**
+            */
+    'action': Action/**/;
+        /**
+            */
+    'gravity'?: FlexButton.GravityEnum/**/;
+        /**
+            */
+    'margin'?: string/**/;
+        /**
+            */
+    'position'?: FlexButton.PositionEnum/**/;
+        /**
+            */
+    'offsetTop'?: string/**/;
+        /**
+            */
+    'offsetBottom'?: string/**/;
+        /**
+            */
+    'offsetStart'?: string/**/;
+        /**
+            */
+    'offsetEnd'?: string/**/;
+        /**
+            */
+    'height'?: FlexButton.HeightEnum/**/;
+        /**
+            */
+    'adjustMode'?: FlexButton.AdjustModeEnum/**/;
+        /**
+            */
+    'scaling'?: boolean/**/;
+        
 }
+    
+
+    
+export namespace FlexButton {
+        
+        
+        export type StyleEnum =
+                'primary'
+                    | 'secondary'
+                    | 'link'
+                    
+                
+    ;
+            
+        
+        export type GravityEnum =
+                'top'
+                    | 'bottom'
+                    | 'center'
+                    
+                
+    ;
+            
+        
+        export type PositionEnum =
+                'relative'
+                    | 'absolute'
+                    
+                
+    ;
+            
+        
+        
+        
+        
+        export type HeightEnum =
+                'md'
+                    | 'sm'
+                    
+                
+    ;
+            
+        export type AdjustModeEnum =
+                'shrink-to-fit'
+                    
+                
+    ;
+            
+        
+        
+}
+    
+
+    
+
+

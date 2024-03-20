@@ -1,9 +1,11 @@
-import { shop } from "../lib";
+import { shop } from "../lib/index.js";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import { deepEqual, equal } from "node:assert";
 
-const pkg = require("../package.json");
+import module from "node:module";
+const requireModule = module.createRequire(import.meta.url);
+const pkg = requireModule("../package.json");
 
 const channelAccessToken = "test_channel_access_token";
 

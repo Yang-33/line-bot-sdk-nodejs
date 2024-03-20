@@ -10,18 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { FlexBoxLinearGradient } from "./models";
+
+
+    
+
+    
+        import { FlexBoxLinearGradient } from './models.js';
+        
 
 export type FlexBoxBackground =
-  | FlexBoxLinearGradient // linearGradient
-  | UnknownFlexBoxBackground;
+        | FlexBoxLinearGradient // linearGradient
+        | UnknownFlexBoxBackground
+;
 
 export type UnknownFlexBoxBackground = FlexBoxBackgroundBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
+    
+export type FlexBoxBackgroundBase =  { 
+        /**
+            */
+    'type': string/**/;
+        
+}
+    
 
-export type FlexBoxBackgroundBase = {
-  /**
-   */
-  type: string /**/;
-};
+    
+
+    
+
+

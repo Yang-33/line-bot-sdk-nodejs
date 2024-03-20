@@ -10,36 +10,69 @@
  * Do not edit the class manually.
  */
 
-import { FlexComponent } from "./flexComponent";
 
-import { FlexComponentBase } from "./models";
 
-export type FlexSpan = FlexComponentBase & {
-  type: "span";
-  /**
-   */
-  text?: string /**/;
-  /**
-   */
-  size?: string /**/;
-  /**
-   */
-  color?: string /**/;
-  /**
-   */
-  weight?: FlexSpan.WeightEnum /**/;
-  /**
-   */
-  style?: FlexSpan.StyleEnum /**/;
-  /**
-   */
-  decoration?: FlexSpan.DecorationEnum /**/;
-};
+    import { FlexComponent } from './flexComponent.js';
 
-export namespace FlexSpan {
-  export type WeightEnum = "regular" | "bold";
+    
+import { FlexComponentBase } from './models.js';
 
-  export type StyleEnum = "normal" | "italic";
-
-  export type DecorationEnum = "none" | "underline" | "line-through";
+        
+export type FlexSpan = FlexComponentBase &  { 
+type: "span",
+        /**
+            */
+    'text'?: string/**/;
+        /**
+            */
+    'size'?: string/**/;
+        /**
+            */
+    'color'?: string/**/;
+        /**
+            */
+    'weight'?: FlexSpan.WeightEnum/**/;
+        /**
+            */
+    'style'?: FlexSpan.StyleEnum/**/;
+        /**
+            */
+    'decoration'?: FlexSpan.DecorationEnum/**/;
+        
 }
+    
+
+    
+export namespace FlexSpan {
+        
+        
+        
+        export type WeightEnum =
+                'regular'
+                    | 'bold'
+                    
+                
+    ;
+            
+        export type StyleEnum =
+                'normal'
+                    | 'italic'
+                    
+                
+    ;
+            
+        export type DecorationEnum =
+                'none'
+                    | 'underline'
+                    | 'line-through'
+                    
+                
+    ;
+            
+        
+}
+    
+
+    
+
+

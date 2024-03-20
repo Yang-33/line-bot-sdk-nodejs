@@ -10,31 +10,44 @@
  * Do not edit the class manually.
  */
 
-import { ImagemapArea } from "./imagemapArea";
 
-import { ClipboardImagemapAction } from "./models";
-import { MessageImagemapAction } from "./models";
-import { URIImagemapAction } from "./models";
+
+    import { ImagemapArea } from './imagemapArea.js';
+
+    
+        import { ClipboardImagemapAction } from './models.js';
+        import { MessageImagemapAction } from './models.js';
+        import { URIImagemapAction } from './models.js';
+        
 
 export type ImagemapAction =
-  | ClipboardImagemapAction // clipboard
-  | MessageImagemapAction // message
-  | URIImagemapAction // uri
-  | UnknownImagemapAction;
+        | ClipboardImagemapAction // clipboard
+        | MessageImagemapAction // message
+        | URIImagemapAction // uri
+        | UnknownImagemapAction
+;
 
 export type UnknownImagemapAction = ImagemapActionBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
+    
+export type ImagemapActionBase =  { 
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-action-objects">type Documentation</a>
+            */
+    'type': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-action-objects">area Documentation</a>
+            */
+    'area': ImagemapArea/**/;
+        
+}
+    
 
-export type ImagemapActionBase = {
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-action-objects">type Documentation</a>
-   */
-  type: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-action-objects">area Documentation</a>
-   */
-  area: ImagemapArea /**/;
-};
+    
+
+    
+
+

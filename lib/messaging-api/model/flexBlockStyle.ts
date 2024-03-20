@@ -10,14 +10,27 @@
  * Do not edit the class manually.
  */
 
-export type FlexBlockStyle = {
-  /**
-   */
-  backgroundColor?: string /**/;
-  /**
-   */
-  separator?: boolean /**/;
-  /**
-   */
-  separatorColor?: string /**/;
-};
+
+
+    
+
+    
+export type FlexBlockStyle =  { 
+        /**
+            */
+    'backgroundColor'?: string/**/;
+        /**
+            */
+    'separator'?: boolean/**/;
+        /**
+            */
+    'separatorColor'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

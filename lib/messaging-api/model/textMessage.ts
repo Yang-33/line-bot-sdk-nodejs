@@ -10,29 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { Emoji } from "./emoji";
-import { Message } from "./message";
-import { QuickReply } from "./quickReply";
-import { Sender } from "./sender";
 
-import { MessageBase } from "./models";
 
-export type TextMessage = MessageBase & {
-  type: "text";
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#text-message">text Documentation</a>
-   */
-  text: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#text-message">emojis Documentation</a>
-   */
-  emojis?: Array<Emoji> /**/;
-  /**
-   * Quote token of the message you want to quote.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#text-message">quoteToken Documentation</a>
-   */
-  quoteToken?: string /**/;
-};
+    import { Emoji } from './emoji.js';import { Message } from './message.js';import { QuickReply } from './quickReply.js';import { Sender } from './sender.js';
+
+    
+import { MessageBase } from './models.js';
+
+        
+export type TextMessage = MessageBase &  { 
+type: "text",
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#text-message">text Documentation</a>
+            */
+    'text': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#text-message">emojis Documentation</a>
+            */
+    'emojis'?: Array<Emoji>/**/;
+        /**
+            * Quote token of the message you want to quote.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#text-message">quoteToken Documentation</a>
+            */
+    'quoteToken'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

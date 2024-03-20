@@ -10,20 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { ImagemapArea } from "./imagemapArea";
-import { ImagemapExternalLink } from "./imagemapExternalLink";
 
-export type ImagemapVideo = {
-  /**
-   */
-  originalContentUrl?: string /**/;
-  /**
-   */
-  previewImageUrl?: string /**/;
-  /**
-   */
-  area?: ImagemapArea /**/;
-  /**
-   */
-  externalLink?: ImagemapExternalLink /**/;
-};
+
+    import { ImagemapArea } from './imagemapArea.js';import { ImagemapExternalLink } from './imagemapExternalLink.js';
+
+    
+export type ImagemapVideo =  { 
+        /**
+            */
+    'originalContentUrl'?: string/**/;
+        /**
+            */
+    'previewImageUrl'?: string/**/;
+        /**
+            */
+    'area'?: ImagemapArea/**/;
+        /**
+            */
+    'externalLink'?: ImagemapExternalLink/**/;
+        
+}
+    
+
+    
+
+    
+
+

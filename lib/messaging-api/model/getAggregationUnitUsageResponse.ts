@@ -10,11 +10,24 @@
  * Do not edit the class manually.
  */
 
-export type GetAggregationUnitUsageResponse = {
-  /**
-   * Number of aggregation units used this month.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-number-of-units-used-this-month">numOfCustomAggregationUnits Documentation</a>
-   */
-  numOfCustomAggregationUnits: number /**/;
-};
+
+
+    
+
+    
+export type GetAggregationUnitUsageResponse =  { 
+        /**
+            * Number of aggregation units used this month.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-number-of-units-used-this-month">numOfCustomAggregationUnits Documentation</a>
+            */
+    'numOfCustomAggregationUnits': number/**/;
+        
+}
+    
+
+    
+
+    
+
+

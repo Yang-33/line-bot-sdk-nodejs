@@ -10,14 +10,26 @@
  * Do not edit the class manually.
  */
 
-import { ThingsContent } from "./thingsContent";
 
-import { ThingsContentBase } from "./models";
 
-export type UnlinkThingsContent = ThingsContentBase & {
-  type: "unlink";
-  /**
-   * Device ID of the device that has been linked with LINE.
-   */
-  deviceId: string /**/;
-};
+    import { ThingsContent } from './thingsContent.js';
+
+    
+import { ThingsContentBase } from './models.js';
+
+        
+export type UnlinkThingsContent = ThingsContentBase &  { 
+type: "unlink",
+        /**
+            * Device ID of the device that has been linked with LINE.
+            */
+    'deviceId': string/**/;
+        
+}
+    
+
+    
+
+    
+
+

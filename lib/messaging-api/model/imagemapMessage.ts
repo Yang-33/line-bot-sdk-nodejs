@@ -10,40 +10,47 @@
  * Do not edit the class manually.
  */
 
-import { ImagemapAction } from "./imagemapAction";
-import { ImagemapBaseSize } from "./imagemapBaseSize";
-import { ImagemapVideo } from "./imagemapVideo";
-import { Message } from "./message";
-import { QuickReply } from "./quickReply";
-import { Sender } from "./sender";
 
-import { MessageBase } from "./models";
 
-export type ImagemapMessage = MessageBase & {
-  type: "imagemap";
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">baseUrl Documentation</a>
-   */
-  baseUrl: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">altText Documentation</a>
-   */
-  altText: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">baseSize Documentation</a>
-   */
-  baseSize: ImagemapBaseSize /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">actions Documentation</a>
-   */
-  actions: Array<ImagemapAction> /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">video Documentation</a>
-   */
-  video?: ImagemapVideo /**/;
-};
+    import { ImagemapAction } from './imagemapAction.js';import { ImagemapBaseSize } from './imagemapBaseSize.js';import { ImagemapVideo } from './imagemapVideo.js';import { Message } from './message.js';import { QuickReply } from './quickReply.js';import { Sender } from './sender.js';
+
+    
+import { MessageBase } from './models.js';
+
+        
+export type ImagemapMessage = MessageBase &  { 
+type: "imagemap",
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">baseUrl Documentation</a>
+            */
+    'baseUrl': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">altText Documentation</a>
+            */
+    'altText': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">baseSize Documentation</a>
+            */
+    'baseSize': ImagemapBaseSize/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">actions Documentation</a>
+            */
+    'actions': Array<ImagemapAction>/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#imagemap-message">video Documentation</a>
+            */
+    'video'?: ImagemapVideo/**/;
+        
+}
+    
+
+    
+
+    
+
+

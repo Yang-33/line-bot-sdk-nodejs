@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "pretest": "npm run format && npm run build",
-    "test": "TEST_PORT=1234 TS_NODE_CACHE=0 mocha --exit",
+    "test": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' TEST_PORT=1234 TS_NODE_CACHE=0 mocha --exit",
     "covtest": "TEST_PORT=1234 TS_NODE_CACHE=0 nyc mocha --exit",
     "prettier": "prettier \"{lib,test}/**/*.ts\"",
     "format": "npm run prettier -- --write",
@@ -88,10 +88,7 @@
     "instrument": true
   },
   "mocha": {
-    "node-option": [
-      "experimental-specifier-resolution=node",
-      "loader=ts-node/esm"
-    ],
+    "require": "ts-node/register",
     "spec": [
       "test/**/*.spec.ts",
       "lib/**/tests/**/*.spec.ts"

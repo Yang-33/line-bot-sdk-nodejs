@@ -14,7 +14,7 @@
     "prettier": "prettier \"{lib,test}/**/*.ts\"",
     "format": "npm run prettier -- --write",
     "format:check": "npm run prettier -- -l",
-    "clean": "git clean -fx lib/ module/",
+    "clean": "git clean -fx dist/ module/",
     "prebuild": "npm run format:check && npm run clean",
     "build": "tsc -p . && tsc -p ./tsconfig.cjs.json && tsconfig-to-dual-package",
     "docs": "vuepress dev docs",
@@ -22,9 +22,7 @@
     "docs:deploy": "./scripts/deploy-docs.sh",
     "apidocs": "typedoc --excludePrivate --plugin typedoc-plugin-markdown --out docs/apidocs lib/index.ts",
     "generate-changelog": "ts-node ./scripts/generate-changelog.ts",
-    "release": "npm run build && npm publish --access public",
-    "watch": "tsc -p . --watch",
-    "prepublishOnly": "npm run clean && npm run build"
+    "release": "npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",

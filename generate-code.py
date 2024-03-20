@@ -38,7 +38,7 @@ def generate_clients():
     for sourceYaml in components:
         output_path = 'lib/' + sourceYaml.replace('.yml', '')
 
-        run_command(f'rm -rf {output_path}/')
+        # run_command(f'rm -rf {output_path}/')
 
         command = f'''java \\
                     -cp ./generator/target/line-bot-sdk-nodejs-generator-openapi-generator-1.0.0.jar \\

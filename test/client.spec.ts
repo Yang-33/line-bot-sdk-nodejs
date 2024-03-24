@@ -76,7 +76,7 @@ describe("client", () => {
     server.resetHandlers();
   });
 
-  const testMsg: Types.TextMessage = { type: "text", text: "hello" };
+  const testMsg: Types.TextMessage = { type: "text" as const, text: "hello" };
   const richMenu: Types.RichMenu = {
     size: {
       width: 2500,
@@ -94,8 +94,9 @@ describe("client", () => {
           height: 1686,
         },
         action: {
-          type: "postback",
+          type: "postback" as const,
           data: "action=buy&itemid=123",
+          label: "label",
         },
       },
     ],

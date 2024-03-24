@@ -1,28 +1,21 @@
 {
   "compilerOptions": {
-    /* Basic Options */
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "esModuleInterop": true,
-    "newLine": "LF",
-    "outDir": "./module/",
-    "target": "ES2018",
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-    "jsx": "preserve",
-    "lib": [
-      "esnext",
-      "dom"
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ESNext",
+    "noImplicitAny": true,
+    "outDir": "dist",
+    "rootDirs": [
+      "lib",
+      "test"
     ],
-    // "strict": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noImplicitReturns": true,
-    // "noFallthroughCasesInSwitch": true
+    "declaration": true,
   },
   "include": [
-    "lib/**/*"
+    "lib/**/*.ts",
+    "lib/**/*.js",
+    "lib/**/*.cjs",
+    "lib/**/*.mjs",
   ],
   "exclude": [
     ".git",

@@ -33,7 +33,7 @@ const isTextEvent = (event: any): event is webhook.MessageEvent & { message: web
 };
 
 // Function handler to receive the text.
-const textEventHandler = async (event: webhook.Event): Promise<MessageAPIResponseBase | undefined> => {
+const textEventHandler = async (event: typeof webhook.Event): Promise<MessageAPIResponseBase | undefined> => {
   // Process all variables here.
   if (!isTextEvent(event)) {
     return;

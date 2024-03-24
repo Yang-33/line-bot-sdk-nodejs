@@ -10,17 +10,29 @@
  * Do not edit the class manually.
  */
 
-import { Mentionee } from "./mentionee";
 
+
+    import { Mentionee } from './mentionee.js';
+
+    
 /**
  * Mentioned target is user
  */
-import { MentioneeBase } from "./models";
+import { MentioneeBase } from './models.js';
 
-export type UserMentionee = MentioneeBase & {
-  type: "user";
-  /**
-   * User ID of the mentioned user. Only included if mention.mentions[].type is user and the user consents to the LINE Official Account obtaining their user profile information.
-   */
-  userId?: string /**/;
-};
+        
+export type UserMentionee = MentioneeBase &  { 
+type: "user",
+        /**
+            * User ID of the mentioned user. Only included if mention.mentions[].type is user and the user consents to the LINE Official Account obtaining their user profile information.
+            */
+    'userId'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

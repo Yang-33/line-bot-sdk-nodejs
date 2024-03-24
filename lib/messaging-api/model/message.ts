@@ -10,50 +10,62 @@
  * Do not edit the class manually.
  */
 
-import { QuickReply } from "./quickReply";
-import { Sender } from "./sender";
 
-import { AudioMessage } from "./models";
-import { FlexMessage } from "./models";
-import { ImageMessage } from "./models";
-import { ImagemapMessage } from "./models";
-import { LocationMessage } from "./models";
-import { StickerMessage } from "./models";
-import { TemplateMessage } from "./models";
-import { TextMessage } from "./models";
-import { VideoMessage } from "./models";
+
+    import { QuickReply } from './quickReply.js';import { Sender } from './sender.js';
+
+    
+        import { AudioMessage } from './models.js';
+        import { FlexMessage } from './models.js';
+        import { ImageMessage } from './models.js';
+        import { ImagemapMessage } from './models.js';
+        import { LocationMessage } from './models.js';
+        import { StickerMessage } from './models.js';
+        import { TemplateMessage } from './models.js';
+        import { TextMessage } from './models.js';
+        import { VideoMessage } from './models.js';
+        
 
 export type Message =
-  | AudioMessage // audio
-  | FlexMessage // flex
-  | ImageMessage // image
-  | ImagemapMessage // imagemap
-  | LocationMessage // location
-  | StickerMessage // sticker
-  | TemplateMessage // template
-  | TextMessage // text
-  | VideoMessage // video
-  | UnknownMessage;
+        | AudioMessage // audio
+        | FlexMessage // flex
+        | ImageMessage // image
+        | ImagemapMessage // imagemap
+        | LocationMessage // location
+        | StickerMessage // sticker
+        | TemplateMessage // template
+        | TextMessage // text
+        | VideoMessage // video
+        | UnknownMessage
+;
 
 export type UnknownMessage = MessageBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
+    
+export type MessageBase =  { 
+        /**
+            * Type of message
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#message-common-properties">type Documentation</a>
+            */
+    'type': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#message-common-properties">quickReply Documentation</a>
+            */
+    'quickReply'?: QuickReply/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#message-common-properties">sender Documentation</a>
+            */
+    'sender'?: Sender/**/;
+        
+}
+    
 
-export type MessageBase = {
-  /**
-   * Type of message
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#message-common-properties">type Documentation</a>
-   */
-  type: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#message-common-properties">quickReply Documentation</a>
-   */
-  quickReply?: QuickReply /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#message-common-properties">sender Documentation</a>
-   */
-  sender?: Sender /**/;
-};
+    
+
+    
+
+

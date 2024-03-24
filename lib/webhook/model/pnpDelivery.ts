@@ -10,12 +10,25 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * A delivery object containing a hashed phone number string or a string specified by `X-Line-Delivery-Tag` header
  */
-export type PnpDelivery = {
-  /**
-   * A hashed phone number string or a string specified by `X-Line-Delivery-Tag` header
-   */
-  data: string /**/;
-};
+export type PnpDelivery =  { 
+        /**
+            * A hashed phone number string or a string specified by `X-Line-Delivery-Tag` header
+            */
+    'data': string/**/;
+        
+}
+    
+
+    
+
+    
+
+

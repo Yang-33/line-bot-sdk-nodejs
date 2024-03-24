@@ -10,29 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { GetMessageEventResponseClick } from "./getMessageEventResponseClick";
-import { GetMessageEventResponseMessage } from "./getMessageEventResponseMessage";
-import { GetMessageEventResponseOverview } from "./getMessageEventResponseOverview";
 
+
+    import { GetMessageEventResponseClick } from './getMessageEventResponseClick.js';import { GetMessageEventResponseMessage } from './getMessageEventResponseMessage.js';import { GetMessageEventResponseOverview } from './getMessageEventResponseOverview.js';
+
+    
 /**
  * Statistics about how users interact with narrowcast messages or broadcast messages sent from your LINE Official Account.
  */
-export type GetMessageEventResponse = {
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-insight-message-event-response">overview Documentation</a>
-   */
-  overview?: GetMessageEventResponseOverview /**/;
-  /**
-   * Array of information about individual message bubbles.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-insight-message-event-response">messages Documentation</a>
-   */
-  messages?: Array<GetMessageEventResponseMessage> /**/;
-  /**
-   * Array of information about opened URLs in the message.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-insight-message-event-response">clicks Documentation</a>
-   */
-  clicks?: Array<GetMessageEventResponseClick> /**/;
-};
+export type GetMessageEventResponse =  { 
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-insight-message-event-response">overview Documentation</a>
+            */
+    'overview'?: GetMessageEventResponseOverview/**/;
+        /**
+            * Array of information about individual message bubbles.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-insight-message-event-response">messages Documentation</a>
+            */
+    'messages'?: Array<GetMessageEventResponseMessage>/**/;
+        /**
+            * Array of information about opened URLs in the message.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-insight-message-event-response">clicks Documentation</a>
+            */
+    'clicks'?: Array<GetMessageEventResponseClick>/**/;
+        
+}
+    
+
+    
+
+    
+
+

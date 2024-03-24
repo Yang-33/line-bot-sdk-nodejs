@@ -10,10 +10,22 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
 
-import { ActionBase } from "./models";
 
-export type CameraAction = ActionBase & {
-  type: "camera";
-};
+    import { Action } from './action.js';
+
+    
+import { ActionBase } from './models.js';
+
+        
+export type CameraAction = ActionBase &  { 
+type: "camera",
+        
+}
+    
+
+    
+
+    
+
+

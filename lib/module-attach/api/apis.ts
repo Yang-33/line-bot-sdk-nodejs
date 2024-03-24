@@ -1,1 +1,3 @@
-export { LineModuleAttachClient } from "./lineModuleAttachClient";
+
+export { LineModuleAttachClient } from './lineModuleAttachClient.js';
+

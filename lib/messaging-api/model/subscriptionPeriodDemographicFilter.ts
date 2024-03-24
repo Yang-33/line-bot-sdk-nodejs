@@ -10,19 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { DemographicFilter } from "./demographicFilter";
-import { SubscriptionPeriodDemographic } from "./subscriptionPeriodDemographic";
 
-import { DemographicFilterBase } from "./models";
 
-export type SubscriptionPeriodDemographicFilter = DemographicFilterBase & {
-  type: "subscriptionPeriod";
-  /**
-   */
-  gte?: SubscriptionPeriodDemographic /**/;
-  /**
-   */
-  lt?: SubscriptionPeriodDemographic /**/;
-};
+    import { DemographicFilter } from './demographicFilter.js';import { SubscriptionPeriodDemographic } from './subscriptionPeriodDemographic.js';
 
-export namespace SubscriptionPeriodDemographicFilter {}
+    
+import { DemographicFilterBase } from './models.js';
+
+        
+export type SubscriptionPeriodDemographicFilter = DemographicFilterBase &  { 
+type: "subscriptionPeriod",
+        /**
+            */
+    'gte'?: SubscriptionPeriodDemographic/**/;
+        /**
+            */
+    'lt'?: SubscriptionPeriodDemographic/**/;
+        
+}
+    
+
+    
+export namespace SubscriptionPeriodDemographicFilter {
+        
+        
+        
+}
+    
+
+    
+
+

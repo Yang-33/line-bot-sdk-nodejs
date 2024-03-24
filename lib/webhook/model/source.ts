@@ -10,28 +10,43 @@
  * Do not edit the class manually.
  */
 
-import { GroupSource } from "./models";
-import { RoomSource } from "./models";
-import { UserSource } from "./models";
+
+
+    
+
+    
+        import { GroupSource } from './models.js';
+        import { RoomSource } from './models.js';
+        import { UserSource } from './models.js';
+        
 
 export type Source =
-  | GroupSource // group
-  | RoomSource // room
-  | UserSource // user
-  | UnknownSource;
+        | GroupSource // group
+        | RoomSource // room
+        | UserSource // user
+        | UnknownSource
+;
 
 export type UnknownSource = SourceBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
-
+    
 /**
  * the source of the event.
  */
-export type SourceBase = {
-  /**
-   * source type
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#source-user">type Documentation</a>
-   */
-  type?: string /**/;
-};
+export type SourceBase =  { 
+        /**
+            * source type
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#source-user">type Documentation</a>
+            */
+    'type'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

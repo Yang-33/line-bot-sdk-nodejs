@@ -10,16 +10,29 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Attach by operation of the module channel provider
  */
-export type AttachModuleResponse = {
-  /**
-   * User ID of the bot on the LINE Official Account.
-   */
-  botId: string /**/;
-  /**
-   * Permissions (scope) granted by the LINE Official Account admin.
-   */
-  scopes: Array<string> /**/;
-};
+export type AttachModuleResponse =  { 
+        /**
+            * User ID of the bot on the LINE Official Account.
+            */
+    'botId': string/**/;
+        /**
+            * Permissions (scope) granted by the LINE Official Account admin.
+            */
+    'scopes': Array<string>/**/;
+        
+}
+    
+
+    
+
+    
+
+

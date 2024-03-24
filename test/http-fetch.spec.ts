@@ -1,13 +1,24 @@
 import { deepEqual, equal, ok } from "node:assert";
-import { HTTPFetchError } from "../lib";
-import HTTPFetchClient, { convertResponseToReadable } from "../lib/http-fetch";
-import { getStreamData } from "./helpers/stream";
+import { HTTPFetchError } from "../lib/index.js";
+import HTTPFetchClient, {
+  convertResponseToReadable,
+} from "../lib/http-fetch.js";
+import { getStreamData } from "./helpers/stream.js";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import { join } from "node:path";
 import * as fs from "node:fs";
 
-const pkg = require("../package.json");
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+import module from "node:module";
+const requireModule = module.createRequire(import.meta.url);
+const pkg = requireModule("../package.json");
+
 const baseURL = "https://line.me";
 
 describe("http(fetch)", () => {

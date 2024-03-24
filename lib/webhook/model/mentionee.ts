@@ -10,35 +10,50 @@
  * Do not edit the class manually.
  */
 
-import { AllMentionee } from "./models";
-import { UserMentionee } from "./models";
+
+
+    
+
+    
+        import { AllMentionee } from './models.js';
+        import { UserMentionee } from './models.js';
+        
 
 export type Mentionee =
-  | AllMentionee // all
-  | UserMentionee // user
-  | UnknownMentionee;
+        | AllMentionee // all
+        | UserMentionee // user
+        | UnknownMentionee
+;
 
 export type UnknownMentionee = MentioneeBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
+    
+export type MentioneeBase =  { 
+        /**
+            * Mentioned target.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#wh-text">type Documentation</a>
+            */
+    'type': string/**/;
+        /**
+            * Index position of the user mention for a character in text, with the first character being at position 0.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#wh-text">index Documentation</a>
+            */
+    'index': number/**/;
+        /**
+            * The length of the text of the mentioned user. For a mention @example, 8 is the length.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#wh-text">length Documentation</a>
+            */
+    'length': number/**/;
+        
+}
+    
 
-export type MentioneeBase = {
-  /**
-   * Mentioned target.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#wh-text">type Documentation</a>
-   */
-  type: string /**/;
-  /**
-   * Index position of the user mention for a character in text, with the first character being at position 0.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#wh-text">index Documentation</a>
-   */
-  index: number /**/;
-  /**
-   * The length of the text of the mentioned user. For a mention @example, 8 is the length.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#wh-text">length Documentation</a>
-   */
-  length: number /**/;
-};
+    
+
+    
+
+

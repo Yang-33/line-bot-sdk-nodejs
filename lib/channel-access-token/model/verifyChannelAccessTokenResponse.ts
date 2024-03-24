@@ -10,20 +10,33 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Verification result
  */
-export type VerifyChannelAccessTokenResponse = {
-  /**
-   * The channel ID for which the channel access token was issued.
-   */
-  clientId: string /**/;
-  /**
-   * Number of seconds before the channel access token expires.
-   */
-  expiresIn: number /**/;
-  /**
-   * Permissions granted to the channel access token.
-   */
-  scope?: string /**/;
-};
+export type VerifyChannelAccessTokenResponse =  { 
+        /**
+            * The channel ID for which the channel access token was issued.
+            */
+    'clientId': string/**/;
+        /**
+            * Number of seconds before the channel access token expires.
+            */
+    'expiresIn': number/**/;
+        /**
+            * Permissions granted to the channel access token.
+            */
+    'scope'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

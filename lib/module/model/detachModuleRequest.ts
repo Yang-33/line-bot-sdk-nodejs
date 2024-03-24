@@ -10,14 +10,27 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Unlink (detach) the module channel by the operation of the module channel administrator
  */
-export type DetachModuleRequest = {
-  /**
-   * User ID of the LINE Official Account bot attached to the module channel.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/partner-docs/#unlink-detach-module-channel-by-operation-mc-admin">botId Documentation</a>
-   */
-  botId?: string /**/;
-};
+export type DetachModuleRequest =  { 
+        /**
+            * User ID of the LINE Official Account bot attached to the module channel.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/partner-docs/#unlink-detach-module-channel-by-operation-mc-admin">botId Documentation</a>
+            */
+    'botId'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

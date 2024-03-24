@@ -10,12 +10,24 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Job status
  */
 
-export type AudienceGroupJobStatus =
-  | "QUEUED"
-  | "WORKING"
-  | "FINISHED"
-  | "FAILED";
+    
+
+    export type AudienceGroupJobStatus =
+        'QUEUED'
+        | 'WORKING'
+        | 'FINISHED'
+        | 'FAILED'
+        
+;
+    
+
+

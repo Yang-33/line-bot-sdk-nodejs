@@ -10,26 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { MessageContent } from "./messageContent";
 
-import { MessageContentBase } from "./models";
 
-export type LocationMessageContent = MessageContentBase & {
-  type: "location";
-  /**
-   * Title
-   */
-  title?: string /**/;
-  /**
-   * Address
-   */
-  address?: string /**/;
-  /**
-   * Latitude
-   */
-  latitude: number /**/;
-  /**
-   * Longitude
-   */
-  longitude: number /**/;
-};
+    import { MessageContent } from './messageContent.js';
+
+    
+import { MessageContentBase } from './models.js';
+
+        
+export type LocationMessageContent = MessageContentBase &  { 
+type: "location",
+        /**
+            * Title
+            */
+    'title'?: string/**/;
+        /**
+            * Address
+            */
+    'address'?: string/**/;
+        /**
+            * Latitude
+            */
+    'latitude': number/**/;
+        /**
+            * Longitude
+            */
+    'longitude': number/**/;
+        
+}
+    
+
+    
+
+    
+
+

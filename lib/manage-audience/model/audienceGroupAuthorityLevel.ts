@@ -10,8 +10,22 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * authority level
  */
 
-export type AudienceGroupAuthorityLevel = "PUBLIC" | "PRIVATE";
+    
+
+    export type AudienceGroupAuthorityLevel =
+        'PUBLIC'
+        | 'PRIVATE'
+        
+;
+    
+
+

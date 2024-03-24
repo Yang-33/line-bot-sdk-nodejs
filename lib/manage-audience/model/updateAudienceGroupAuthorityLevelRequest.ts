@@ -10,17 +10,31 @@
  * Do not edit the class manually.
  */
 
-import { AudienceGroupAuthorityLevel } from "./audienceGroupAuthorityLevel";
 
+
+    import { AudienceGroupAuthorityLevel } from './audienceGroupAuthorityLevel.js';
+
+    
 /**
  * Change the authority level of the audience
  */
-export type UpdateAudienceGroupAuthorityLevelRequest = {
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#change-authority-level">authorityLevel Documentation</a>
-   */
-  authorityLevel?: AudienceGroupAuthorityLevel /**/;
-};
+export type UpdateAudienceGroupAuthorityLevelRequest =  { 
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#change-authority-level">authorityLevel Documentation</a>
+            */
+    'authorityLevel'?: AudienceGroupAuthorityLevel/**/;
+        
+}
+    
 
-export namespace UpdateAudienceGroupAuthorityLevelRequest {}
+    
+export namespace UpdateAudienceGroupAuthorityLevelRequest {
+        
+        
+}
+    
+
+    
+
+

@@ -10,31 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { Emoji } from "./emoji";
-import { Mention } from "./mention";
-import { MessageContent } from "./messageContent";
 
-import { MessageContentBase } from "./models";
 
-export type TextMessageContent = MessageContentBase & {
-  type: "text";
-  /**
-   * Message text.
-   */
-  text: string /**/;
-  /**
-   * Array of one or more LINE emoji objects. Only included in the message event when the text property contains a LINE emoji.
-   */
-  emojis?: Array<Emoji> /**/;
-  /**
-   */
-  mention?: Mention /**/;
-  /**
-   * Quote token to quote this message.
-   */
-  quoteToken: string /**/;
-  /**
-   * Message ID of a quoted message. Only included when the received message quotes a past message.
-   */
-  quotedMessageId?: string /**/;
-};
+    import { Emoji } from './emoji.js';import { Mention } from './mention.js';import { MessageContent } from './messageContent.js';
+
+    
+import { MessageContentBase } from './models.js';
+
+        
+export type TextMessageContent = MessageContentBase &  { 
+type: "text",
+        /**
+            * Message text.
+            */
+    'text': string/**/;
+        /**
+            * Array of one or more LINE emoji objects. Only included in the message event when the text property contains a LINE emoji.
+            */
+    'emojis'?: Array<Emoji>/**/;
+        /**
+            */
+    'mention'?: Mention/**/;
+        /**
+            * Quote token to quote this message. 
+            */
+    'quoteToken': string/**/;
+        /**
+            * Message ID of a quoted message. Only included when the received message quotes a past message.
+            */
+    'quotedMessageId'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

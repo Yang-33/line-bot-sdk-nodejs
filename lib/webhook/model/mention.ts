@@ -10,11 +10,22 @@
  * Do not edit the class manually.
  */
 
-import { Mentionee } from "./mentionee";
 
-export type Mention = {
-  /**
-   * Array of one or more mention objects. Max: 20 mentions
-   */
-  mentionees: Array<Mentionee> /**/;
-};
+
+    import { Mentionee } from './mentionee.js';
+
+    
+export type Mention =  { 
+        /**
+            * Array of one or more mention objects. Max: 20 mentions
+            */
+    'mentionees': Array<Mentionee>/**/;
+        
+}
+    
+
+    
+
+    
+
+

@@ -10,51 +10,75 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
-import { FlexBox } from "./flexBox";
-import { FlexBubbleStyles } from "./flexBubbleStyles";
-import { FlexComponent } from "./flexComponent";
-import { FlexContainer } from "./flexContainer";
 
-import { FlexContainerBase } from "./models";
 
-export type FlexBubble = FlexContainerBase & {
-  type: "bubble";
-  /**
-   */
-  direction?: FlexBubble.DirectionEnum /**/;
-  /**
-   */
-  styles?: FlexBubbleStyles /**/;
-  /**
-   */
-  header?: FlexBox /**/;
-  /**
-   */
-  hero?: FlexComponent /**/;
-  /**
-   */
-  body?: FlexBox /**/;
-  /**
-   */
-  footer?: FlexBox /**/;
-  /**
-   */
-  size?: FlexBubble.SizeEnum /**/;
-  /**
-   */
-  action?: Action /**/;
-};
+    import { Action } from './action.js';import { FlexBox } from './flexBox.js';import { FlexBubbleStyles } from './flexBubbleStyles.js';import { FlexComponent } from './flexComponent.js';import { FlexContainer } from './flexContainer.js';
 
-export namespace FlexBubble {
-  export type DirectionEnum = "ltr" | "rtl";
+    
+import { FlexContainerBase } from './models.js';
 
-  export type SizeEnum =
-    | "nano"
-    | "micro"
-    | "deca"
-    | "hecto"
-    | "kilo"
-    | "mega"
-    | "giga";
+        
+export type FlexBubble = FlexContainerBase &  { 
+type: "bubble",
+        /**
+            */
+    'direction'?: FlexBubble.DirectionEnum/**/;
+        /**
+            */
+    'styles'?: FlexBubbleStyles/**/;
+        /**
+            */
+    'header'?: FlexBox/**/;
+        /**
+            */
+    'hero'?: FlexComponent/**/;
+        /**
+            */
+    'body'?: FlexBox/**/;
+        /**
+            */
+    'footer'?: FlexBox/**/;
+        /**
+            */
+    'size'?: FlexBubble.SizeEnum/**/;
+        /**
+            */
+    'action'?: Action/**/;
+        
 }
+    
+
+    
+export namespace FlexBubble {
+        export type DirectionEnum =
+                'ltr'
+                    | 'rtl'
+                    
+                
+    ;
+            
+        
+        
+        
+        
+        
+        export type SizeEnum =
+                'nano'
+                    | 'micro'
+                    | 'deca'
+                    | 'hecto'
+                    | 'kilo'
+                    | 'mega'
+                    | 'giga'
+                    
+                
+    ;
+            
+        
+        
+}
+    
+
+    
+
+

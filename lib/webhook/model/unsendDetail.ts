@@ -10,9 +10,22 @@
  * Do not edit the class manually.
  */
 
-export type UnsendDetail = {
-  /**
-   * The message ID of the unsent message
-   */
-  messageId: string /**/;
-};
+
+
+    
+
+    
+export type UnsendDetail =  { 
+        /**
+            * The message ID of the unsent message
+            */
+    'messageId': string/**/;
+        
+}
+    
+
+    
+
+    
+
+

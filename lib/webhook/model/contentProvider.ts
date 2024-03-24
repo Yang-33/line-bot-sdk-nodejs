@@ -10,24 +10,46 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Provider of the media file.
  */
-export type ContentProvider = {
-  /**
-   * Provider of the image file.
-   */
-  type: ContentProvider.TypeEnum /**/;
-  /**
-   * URL of the image file. Only included when contentProvider.type is external.
-   */
-  originalContentUrl?: string /**/;
-  /**
-   * URL of the preview image. Only included when contentProvider.type is external.
-   */
-  previewImageUrl?: string /**/;
-};
-
-export namespace ContentProvider {
-  export type TypeEnum = "line" | "external";
+export type ContentProvider =  { 
+        /**
+            * Provider of the image file.
+            */
+    'type': ContentProvider.TypeEnum/**/;
+        /**
+            * URL of the image file. Only included when contentProvider.type is external.
+            */
+    'originalContentUrl'?: string/**/;
+        /**
+            * URL of the preview image. Only included when contentProvider.type is external.
+            */
+    'previewImageUrl'?: string/**/;
+        
 }
+    
+
+    
+export namespace ContentProvider {
+        export type TypeEnum =
+                'line'
+                    | 'external'
+                    
+                
+    ;
+            
+        
+        
+        
+}
+    
+
+    
+
+

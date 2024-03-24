@@ -10,12 +10,25 @@
  * Do not edit the class manually.
  */
 
-export type AgeDemographic =
-  | "age_15"
-  | "age_20"
-  | "age_25"
-  | "age_30"
-  | "age_35"
-  | "age_40"
-  | "age_45"
-  | "age_50";
+
+
+    
+
+    
+
+    
+
+    export type AgeDemographic =
+        'age_15'
+        | 'age_20'
+        | 'age_25'
+        | 'age_30'
+        | 'age_35'
+        | 'age_40'
+        | 'age_45'
+        | 'age_50'
+        
+;
+    
+
+

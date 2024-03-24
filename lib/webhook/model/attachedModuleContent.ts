@@ -10,18 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { ModuleContent } from "./moduleContent";
 
-import { ModuleContentBase } from "./models";
 
-export type AttachedModuleContent = ModuleContentBase & {
-  type: "attached";
-  /**
-   * User ID of the bot on the attached LINE Official Account
-   */
-  botId: string /**/;
-  /**
-   * An array of strings indicating the scope permitted by the admin of the LINE Official Account.
-   */
-  scopes: Array<string> /**/;
-};
+    import { ModuleContent } from './moduleContent.js';
+
+    
+import { ModuleContentBase } from './models.js';
+
+        
+export type AttachedModuleContent = ModuleContentBase &  { 
+type: "attached",
+        /**
+            * User ID of the bot on the attached LINE Official Account
+            */
+    'botId': string/**/;
+        /**
+            * An array of strings indicating the scope permitted by the admin of the LINE Official Account.
+            */
+    'scopes': Array<string>/**/;
+        
+}
+    
+
+    
+
+    
+
+

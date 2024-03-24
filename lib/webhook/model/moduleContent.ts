@@ -10,21 +10,36 @@
  * Do not edit the class manually.
  */
 
-import { AttachedModuleContent } from "./models";
-import { DetachedModuleContent } from "./models";
+
+
+    
+
+    
+        import { AttachedModuleContent } from './models.js';
+        import { DetachedModuleContent } from './models.js';
+        
 
 export type ModuleContent =
-  | AttachedModuleContent // attached
-  | DetachedModuleContent // detached
-  | UnknownModuleContent;
+        | AttachedModuleContent // attached
+        | DetachedModuleContent // detached
+        | UnknownModuleContent
+;
 
 export type UnknownModuleContent = ModuleContentBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
+    
+export type ModuleContentBase =  { 
+        /**
+            * Type
+            */
+    'type': string/**/;
+        
+}
+    
 
-export type ModuleContentBase = {
-  /**
-   * Type
-   */
-  type: string /**/;
-};
+    
+
+    
+
+

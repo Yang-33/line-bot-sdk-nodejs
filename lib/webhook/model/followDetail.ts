@@ -10,9 +10,22 @@
  * Do not edit the class manually.
  */
 
-export type FollowDetail = {
-  /**
-   * Whether a user has added your LINE Official Account as a friend or unblocked.
-   */
-  isUnblocked: boolean /**/;
-};
+
+
+    
+
+    
+export type FollowDetail =  { 
+        /**
+            * Whether a user has added your LINE Official Account as a friend or unblocked.
+            */
+    'isUnblocked': boolean/**/;
+        
+}
+    
+
+    
+
+    
+
+

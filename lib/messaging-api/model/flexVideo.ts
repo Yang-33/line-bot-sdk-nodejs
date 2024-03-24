@@ -10,26 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
-import { FlexComponent } from "./flexComponent";
 
-import { FlexComponentBase } from "./models";
 
-export type FlexVideo = FlexComponentBase & {
-  type: "video";
-  /**
-   */
-  url: string /**/;
-  /**
-   */
-  previewUrl: string /**/;
-  /**
-   */
-  altContent: FlexComponent /**/;
-  /**
-   */
-  aspectRatio?: string /**/;
-  /**
-   */
-  action?: Action /**/;
-};
+    import { Action } from './action.js';import { FlexComponent } from './flexComponent.js';
+
+    
+import { FlexComponentBase } from './models.js';
+
+        
+export type FlexVideo = FlexComponentBase &  { 
+type: "video",
+        /**
+            */
+    'url': string/**/;
+        /**
+            */
+    'previewUrl': string/**/;
+        /**
+            */
+    'altContent': FlexComponent/**/;
+        /**
+            */
+    'aspectRatio'?: string/**/;
+        /**
+            */
+    'action'?: Action/**/;
+        
+}
+    
+
+    
+
+    
+
+

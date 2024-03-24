@@ -10,20 +10,31 @@
  * Do not edit the class manually.
  */
 
-import { CarouselColumn } from "./carouselColumn";
-import { Template } from "./template";
 
-import { TemplateBase } from "./models";
 
-export type CarouselTemplate = TemplateBase & {
-  type: "carousel";
-  /**
-   */
-  columns: Array<CarouselColumn> /**/;
-  /**
-   */
-  imageAspectRatio?: string /**/;
-  /**
-   */
-  imageSize?: string /**/;
-};
+    import { CarouselColumn } from './carouselColumn.js';import { Template } from './template.js';
+
+    
+import { TemplateBase } from './models.js';
+
+        
+export type CarouselTemplate = TemplateBase &  { 
+type: "carousel",
+        /**
+            */
+    'columns': Array<CarouselColumn>/**/;
+        /**
+            */
+    'imageAspectRatio'?: string/**/;
+        /**
+            */
+    'imageSize'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

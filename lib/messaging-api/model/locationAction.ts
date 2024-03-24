@@ -10,10 +10,22 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
 
-import { ActionBase } from "./models";
 
-export type LocationAction = ActionBase & {
-  type: "location";
-};
+    import { Action } from './action.js';
+
+    
+import { ActionBase } from './models.js';
+
+        
+export type LocationAction = ActionBase &  { 
+type: "location",
+        
+}
+    
+
+    
+
+    
+
+

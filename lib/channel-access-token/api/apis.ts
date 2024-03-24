@@ -1,1 +1,3 @@
-export { ChannelAccessTokenClient } from "./channelAccessTokenClient";
+
+export { ChannelAccessTokenClient } from './channelAccessTokenClient.js';
+

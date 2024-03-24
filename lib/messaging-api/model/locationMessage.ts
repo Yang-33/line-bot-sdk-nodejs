@@ -10,32 +10,42 @@
  * Do not edit the class manually.
  */
 
-import { Message } from "./message";
-import { QuickReply } from "./quickReply";
-import { Sender } from "./sender";
 
-import { MessageBase } from "./models";
 
-export type LocationMessage = MessageBase & {
-  type: "location";
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#location-message">title Documentation</a>
-   */
-  title: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#location-message">address Documentation</a>
-   */
-  address: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#location-message">latitude Documentation</a>
-   */
-  latitude: number /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#location-message">longitude Documentation</a>
-   */
-  longitude: number /**/;
-};
+    import { Message } from './message.js';import { QuickReply } from './quickReply.js';import { Sender } from './sender.js';
+
+    
+import { MessageBase } from './models.js';
+
+        
+export type LocationMessage = MessageBase &  { 
+type: "location",
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#location-message">title Documentation</a>
+            */
+    'title': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#location-message">address Documentation</a>
+            */
+    'address': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#location-message">latitude Documentation</a>
+            */
+    'latitude': number/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#location-message">longitude Documentation</a>
+            */
+    'longitude': number/**/;
+        
+}
+    
+
+    
+
+    
+
+

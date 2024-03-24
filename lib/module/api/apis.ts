@@ -1,1 +1,3 @@
-export { LineModuleClient } from "./lineModuleClient";
+
+export { LineModuleClient } from './lineModuleClient.js';
+

@@ -10,14 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { ImageCarouselColumn } from "./imageCarouselColumn";
-import { Template } from "./template";
 
-import { TemplateBase } from "./models";
 
-export type ImageCarouselTemplate = TemplateBase & {
-  type: "image_carousel";
-  /**
-   */
-  columns: Array<ImageCarouselColumn> /**/;
-};
+    import { ImageCarouselColumn } from './imageCarouselColumn.js';import { Template } from './template.js';
+
+    
+import { TemplateBase } from './models.js';
+
+        
+export type ImageCarouselTemplate = TemplateBase &  { 
+type: "image_carousel",
+        /**
+            */
+    'columns': Array<ImageCarouselColumn>/**/;
+        
+}
+    
+
+    
+
+    
+
+

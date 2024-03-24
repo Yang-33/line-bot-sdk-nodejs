@@ -5,9 +5,11 @@ import axios, {
   AxiosRequestConfig,
 } from "axios";
 import { Readable } from "node:stream";
-import { HTTPError, ReadError, RequestError } from "./exceptions";
+import { HTTPError, ReadError, RequestError } from "./exceptions.js";
 
-const pkg = require("../package.json");
+import module from "node:module";
+const requireModule = module.createRequire(import.meta.url);
+const pkg = requireModule("../package.json");
 
 interface httpClientConfig extends Partial<AxiosRequestConfig> {
   baseURL?: string;

@@ -10,14 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { DemographicFilter } from "./demographicFilter";
-import { GenderDemographic } from "./genderDemographic";
 
-import { DemographicFilterBase } from "./models";
 
-export type GenderDemographicFilter = DemographicFilterBase & {
-  type: "gender";
-  /**
-   */
-  oneOf?: Array<GenderDemographic> /**/;
-};
+    import { DemographicFilter } from './demographicFilter.js';import { GenderDemographic } from './genderDemographic.js';
+
+    
+import { DemographicFilterBase } from './models.js';
+
+        
+export type GenderDemographicFilter = DemographicFilterBase &  { 
+type: "gender",
+        /**
+            */
+    'oneOf'?: Array<GenderDemographic>/**/;
+        
+}
+    
+
+    
+
+    
+
+

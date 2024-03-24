@@ -10,27 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { Message } from "./message";
-import { QuickReply } from "./quickReply";
-import { Sender } from "./sender";
 
-import { MessageBase } from "./models";
 
-export type VideoMessage = MessageBase & {
-  type: "video";
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#video-message">originalContentUrl Documentation</a>
-   */
-  originalContentUrl: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#video-message">previewImageUrl Documentation</a>
-   */
-  previewImageUrl: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#video-message">trackingId Documentation</a>
-   */
-  trackingId?: string /**/;
-};
+    import { Message } from './message.js';import { QuickReply } from './quickReply.js';import { Sender } from './sender.js';
+
+    
+import { MessageBase } from './models.js';
+
+        
+export type VideoMessage = MessageBase &  { 
+type: "video",
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#video-message">originalContentUrl Documentation</a>
+            */
+    'originalContentUrl': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#video-message">previewImageUrl Documentation</a>
+            */
+    'previewImageUrl': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#video-message">trackingId Documentation</a>
+            */
+    'trackingId'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

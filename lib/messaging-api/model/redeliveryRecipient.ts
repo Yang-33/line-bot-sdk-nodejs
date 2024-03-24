@@ -10,13 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { Recipient } from "./recipient";
 
-import { RecipientBase } from "./models";
 
-export type RedeliveryRecipient = RecipientBase & {
-  type: "redelivery";
-  /**
-   */
-  requestId?: string /**/;
-};
+    import { Recipient } from './recipient.js';
+
+    
+import { RecipientBase } from './models.js';
+
+        
+export type RedeliveryRecipient = RecipientBase &  { 
+type: "redelivery",
+        /**
+            */
+    'requestId'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

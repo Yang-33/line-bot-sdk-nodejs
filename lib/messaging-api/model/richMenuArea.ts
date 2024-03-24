@@ -10,17 +10,27 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
-import { RichMenuBounds } from "./richMenuBounds";
 
+
+    import { Action } from './action.js';import { RichMenuBounds } from './richMenuBounds.js';
+
+    
 /**
  * Rich menu area
  */
-export type RichMenuArea = {
-  /**
-   */
-  bounds?: RichMenuBounds /**/;
-  /**
-   */
-  action?: Action /**/;
-};
+export type RichMenuArea =  { 
+        /**
+            */
+    'bounds'?: RichMenuBounds/**/;
+        /**
+            */
+    'action'?: Action/**/;
+        
+}
+    
+
+    
+
+    
+
+

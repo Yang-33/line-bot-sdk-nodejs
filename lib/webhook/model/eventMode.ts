@@ -10,8 +10,22 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Channel state.
  */
 
-export type EventMode = "active" | "standby";
+    
+
+    export type EventMode =
+        'active'
+        | 'standby'
+        
+;
+    
+
+

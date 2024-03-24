@@ -10,13 +10,24 @@
  * Do not edit the class manually.
  */
 
-import { SentMessage } from "./sentMessage";
 
-export type PushMessageResponse = {
-  /**
-   * Array of sent messages.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#send-push-message-response">sentMessages Documentation</a>
-   */
-  sentMessages: Array<SentMessage> /**/;
-};
+
+    import { SentMessage } from './sentMessage.js';
+
+    
+export type PushMessageResponse =  { 
+        /**
+            * Array of sent messages.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#send-push-message-response">sentMessages Documentation</a>
+            */
+    'sentMessages': Array<SentMessage>/**/;
+        
+}
+    
+
+    
+
+    
+
+

@@ -10,16 +10,27 @@
  * Do not edit the class manually.
  */
 
-import { QuickReplyItem } from "./quickReplyItem";
 
+
+    import { QuickReplyItem } from './quickReplyItem.js';
+
+    
 /**
  * Quick reply
  */
-export type QuickReply = {
-  /**
-   * Quick reply button objects.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#items-object">items Documentation</a>
-   */
-  items?: Array<QuickReplyItem> /**/;
-};
+export type QuickReply =  { 
+        /**
+            * Quick reply button objects.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#items-object">items Documentation</a>
+            */
+    'items'?: Array<QuickReplyItem>/**/;
+        
+}
+    
+
+    
+
+    
+
+

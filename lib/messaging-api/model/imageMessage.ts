@@ -10,22 +10,32 @@
  * Do not edit the class manually.
  */
 
-import { Message } from "./message";
-import { QuickReply } from "./quickReply";
-import { Sender } from "./sender";
 
-import { MessageBase } from "./models";
 
-export type ImageMessage = MessageBase & {
-  type: "image";
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#image-message">originalContentUrl Documentation</a>
-   */
-  originalContentUrl: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#image-message">previewImageUrl Documentation</a>
-   */
-  previewImageUrl: string /**/;
-};
+    import { Message } from './message.js';import { QuickReply } from './quickReply.js';import { Sender } from './sender.js';
+
+    
+import { MessageBase } from './models.js';
+
+        
+export type ImageMessage = MessageBase &  { 
+type: "image",
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#image-message">originalContentUrl Documentation</a>
+            */
+    'originalContentUrl': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#image-message">previewImageUrl Documentation</a>
+            */
+    'previewImageUrl': string/**/;
+        
+}
+    
+
+    
+
+    
+
+

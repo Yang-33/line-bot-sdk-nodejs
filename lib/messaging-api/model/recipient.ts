@@ -10,26 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { AudienceRecipient } from "./models";
-import { OperatorRecipient } from "./models";
-import { RedeliveryRecipient } from "./models";
+
+
+    
+
+    
+        import { AudienceRecipient } from './models.js';
+        import { OperatorRecipient } from './models.js';
+        import { RedeliveryRecipient } from './models.js';
+        
 
 export type Recipient =
-  | AudienceRecipient // audience
-  | OperatorRecipient // operator
-  | RedeliveryRecipient // redelivery
-  | UnknownRecipient;
+        | AudienceRecipient // audience
+        | OperatorRecipient // operator
+        | RedeliveryRecipient // redelivery
+        | UnknownRecipient
+;
 
 export type UnknownRecipient = RecipientBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
-
+    
 /**
  * Recipient
  */
-export type RecipientBase = {
-  /**
-   * Type of recipient
-   */
-  type?: string /**/;
-};
+export type RecipientBase =  { 
+        /**
+            * Type of recipient
+            */
+    'type'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

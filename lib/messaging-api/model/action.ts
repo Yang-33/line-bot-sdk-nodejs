@@ -10,46 +10,61 @@
  * Do not edit the class manually.
  */
 
-import { CameraAction } from "./models";
-import { CameraRollAction } from "./models";
-import { ClipboardAction } from "./models";
-import { DatetimePickerAction } from "./models";
-import { LocationAction } from "./models";
-import { MessageAction } from "./models";
-import { PostbackAction } from "./models";
-import { RichMenuSwitchAction } from "./models";
-import { URIAction } from "./models";
+
+
+    
+
+    
+        import { CameraAction } from './models.js';
+        import { CameraRollAction } from './models.js';
+        import { ClipboardAction } from './models.js';
+        import { DatetimePickerAction } from './models.js';
+        import { LocationAction } from './models.js';
+        import { MessageAction } from './models.js';
+        import { PostbackAction } from './models.js';
+        import { RichMenuSwitchAction } from './models.js';
+        import { URIAction } from './models.js';
+        
 
 export type Action =
-  | CameraAction // camera
-  | CameraRollAction // cameraRoll
-  | ClipboardAction // clipboard
-  | DatetimePickerAction // datetimepicker
-  | LocationAction // location
-  | MessageAction // message
-  | PostbackAction // postback
-  | RichMenuSwitchAction // richmenuswitch
-  | URIAction // uri
-  | UnknownAction;
+        | CameraAction // camera
+        | CameraRollAction // cameraRoll
+        | ClipboardAction // clipboard
+        | DatetimePickerAction // datetimepicker
+        | LocationAction // location
+        | MessageAction // message
+        | PostbackAction // postback
+        | RichMenuSwitchAction // richmenuswitch
+        | URIAction // uri
+        | UnknownAction
+;
 
 export type UnknownAction = ActionBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
-
+    
 /**
  * Action
  */
-export type ActionBase = {
-  /**
-   * Type of action
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#action-objects">type Documentation</a>
-   */
-  type?: string /**/;
-  /**
-   * Label for the action.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#action-objects">label Documentation</a>
-   */
-  label?: string /**/;
-};
+export type ActionBase =  { 
+        /**
+            * Type of action
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#action-objects">type Documentation</a>
+            */
+    'type'?: string/**/;
+        /**
+            * Label for the action.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#action-objects">label Documentation</a>
+            */
+    'label'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

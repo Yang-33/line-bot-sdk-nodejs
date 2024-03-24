@@ -10,24 +10,43 @@
  * Do not edit the class manually.
  */
 
-export type SubscriptionPeriodTile = {
-  /**
-   * Subscription period. Possible values: `within7days`, `within90days`, `unknown` etc.
-   */
-  subscriptionPeriod?: SubscriptionPeriodTile.SubscriptionPeriodEnum /**/;
-  /**
-   * Percentage. Possible values: [0.0,100.0] e.g. 0, 2.9, 37.6.
-   */
-  percentage?: number /**/;
-};
 
-export namespace SubscriptionPeriodTile {
-  export type SubscriptionPeriodEnum =
-    | "within7days"
-    | "within30days"
-    | "within90days"
-    | "within180days"
-    | "within365days"
-    | "over365days"
-    | "unknown";
+
+    
+
+    
+export type SubscriptionPeriodTile =  { 
+        /**
+            * Subscription period. Possible values: `within7days`, `within90days`, `unknown` etc.
+            */
+    'subscriptionPeriod'?: SubscriptionPeriodTile.SubscriptionPeriodEnum/**/;
+        /**
+            * Percentage. Possible values: [0.0,100.0] e.g. 0, 2.9, 37.6.
+            */
+    'percentage'?: number/**/;
+        
 }
+    
+
+    
+export namespace SubscriptionPeriodTile {
+        export type SubscriptionPeriodEnum =
+                'within7days'
+                    | 'within30days'
+                    | 'within90days'
+                    | 'within180days'
+                    | 'within365days'
+                    | 'over365days'
+                    | 'unknown'
+                    
+                
+    ;
+            
+        
+        
+}
+    
+
+    
+
+

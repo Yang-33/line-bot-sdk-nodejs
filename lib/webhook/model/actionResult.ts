@@ -10,16 +10,37 @@
  * Do not edit the class manually.
  */
 
-export type ActionResult = {
-  /**
-   */
-  type: ActionResult.TypeEnum /**/;
-  /**
-   * Base64-encoded binary data
-   */
-  data?: string /**/;
-};
 
-export namespace ActionResult {
-  export type TypeEnum = "void" | "binary";
+
+    
+
+    
+export type ActionResult =  { 
+        /**
+            */
+    'type': ActionResult.TypeEnum/**/;
+        /**
+            * Base64-encoded binary data
+            */
+    'data'?: string/**/;
+        
 }
+    
+
+    
+export namespace ActionResult {
+        export type TypeEnum =
+                'void'
+                    | 'binary'
+                    
+                
+    ;
+            
+        
+        
+}
+    
+
+    
+
+

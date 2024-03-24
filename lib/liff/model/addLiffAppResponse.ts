@@ -10,8 +10,21 @@
  * Do not edit the class manually.
  */
 
-export type AddLiffAppResponse = {
-  /**
-   */
-  liffId: string /**/;
-};
+
+
+    
+
+    
+export type AddLiffAppResponse =  { 
+        /**
+            */
+    'liffId': string/**/;
+        
+}
+    
+
+    
+
+    
+
+

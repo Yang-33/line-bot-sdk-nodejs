@@ -10,19 +10,31 @@
  * Do not edit the class manually.
  */
 
-import { DemographicFilter } from "./demographicFilter";
 
-import { DemographicFilterBase } from "./models";
 
-export type OperatorDemographicFilter = DemographicFilterBase & {
-  type: "operator";
-  /**
-   */
-  and?: Array<DemographicFilter> /**/;
-  /**
-   */
-  or?: Array<DemographicFilter> /**/;
-  /**
-   */
-  not?: DemographicFilter /**/;
-};
+    import { DemographicFilter } from './demographicFilter.js';
+
+    
+import { DemographicFilterBase } from './models.js';
+
+        
+export type OperatorDemographicFilter = DemographicFilterBase &  { 
+type: "operator",
+        /**
+            */
+    'and'?: Array<DemographicFilter>/**/;
+        /**
+            */
+    'or'?: Array<DemographicFilter>/**/;
+        /**
+            */
+    'not'?: DemographicFilter/**/;
+        
+}
+    
+
+    
+
+    
+
+

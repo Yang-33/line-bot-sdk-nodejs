@@ -10,14 +10,26 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Status
  */
 
-export type AudienceGroupStatus =
-  | "IN_PROGRESS"
-  | "READY"
-  | "FAILED"
-  | "EXPIRED"
-  | "INACTIVE"
-  | "ACTIVATING";
+    
+
+    export type AudienceGroupStatus =
+        'IN_PROGRESS'
+        | 'READY'
+        | 'FAILED'
+        | 'EXPIRED'
+        | 'INACTIVE'
+        | 'ACTIVATING'
+        
+;
+    
+
+

@@ -10,20 +10,35 @@
  * Do not edit the class manually.
  */
 
-import { FlexBubble } from "./models";
-import { FlexCarousel } from "./models";
+
+
+    
+
+    
+        import { FlexBubble } from './models.js';
+        import { FlexCarousel } from './models.js';
+        
 
 export type FlexContainer =
-  | FlexBubble // bubble
-  | FlexCarousel // carousel
-  | UnknownFlexContainer;
+        | FlexBubble // bubble
+        | FlexCarousel // carousel
+        | UnknownFlexContainer
+;
 
 export type UnknownFlexContainer = FlexContainerBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
+    
+export type FlexContainerBase =  { 
+        /**
+            */
+    'type': string/**/;
+        
+}
+    
 
-export type FlexContainerBase = {
-  /**
-   */
-  type: string /**/;
-};
+    
+
+    
+
+

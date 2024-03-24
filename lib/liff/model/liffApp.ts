@@ -10,36 +10,53 @@
  * Do not edit the class manually.
  */
 
-import { LiffBotPrompt } from "./liffBotPrompt";
-import { LiffFeatures } from "./liffFeatures";
-import { LiffScope } from "./liffScope";
-import { LiffView } from "./liffView";
 
-export type LiffApp = {
-  /**
-   * LIFF app ID
-   */
-  liffId?: string /**/;
-  /**
-   */
-  view?: LiffView /**/;
-  /**
-   * Name of the LIFF app
-   */
-  description?: string /**/;
-  /**
-   */
-  features?: LiffFeatures /**/;
-  /**
-   * How additional information in LIFF URLs is handled. concat is returned.
-   */
-  permanentLinkPattern?: string /**/;
-  /**
-   */
-  scope?: Array<LiffScope> /**/;
-  /**
-   */
-  botPrompt?: LiffBotPrompt /**/;
-};
 
-export namespace LiffApp {}
+    import { LiffBotPrompt } from './liffBotPrompt.js';import { LiffFeatures } from './liffFeatures.js';import { LiffScope } from './liffScope.js';import { LiffView } from './liffView.js';
+
+    
+export type LiffApp =  { 
+        /**
+            * LIFF app ID
+            */
+    'liffId'?: string/**/;
+        /**
+            */
+    'view'?: LiffView/**/;
+        /**
+            * Name of the LIFF app
+            */
+    'description'?: string/**/;
+        /**
+            */
+    'features'?: LiffFeatures/**/;
+        /**
+            * How additional information in LIFF URLs is handled. concat is returned. 
+            */
+    'permanentLinkPattern'?: string/**/;
+        /**
+            */
+    'scope'?: Array<LiffScope>/**/;
+        /**
+            */
+    'botPrompt'?: LiffBotPrompt/**/;
+        
+}
+    
+
+    
+export namespace LiffApp {
+        
+        
+        
+        
+        
+        
+        
+        
+}
+    
+
+    
+
+

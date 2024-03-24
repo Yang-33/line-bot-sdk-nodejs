@@ -10,8 +10,21 @@
  * Do not edit the class manually.
  */
 
-export type AltUri = {
-  /**
-   */
-  desktop?: string /**/;
-};
+
+
+    
+
+    
+export type AltUri =  { 
+        /**
+            */
+    'desktop'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

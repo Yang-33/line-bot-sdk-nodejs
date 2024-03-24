@@ -10,28 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { Message } from "./message";
-import { QuickReply } from "./quickReply";
-import { Sender } from "./sender";
 
-import { MessageBase } from "./models";
 
-export type StickerMessage = MessageBase & {
-  type: "sticker";
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#sticker-message">packageId Documentation</a>
-   */
-  packageId: string /**/;
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#sticker-message">stickerId Documentation</a>
-   */
-  stickerId: string /**/;
-  /**
-   * Quote token of the message you want to quote.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#sticker-message">quoteToken Documentation</a>
-   */
-  quoteToken?: string /**/;
-};
+    import { Message } from './message.js';import { QuickReply } from './quickReply.js';import { Sender } from './sender.js';
+
+    
+import { MessageBase } from './models.js';
+
+        
+export type StickerMessage = MessageBase &  { 
+type: "sticker",
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#sticker-message">packageId Documentation</a>
+            */
+    'packageId': string/**/;
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#sticker-message">stickerId Documentation</a>
+            */
+    'stickerId': string/**/;
+        /**
+            * Quote token of the message you want to quote.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#sticker-message">quoteToken Documentation</a>
+            */
+    'quoteToken'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

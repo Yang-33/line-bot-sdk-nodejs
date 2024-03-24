@@ -10,18 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { MessageContent } from "./messageContent";
 
-import { MessageContentBase } from "./models";
 
-export type FileMessageContent = MessageContentBase & {
-  type: "file";
-  /**
-   * File name
-   */
-  fileName: string /**/;
-  /**
-   * File size in bytes
-   */
-  fileSize: number /**/;
-};
+    import { MessageContent } from './messageContent.js';
+
+    
+import { MessageContentBase } from './models.js';
+
+        
+export type FileMessageContent = MessageContentBase &  { 
+type: "file",
+        /**
+            * File name
+            */
+    'fileName': string/**/;
+        /**
+            * File size in bytes
+            */
+    'fileSize': number/**/;
+        
+}
+    
+
+    
+
+    
+
+

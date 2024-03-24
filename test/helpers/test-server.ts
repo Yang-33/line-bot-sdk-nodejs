@@ -1,13 +1,19 @@
-import * as bodyParser from "body-parser";
-import * as express from "express";
+import bodyParser from "body-parser";
+import express from "express";
 import { Server } from "node:http";
 import { join } from "node:path";
 import { writeFileSync } from "node:fs";
 import {
   JSONParseError,
   SignatureValidationFailed,
-} from "../../lib/exceptions";
-import * as finalhandler from "finalhandler";
+} from "../../lib/exceptions.js";
+import finalhandler from "finalhandler";
+
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 let server: Server | null = null;
 

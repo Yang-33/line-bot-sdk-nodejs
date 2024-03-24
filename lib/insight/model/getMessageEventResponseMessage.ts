@@ -10,53 +10,66 @@
  * Do not edit the class manually.
  */
 
-export type GetMessageEventResponseMessage = {
-  /**
-   * Bubble\'s serial number.
-   */
-  seq?: number /**/;
-  /**
-   * Number of times the bubble was displayed.
-   */
-  impression?: number | null /**/;
-  /**
-   * Number of times audio or video in the bubble started playing.
-   */
-  mediaPlayed?: number | null /**/;
-  /**
-   * Number of times audio or video in the bubble started playing and was played 25% of the total time.
-   */
-  mediaPlayed25Percent?: number | null /**/;
-  /**
-   * Number of times audio or video in the bubble started playing and was played 50% of the total time.
-   */
-  mediaPlayed50Percent?: number | null /**/;
-  /**
-   * Number of times audio or video in the bubble started playing and was played 75% of the total time.
-   */
-  mediaPlayed75Percent?: number | null /**/;
-  /**
-   * Number of times audio or video in the bubble started playing and was played 100% of the total time.
-   */
-  mediaPlayed100Percent?: number | null /**/;
-  /**
-   * Number of users that started playing audio or video in the bubble.
-   */
-  uniqueMediaPlayed?: number | null /**/;
-  /**
-   * Number of users that started playing audio or video in the bubble and played 25% of the total time.
-   */
-  uniqueMediaPlayed25Percent?: number | null /**/;
-  /**
-   * Number of users that started playing audio or video in the bubble and played 50% of the total time.
-   */
-  uniqueMediaPlayed50Percent?: number | null /**/;
-  /**
-   * Number of users that started playing audio or video in the bubble and played 75% of the total time.
-   */
-  uniqueMediaPlayed75Percent?: number | null /**/;
-  /**
-   * Number of users that started playing audio or video in the bubble and played 100% of the total time.
-   */
-  uniqueMediaPlayed100Percent?: number | null /**/;
-};
+
+
+    
+
+    
+export type GetMessageEventResponseMessage =  { 
+        /**
+            * Bubble\'s serial number.
+            */
+    'seq'?: number/**/;
+        /**
+            * Number of times the bubble was displayed.
+            */
+    'impression'?: number | null/**/;
+        /**
+            * Number of times audio or video in the bubble started playing.
+            */
+    'mediaPlayed'?: number | null/**/;
+        /**
+            * Number of times audio or video in the bubble started playing and was played 25% of the total time.
+            */
+    'mediaPlayed25Percent'?: number | null/**/;
+        /**
+            * Number of times audio or video in the bubble started playing and was played 50% of the total time.
+            */
+    'mediaPlayed50Percent'?: number | null/**/;
+        /**
+            * Number of times audio or video in the bubble started playing and was played 75% of the total time.
+            */
+    'mediaPlayed75Percent'?: number | null/**/;
+        /**
+            * Number of times audio or video in the bubble started playing and was played 100% of the total time.
+            */
+    'mediaPlayed100Percent'?: number | null/**/;
+        /**
+            * Number of users that started playing audio or video in the bubble.
+            */
+    'uniqueMediaPlayed'?: number | null/**/;
+        /**
+            * Number of users that started playing audio or video in the bubble and played 25% of the total time.
+            */
+    'uniqueMediaPlayed25Percent'?: number | null/**/;
+        /**
+            * Number of users that started playing audio or video in the bubble and played 50% of the total time.
+            */
+    'uniqueMediaPlayed50Percent'?: number | null/**/;
+        /**
+            * Number of users that started playing audio or video in the bubble and played 75% of the total time.
+            */
+    'uniqueMediaPlayed75Percent'?: number | null/**/;
+        /**
+            * Number of users that started playing audio or video in the bubble and played 100% of the total time.
+            */
+    'uniqueMediaPlayed100Percent'?: number | null/**/;
+        
+}
+    
+
+    
+
+    
+
+

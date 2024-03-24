@@ -1,1 +1,3 @@
-export { ShopClient } from "./shopClient";
+
+export { ShopClient } from './shopClient.js';
+

@@ -10,16 +10,28 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
 
-import { ActionBase } from "./models";
 
-export type RichMenuSwitchAction = ActionBase & {
-  type: "richmenuswitch";
-  /**
-   */
-  data?: string /**/;
-  /**
-   */
-  richMenuAliasId?: string /**/;
-};
+    import { Action } from './action.js';
+
+    
+import { ActionBase } from './models.js';
+
+        
+export type RichMenuSwitchAction = ActionBase &  { 
+type: "richmenuswitch",
+        /**
+            */
+    'data'?: string/**/;
+        /**
+            */
+    'richMenuAliasId'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

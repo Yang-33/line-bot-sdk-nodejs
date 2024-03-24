@@ -10,22 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { ModuleBot } from "./moduleBot";
 
+
+    import { ModuleBot } from './moduleBot.js';
+
+    
 /**
  * List of bots to which the module is attached
  */
-export type GetModulesResponse = {
-  /**
-   * Array of Bot list Item objects representing basic information about the bot.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/partner-docs/#get-multiple-bot-info-api">bots Documentation</a>
-   */
-  bots: Array<ModuleBot> /**/;
-  /**
-   * Continuation token. Used to get the next array of basic bot information. This property is only returned if there are more unreturned results.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/partner-docs/#get-multiple-bot-info-api">next Documentation</a>
-   */
-  next?: string /**/;
-};
+export type GetModulesResponse =  { 
+        /**
+            * Array of Bot list Item objects representing basic information about the bot.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/partner-docs/#get-multiple-bot-info-api">bots Documentation</a>
+            */
+    'bots': Array<ModuleBot>/**/;
+        /**
+            * Continuation token. Used to get the next array of basic bot information. This property is only returned if there are more unreturned results. 
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/partner-docs/#get-multiple-bot-info-api">next Documentation</a>
+            */
+    'next'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

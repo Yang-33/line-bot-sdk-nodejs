@@ -10,11 +10,24 @@
  * Do not edit the class manually.
  */
 
-export type ImagemapExternalLink = {
-  /**
-   */
-  linkUri?: string /**/;
-  /**
-   */
-  label?: string /**/;
-};
+
+
+    
+
+    
+export type ImagemapExternalLink =  { 
+        /**
+            */
+    'linkUri'?: string/**/;
+        /**
+            */
+    'label'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

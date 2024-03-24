@@ -10,25 +10,38 @@
  * Do not edit the class manually.
  */
 
-export type GetMessageEventResponseClick = {
-  /**
-   * The URL\'s serial number.
-   */
-  seq?: number /**/;
-  /**
-   * URL.
-   */
-  url?: string /**/;
-  /**
-   * Number of times the URL was opened.
-   */
-  click?: number | null /**/;
-  /**
-   * Number of users that opened the URL.
-   */
-  uniqueClick?: number | null /**/;
-  /**
-   * Number of users who opened this url through any link in the message. If a message contains two links to the same URL and a user opens both links, they\'re counted only once.
-   */
-  uniqueClickOfRequest?: number | null /**/;
-};
+
+
+    
+
+    
+export type GetMessageEventResponseClick =  { 
+        /**
+            * The URL\'s serial number.
+            */
+    'seq'?: number/**/;
+        /**
+            * URL.
+            */
+    'url'?: string/**/;
+        /**
+            * Number of times the URL was opened.
+            */
+    'click'?: number | null/**/;
+        /**
+            * Number of users that opened the URL.
+            */
+    'uniqueClick'?: number | null/**/;
+        /**
+            * Number of users who opened this url through any link in the message. If a message contains two links to the same URL and a user opens both links, they\'re counted only once.
+            */
+    'uniqueClickOfRequest'?: number | null/**/;
+        
+}
+    
+
+    
+
+    
+
+

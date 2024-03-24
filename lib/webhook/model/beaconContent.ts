@@ -10,21 +10,44 @@
  * Do not edit the class manually.
  */
 
-export type BeaconContent = {
-  /**
-   * Hardware ID of the beacon that was detected
-   */
-  hwid: string /**/;
-  /**
-   * Type of beacon event.
-   */
-  type: BeaconContent.TypeEnum /**/;
-  /**
-   * Device message of beacon that was detected.
-   */
-  dm?: string /**/;
-};
 
-export namespace BeaconContent {
-  export type TypeEnum = "enter" | "banner" | "stay";
+
+    
+
+    
+export type BeaconContent =  { 
+        /**
+            * Hardware ID of the beacon that was detected
+            */
+    'hwid': string/**/;
+        /**
+            * Type of beacon event.
+            */
+    'type': BeaconContent.TypeEnum/**/;
+        /**
+            * Device message of beacon that was detected.
+            */
+    'dm'?: string/**/;
+        
 }
+    
+
+    
+export namespace BeaconContent {
+        
+        export type TypeEnum =
+                'enter'
+                    | 'banner'
+                    | 'stay'
+                    
+                
+    ;
+            
+        
+        
+}
+    
+
+    
+
+

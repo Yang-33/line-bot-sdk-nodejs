@@ -10,15 +10,26 @@
  * Do not edit the class manually.
  */
 
-import { RichMenuBatchOperation } from "./richMenuBatchOperation";
 
-export type RichMenuBatchRequest = {
-  /**
-   * Array of Rich menu operation object...
-   */
-  operations: Array<RichMenuBatchOperation> /**/;
-  /**
-   * Key for retry. Key value is a string matching the regular expression pattern
-   */
-  resumeRequestKey?: string /**/;
-};
+
+    import { RichMenuBatchOperation } from './richMenuBatchOperation.js';
+
+    
+export type RichMenuBatchRequest =  { 
+        /**
+            * Array of Rich menu operation object...
+            */
+    'operations': Array<RichMenuBatchOperation>/**/;
+        /**
+            * Key for retry. Key value is a string matching the regular expression pattern
+            */
+    'resumeRequestKey'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

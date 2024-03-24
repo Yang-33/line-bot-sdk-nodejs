@@ -10,26 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { DeliveryContext } from "./deliveryContext";
-import { Event } from "./event";
-import { EventMode } from "./eventMode";
-import { JoinedMembers } from "./joinedMembers";
-import { Source } from "./source";
 
+
+    import { DeliveryContext } from './deliveryContext.js';import { Event } from './event.js';import { EventMode } from './eventMode.js';import { JoinedMembers } from './joinedMembers.js';import { Source } from './source.js';
+
+    
 /**
  * Event object for when a user joins a group chat or multi-person chat that the LINE Official Account is in.
  */
-import { EventBase } from "./models";
+import { EventBase } from './models.js';
 
-export type MemberJoinedEvent = EventBase & {
-  type: "memberJoined";
-  /**
-   * Reply token used to send reply message to this event
-   */
-  replyToken: string /**/;
-  /**
-   */
-  joined: JoinedMembers /**/;
-};
+        
+export type MemberJoinedEvent = EventBase &  { 
+type: "memberJoined",
+        /**
+            * Reply token used to send reply message to this event
+            */
+    'replyToken': string/**/;
+        /**
+            */
+    'joined': JoinedMembers/**/;
+        
+}
+    
 
-export namespace MemberJoinedEvent {}
+    
+export namespace MemberJoinedEvent {
+        
+        
+        
+}
+    
+
+    
+
+

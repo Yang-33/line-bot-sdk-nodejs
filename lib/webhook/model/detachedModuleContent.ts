@@ -10,22 +10,41 @@
  * Do not edit the class manually.
  */
 
-import { ModuleContent } from "./moduleContent";
 
-import { ModuleContentBase } from "./models";
 
-export type DetachedModuleContent = ModuleContentBase & {
-  type: "detached";
-  /**
-   * Detached LINE Official Account bot user ID
-   */
-  botId: string /**/;
-  /**
-   * Reason for detaching
-   */
-  reason: DetachedModuleContent.ReasonEnum /**/;
-};
+    import { ModuleContent } from './moduleContent.js';
 
-export namespace DetachedModuleContent {
-  export type ReasonEnum = "bot_deleted";
+    
+import { ModuleContentBase } from './models.js';
+
+        
+export type DetachedModuleContent = ModuleContentBase &  { 
+type: "detached",
+        /**
+            * Detached LINE Official Account bot user ID
+            */
+    'botId': string/**/;
+        /**
+            * Reason for detaching
+            */
+    'reason': DetachedModuleContent.ReasonEnum/**/;
+        
 }
+    
+
+    
+export namespace DetachedModuleContent {
+        
+        export type ReasonEnum =
+                'bot_deleted'
+                    
+                
+    ;
+            
+        
+}
+    
+
+    
+
+

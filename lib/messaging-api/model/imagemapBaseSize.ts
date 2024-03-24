@@ -10,11 +10,24 @@
  * Do not edit the class manually.
  */
 
-export type ImagemapBaseSize = {
-  /**
-   */
-  height: number /**/;
-  /**
-   */
-  width: number /**/;
-};
+
+
+    
+
+    
+export type ImagemapBaseSize =  { 
+        /**
+            */
+    'height': number/**/;
+        /**
+            */
+    'width': number/**/;
+        
+}
+    
+
+    
+
+    
+
+

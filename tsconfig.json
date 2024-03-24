@@ -1,13 +1,24 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es2017",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ESNext",
     "noImplicitAny": true,
     "outDir": "dist",
-    "rootDirs": ["lib", "test"],
+    "rootDirs": [
+      "lib",
+      "test"
+    ],
     "declaration": true,
   },
   "include": [
     "lib/**/*.ts",
+    "lib/**/*.js",
+    "lib/**/*.cjs",
+    "lib/**/*.mjs",
+  ],
+  "exclude": [
+    ".git",
+    "node_modules"
   ]
 }

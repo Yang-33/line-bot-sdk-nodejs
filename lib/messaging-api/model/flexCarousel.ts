@@ -10,14 +10,25 @@
  * Do not edit the class manually.
  */
 
-import { FlexBubble } from "./flexBubble";
-import { FlexContainer } from "./flexContainer";
 
-import { FlexContainerBase } from "./models";
 
-export type FlexCarousel = FlexContainerBase & {
-  type: "carousel";
-  /**
-   */
-  contents: Array<FlexBubble> /**/;
-};
+    import { FlexBubble } from './flexBubble.js';import { FlexContainer } from './flexContainer.js';
+
+    
+import { FlexContainerBase } from './models.js';
+
+        
+export type FlexCarousel = FlexContainerBase &  { 
+type: "carousel",
+        /**
+            */
+    'contents': Array<FlexBubble>/**/;
+        
+}
+    
+
+    
+
+    
+
+

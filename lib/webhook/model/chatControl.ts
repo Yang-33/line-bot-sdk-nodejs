@@ -10,8 +10,21 @@
  * Do not edit the class manually.
  */
 
-export type ChatControl = {
-  /**
-   */
-  expireAt: number /**/;
-};
+
+
+    
+
+    
+export type ChatControl =  { 
+        /**
+            */
+    'expireAt': number/**/;
+        
+}
+    
+
+    
+
+    
+
+

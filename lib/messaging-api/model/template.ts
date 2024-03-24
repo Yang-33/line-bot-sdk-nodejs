@@ -10,24 +10,39 @@
  * Do not edit the class manually.
  */
 
-import { ButtonsTemplate } from "./models";
-import { CarouselTemplate } from "./models";
-import { ConfirmTemplate } from "./models";
-import { ImageCarouselTemplate } from "./models";
+
+
+    
+
+    
+        import { ButtonsTemplate } from './models.js';
+        import { CarouselTemplate } from './models.js';
+        import { ConfirmTemplate } from './models.js';
+        import { ImageCarouselTemplate } from './models.js';
+        
 
 export type Template =
-  | ButtonsTemplate // buttons
-  | CarouselTemplate // carousel
-  | ConfirmTemplate // confirm
-  | ImageCarouselTemplate // image_carousel
-  | UnknownTemplate;
+        | ButtonsTemplate // buttons
+        | CarouselTemplate // carousel
+        | ConfirmTemplate // confirm
+        | ImageCarouselTemplate // image_carousel
+        | UnknownTemplate
+;
 
 export type UnknownTemplate = TemplateBase & {
-  [key: string]: unknown;
+    [key: string]: unknown;
 };
+    
+export type TemplateBase =  { 
+        /**
+            */
+    'type': string/**/;
+        
+}
+    
 
-export type TemplateBase = {
-  /**
-   */
-  type: string /**/;
-};
+    
+
+    
+
+

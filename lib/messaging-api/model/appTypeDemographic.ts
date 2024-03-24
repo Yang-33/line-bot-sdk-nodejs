@@ -10,4 +10,19 @@
  * Do not edit the class manually.
  */
 
-export type AppTypeDemographic = "ios" | "android";
+
+
+    
+
+    
+
+    
+
+    export type AppTypeDemographic =
+        'ios'
+        | 'android'
+        
+;
+    
+
+

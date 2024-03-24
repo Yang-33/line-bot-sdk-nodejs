@@ -1,14 +1,23 @@
 import { deepEqual, equal, ok } from "node:assert";
-import { HTTPError } from "../lib/exceptions";
-import HTTPClient from "../lib/http-axios";
-import { getStreamData } from "./helpers/stream";
+import { HTTPError } from "../lib/exceptions.js";
+import HTTPClient from "../lib/http-axios.js";
+import { getStreamData } from "./helpers/stream.js";
 import { http, HttpResponse } from "msw";
 import { setupServer } from "msw/node";
 import { createReadStream, readFileSync } from "node:fs";
 import { join } from "node:path";
 import * as fs from "node:fs";
 
-const pkg = require("../package.json");
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+import module from "node:module";
+const requireModule = module.createRequire(import.meta.url);
+const pkg = requireModule("../package.json");
+
 const baseURL = "https://line.me";
 describe("http", () => {
   const httpClient = new HTTPClient({

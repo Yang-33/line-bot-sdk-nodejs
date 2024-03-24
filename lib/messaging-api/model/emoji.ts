@@ -10,14 +10,27 @@
  * Do not edit the class manually.
  */
 
-export type Emoji = {
-  /**
-   */
-  index?: number /**/;
-  /**
-   */
-  productId?: string /**/;
-  /**
-   */
-  emojiId?: string /**/;
-};
+
+
+    
+
+    
+export type Emoji =  { 
+        /**
+            */
+    'index'?: number/**/;
+        /**
+            */
+    'productId'?: string/**/;
+        /**
+            */
+    'emojiId'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

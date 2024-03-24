@@ -10,17 +10,30 @@
  * Do not edit the class manually.
  */
 
-export type ImagemapArea = {
-  /**
-   */
-  x: number /**/;
-  /**
-   */
-  y: number /**/;
-  /**
-   */
-  width: number /**/;
-  /**
-   */
-  height: number /**/;
-};
+
+
+    
+
+    
+export type ImagemapArea =  { 
+        /**
+            */
+    'x': number/**/;
+        /**
+            */
+    'y': number/**/;
+        /**
+            */
+    'width': number/**/;
+        /**
+            */
+    'height': number/**/;
+        
+}
+    
+
+    
+
+    
+
+

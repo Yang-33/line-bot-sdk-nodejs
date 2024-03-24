@@ -10,18 +10,29 @@
  * Do not edit the class manually.
  */
 
-import { ContentProvider } from "./contentProvider";
-import { MessageContent } from "./messageContent";
 
-import { MessageContentBase } from "./models";
 
-export type AudioMessageContent = MessageContentBase & {
-  type: "audio";
-  /**
-   */
-  contentProvider: ContentProvider /**/;
-  /**
-   * Length of audio file (milliseconds)
-   */
-  duration?: number /**/;
-};
+    import { ContentProvider } from './contentProvider.js';import { MessageContent } from './messageContent.js';
+
+    
+import { MessageContentBase } from './models.js';
+
+        
+export type AudioMessageContent = MessageContentBase &  { 
+type: "audio",
+        /**
+            */
+    'contentProvider': ContentProvider/**/;
+        /**
+            * Length of audio file (milliseconds)
+            */
+    'duration'?: number/**/;
+        
+}
+    
+
+    
+
+    
+
+

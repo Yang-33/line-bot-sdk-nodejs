@@ -10,18 +10,30 @@
  * Do not edit the class manually.
  */
 
-import { Source } from "./source";
 
-import { SourceBase } from "./models";
 
-export type GroupSource = SourceBase & {
-  type: "group";
-  /**
-   * Group ID of the source group chat
-   */
-  groupId: string /**/;
-  /**
-   * ID of the source user. Only included in message events. Only users of LINE for iOS and LINE for Android are included in userId.
-   */
-  userId?: string /**/;
-};
+    import { Source } from './source.js';
+
+    
+import { SourceBase } from './models.js';
+
+        
+export type GroupSource = SourceBase &  { 
+type: "group",
+        /**
+            * Group ID of the source group chat
+            */
+    'groupId': string/**/;
+        /**
+            * ID of the source user. Only included in message events. Only users of LINE for iOS and LINE for Android are included in userId.
+            */
+    'userId'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

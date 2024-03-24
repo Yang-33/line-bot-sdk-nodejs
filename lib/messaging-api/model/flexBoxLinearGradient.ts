@@ -10,25 +10,37 @@
  * Do not edit the class manually.
  */
 
-import { FlexBoxBackground } from "./flexBoxBackground";
 
-import { FlexBoxBackgroundBase } from "./models";
 
-export type FlexBoxLinearGradient = FlexBoxBackgroundBase & {
-  type: "linearGradient";
-  /**
-   */
-  angle?: string /**/;
-  /**
-   */
-  startColor?: string /**/;
-  /**
-   */
-  endColor?: string /**/;
-  /**
-   */
-  centerColor?: string /**/;
-  /**
-   */
-  centerPosition?: string /**/;
-};
+    import { FlexBoxBackground } from './flexBoxBackground.js';
+
+    
+import { FlexBoxBackgroundBase } from './models.js';
+
+        
+export type FlexBoxLinearGradient = FlexBoxBackgroundBase &  { 
+type: "linearGradient",
+        /**
+            */
+    'angle'?: string/**/;
+        /**
+            */
+    'startColor'?: string/**/;
+        /**
+            */
+    'endColor'?: string/**/;
+        /**
+            */
+    'centerColor'?: string/**/;
+        /**
+            */
+    'centerPosition'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

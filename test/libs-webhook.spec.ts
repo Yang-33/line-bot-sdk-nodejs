@@ -1,4 +1,4 @@
-import { webhook } from "../lib";
+import { webhook } from "../lib/index.js";
 
 describe("webhook", () => {
   it("event", async () => {

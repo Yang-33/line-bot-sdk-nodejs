@@ -1,1 +1,2 @@
-export * from "./attachModuleResponse";
+
+export * from './attachModuleResponse.js';

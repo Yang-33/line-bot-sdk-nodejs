@@ -10,12 +10,25 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Audience
  */
-export type Audience = {
-  /**
-   * A user ID or IFA. You can specify an empty array.
-   */
-  id?: string /**/;
-};
+export type Audience =  { 
+        /**
+            * A user ID or IFA. You can specify an empty array.
+            */
+    'id'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

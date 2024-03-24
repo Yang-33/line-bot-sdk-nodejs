@@ -10,22 +10,33 @@
  * Do not edit the class manually.
  */
 
-import { ContentProvider } from "./contentProvider";
-import { MessageContent } from "./messageContent";
 
-import { MessageContentBase } from "./models";
 
-export type VideoMessageContent = MessageContentBase & {
-  type: "video";
-  /**
-   * Length of video file (milliseconds)
-   */
-  duration?: number /**/;
-  /**
-   */
-  contentProvider: ContentProvider /**/;
-  /**
-   * Quote token to quote this message.
-   */
-  quoteToken: string /**/;
-};
+    import { ContentProvider } from './contentProvider.js';import { MessageContent } from './messageContent.js';
+
+    
+import { MessageContentBase } from './models.js';
+
+        
+export type VideoMessageContent = MessageContentBase &  { 
+type: "video",
+        /**
+            * Length of video file (milliseconds)
+            */
+    'duration'?: number/**/;
+        /**
+            */
+    'contentProvider': ContentProvider/**/;
+        /**
+            * Quote token to quote this message. 
+            */
+    'quoteToken': string/**/;
+        
+}
+    
+
+    
+
+    
+
+

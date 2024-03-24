@@ -10,13 +10,26 @@
  * Do not edit the class manually.
  */
 
-export type RichMenuAliasResponse = {
-  /**
-   * Rich menu alias ID.
-   */
-  richMenuAliasId: string /**/;
-  /**
-   * The rich menu ID associated with the rich menu alias.
-   */
-  richMenuId: string /**/;
-};
+
+
+    
+
+    
+export type RichMenuAliasResponse =  { 
+        /**
+            * Rich menu alias ID.
+            */
+    'richMenuAliasId': string/**/;
+        /**
+            * The rich menu ID associated with the rich menu alias.
+            */
+    'richMenuId': string/**/;
+        
+}
+    
+
+    
+
+    
+
+

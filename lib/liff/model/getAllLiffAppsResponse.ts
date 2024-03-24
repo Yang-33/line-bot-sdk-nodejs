@@ -10,10 +10,21 @@
  * Do not edit the class manually.
  */
 
-import { LiffApp } from "./liffApp";
 
-export type GetAllLiffAppsResponse = {
-  /**
-   */
-  apps?: Array<LiffApp> /**/;
-};
+
+    import { LiffApp } from './liffApp.js';
+
+    
+export type GetAllLiffAppsResponse =  { 
+        /**
+            */
+    'apps'?: Array<LiffApp>/**/;
+        
+}
+    
+
+    
+
+    
+
+

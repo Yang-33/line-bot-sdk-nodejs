@@ -10,16 +10,29 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Error response of the Channel access token
  */
-export type ErrorResponse = {
-  /**
-   * Error summary
-   */
-  error?: string /**/;
-  /**
-   * Details of the error. Not returned in certain situations.
-   */
-  errorDescription?: string /**/;
-};
+export type ErrorResponse =  { 
+        /**
+            * Error summary
+            */
+    'error'?: string/**/;
+        /**
+            * Details of the error. Not returned in certain situations.
+            */
+    'errorDescription'?: string/**/;
+        
+}
+    
+
+    
+
+    
+
+

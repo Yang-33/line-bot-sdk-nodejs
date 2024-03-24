@@ -10,16 +10,28 @@
  * Do not edit the class manually.
  */
 
-import { Action } from "./action";
 
-import { ActionBase } from "./models";
 
-export type ClipboardAction = ActionBase & {
-  type: "clipboard";
-  /**
-   * Text that is copied to the clipboard. Max character limit: 1000
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#clipboard-action">clipboardText Documentation</a>
-   */
-  clipboardText: string /**/;
-};
+    import { Action } from './action.js';
+
+    
+import { ActionBase } from './models.js';
+
+        
+export type ClipboardAction = ActionBase &  { 
+type: "clipboard",
+        /**
+            * Text that is copied to the clipboard. Max character limit: 1000 
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#clipboard-action">clipboardText Documentation</a>
+            */
+    'clipboardText': string/**/;
+        
+}
+    
+
+    
+
+    
+
+

@@ -10,8 +10,21 @@
  * Do not edit the class manually.
  */
 
+
+
+    
+
+    
 /**
  * Job Type
  */
 
-export type AudienceGroupJobType = "DIFF_ADD";
+    
+
+    export type AudienceGroupJobType =
+        'DIFF_ADD'
+        
+;
+    
+
+

@@ -10,29 +10,38 @@
  * Do not edit the class manually.
  */
 
-import { GetStatisticsPerUnitResponseClick } from "./getStatisticsPerUnitResponseClick";
-import { GetStatisticsPerUnitResponseMessage } from "./getStatisticsPerUnitResponseMessage";
-import { GetStatisticsPerUnitResponseOverview } from "./getStatisticsPerUnitResponseOverview";
 
+
+    import { GetStatisticsPerUnitResponseClick } from './getStatisticsPerUnitResponseClick.js';import { GetStatisticsPerUnitResponseMessage } from './getStatisticsPerUnitResponseMessage.js';import { GetStatisticsPerUnitResponseOverview } from './getStatisticsPerUnitResponseOverview.js';
+
+    
 /**
  * Response object for `get statistics per unit`
  */
-export type GetStatisticsPerUnitResponse = {
-  /**
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-statistics-per-unit-response">overview Documentation</a>
-   */
-  overview: GetStatisticsPerUnitResponseOverview /**/;
-  /**
-   * Array of information about individual message bubbles.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-statistics-per-unit-response">messages Documentation</a>
-   */
-  messages: Array<GetStatisticsPerUnitResponseMessage> /**/;
-  /**
-   * Array of information about opened URLs in the message.
-   *
-   * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-statistics-per-unit-response">clicks Documentation</a>
-   */
-  clicks: Array<GetStatisticsPerUnitResponseClick> /**/;
-};
+export type GetStatisticsPerUnitResponse =  { 
+        /**
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-statistics-per-unit-response">overview Documentation</a>
+            */
+    'overview': GetStatisticsPerUnitResponseOverview/**/;
+        /**
+            * Array of information about individual message bubbles.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-statistics-per-unit-response">messages Documentation</a>
+            */
+    'messages': Array<GetStatisticsPerUnitResponseMessage>/**/;
+        /**
+            * Array of information about opened URLs in the message.
+            * 
+     * @see <a href="https://developers.line.biz/en/reference/messaging-api/#get-statistics-per-unit-response">clicks Documentation</a>
+            */
+    'clicks': Array<GetStatisticsPerUnitResponseClick>/**/;
+        
+}
+    
+
+    
+
+    
+
+

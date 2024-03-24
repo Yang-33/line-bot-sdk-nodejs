@@ -1,16 +1,18 @@
 {# @pebvariable name="imports" type="java.util.List<java.util.Map<String, String>>" #}
 {# @pebvariable name="operations" type="org.openapitools.codegen.model.OperationMap" #}
 {# @pebvariable name="authMethods" type="java.util.ArrayList<org.openapitools.codegen.CodegenSecurity>" -#}
-import { {{operations.classname}} } from "../../api";
+import { {{operations.classname}} } from "../../api.js";
 
 {% for import in imports -%}
-import { {{import.classname}} } from '../{{import.filename}}';
+import { {{import.classname}} } from '../{{import.filename}}.js';
 {% endfor %}
 
 import { createServer } from "node:http";
 import { deepEqual, equal, ok } from "node:assert";
 
-const pkg = require("../../../../package.json");
+import module from "node:module";
+const requireModule = module.createRequire(import.meta.url);
+const pkg = requireModule("../../../../package.json");
 
 const channel_access_token = "test_channel_access_token";
 

@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "noImplicitAny": true,
+        "rootDirs": [
+            "lib",
+            "test"
+        ],
+        "declaration": true,
+        "declarationDir": "./dist/types/",
+    },
+    "include": [
+        "lib/**/*.ts",
+    ]
+}

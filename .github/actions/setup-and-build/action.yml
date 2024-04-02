@@ -24,9 +24,12 @@ runs:
 
     - name: Install Dependency
       run: npm ci
+      shell: bash
 
     - name: Test generator
       run: cd generator; mvn package; cd ..
+      shell: bash
 
     - name: Generate code
       run: python3 generate-code.py
+      shell: bash

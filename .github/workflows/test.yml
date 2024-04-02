@@ -16,7 +16,7 @@ jobs:
         node: [ '18', '20' ]
       fail-fast: false
 
-    name: Node.js ${{ matrix.node }}
+    name: Node.js ${{ matrix.node }} - test
 
     steps:
     - uses: actions/checkout@v4
@@ -46,7 +46,7 @@ jobs:
         # https://nodejs.org/en/about/releases/
         node: [ '18', '20' ]
       fail-fast: false
-    name: Node.js ${{ matrix.node }}
+    name: Node.js ${{ matrix.node }} - example
     steps:
     - uses: actions/checkout@v4
       with:
@@ -57,15 +57,19 @@ jobs:
         node-version: ${{ matrix.node }}
     - name: Test building examples (CJS)
       run: |
-        cd examples/echo-bot-ts-cjs
+        pushd examples/echo-bot-ts-cjs
         npm run build-sdk
         npm install
         npm run build
-        cd -
+    - name: Test Node.js App
+      uses: ./.github/actions/app-test
+      with:
+        port: '3000'
+        method: 'GET'
     - name: Test building examples (ESM)
       run: |
-        cd examples/echo-bot-ts-esm
+        popd
+        pushd examples/echo-bot-ts-esm
         npm run build-sdk
         npm install
         npm run build
-        cd -

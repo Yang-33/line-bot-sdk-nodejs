@@ -26,12 +26,35 @@ jobs:
       uses: ./.github/actions/setup-and-build
       with:
         node-version: ${{ matrix.node }}
+
     - name: Test Project
       run: export NODE_OPTIONS=--max-old-space-size=6144; npm test
     - name: Test building apidocs
       run: export NODE_OPTIONS=--openssl-legacy-provider; npm run apidocs
     - name: Test building docs
       run: export NODE_OPTIONS=--openssl-legacy-provider; npm run docs:build
+
+    - name: publint
+      run: npx publint
+    - name: validate package
+      run: npx @arethetypeswrong/cli $(npm pack)
+
+  example:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # https://nodejs.org/en/about/releases/
+        node: [ '18', '20' ]
+      fail-fast: false
+    name: Node.js ${{ matrix.node }}
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: true
+    - name: Setup and Build
+      uses: ./.github/actions/setup-and-build
+      with:
+        node-version: ${{ matrix.node }}
     - name: Test building examples (CJS)
       run: |
         cd examples/echo-bot-ts-cjs
@@ -46,7 +69,3 @@ jobs:
         npm install
         npm run build
         cd -
-    - name: publint
-      run: npx publint
-    - name: validate package
-      run: npx @arethetypeswrong/cli $(npm pack)

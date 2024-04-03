@@ -68,6 +68,8 @@ jobs:
         port: '3000'
         method: 'GET'
         working-directory: examples/echo-bot-ts-cjs
+        channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+        channel-secret: ${{ secrets.CHANNEL_SECRET }}
 
     - name: Test building examples (TS + ESM)
       run: |
@@ -81,6 +83,8 @@ jobs:
         port: '3000'
         method: 'GET'
         working-directory: examples/echo-bot-ts-esm
+        channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+        channel-secret: ${{ secrets.CHANNEL_SECRET }}
 
     - name: Test building examples (JS + CJS)
       run: |
@@ -93,3 +97,5 @@ jobs:
         port: '3000'
         method: 'GET'
         working-directory: examples/echo-bot
+        channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+        channel-secret: ${{ secrets.CHANNEL_SECRET }}

@@ -21,6 +21,13 @@ const app = express();
 app.get(
   '/',
   async (_, res) => {
+    const botInfo = await client.getBotInfo()
+    if (botInfo.displayName.length < 2) {
+      return res.status(500).json({
+        status: 'failure',
+        message: 'api call failed',
+      });
+    }
     return res.status(200).json({
       status: 'success',
       message: 'Connected successfully!',

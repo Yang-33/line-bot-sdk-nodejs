@@ -1,5 +1,3 @@
-'use strict';
-
 import { messagingApi, middleware } from '@line/bot-sdk';
 import express from 'express';
 

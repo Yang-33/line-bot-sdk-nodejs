@@ -27,11 +27,12 @@ app.get(
         status: 'failure',
         message: 'api call failed',
       });
+    } else {
+      return res.status(200).json({
+        status: 'success',
+        message: `${JSON.stringify(botInfo)}`,
+      });
     }
-    return res.status(200).json({
-      status: 'success',
-      message: 'Connected successfully!',
-    });
   }
 );
 

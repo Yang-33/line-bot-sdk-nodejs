@@ -59,10 +59,18 @@ const textEventHandler = async (event: webhook.Event): Promise<MessageAPIRespons
 app.get(
   '/',
   async (_: Request, res: Response): Promise<Response> => {
-    return res.status(200).json({
-      status: 'success',
-      message: 'Connected successfully!',
-    });
+    const botInfo = await client.getBotInfo()
+    if (botInfo.displayName.length < 2) {
+      return res.status(500).json({
+        status: 'failure',
+        message: 'api call failed',
+      });
+    } else {
+      return res.status(200).json({
+        status: 'success',
+        message: `${JSON.stringify(botInfo)}`,
+      });
+    }
   }
 );
 

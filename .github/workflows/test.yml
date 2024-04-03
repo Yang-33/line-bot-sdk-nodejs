@@ -51,16 +51,18 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: true
-    - name: Setup and Build
-      uses: ./.github/actions/setup-and-build
-      with:
-        node-version: ${{ matrix.node }}
+    # - name: Setup and Build
+    #   uses: ./.github/actions/setup-and-build
+    #   with:
+    #     node-version: ${{ matrix.node }}
     - name: Test building examples (CJS)
       run: |
         pushd examples/echo-bot-ts-cjs
         npm run build-sdk
         npm install
         npm run build
+        pwd
+        ls
     - name: Test Node.js App
       uses: ./.github/actions/app-test
       with:

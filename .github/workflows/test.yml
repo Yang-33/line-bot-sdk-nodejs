@@ -99,3 +99,17 @@ jobs:
         working-directory: examples/echo-bot
         channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
         channel-secret: ${{ secrets.CHANNEL_SECRET }}
+
+    - name: Test building examples (JS + ESM)
+      run: |
+        cd examples/echo-bot
+        npm run build-sdk
+        npm install
+    - name: Test Node.js App (echo-bot-esm)
+      uses: ./.github/actions/app-test
+      with:
+        port: '3000'
+        method: 'GET'
+        working-directory: examples/echo-bot-esm
+        channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+        channel-secret: ${{ secrets.CHANNEL_SECRET }}

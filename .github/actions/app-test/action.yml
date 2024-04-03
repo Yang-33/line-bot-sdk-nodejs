@@ -22,15 +22,12 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: hoge
+    - name: Start application
       run: |
         echo "hoge desu"
         ls
         pwd
-      shell: bash
-
-    - name: Start application
-      run: npm start &
+        npm start &
       shell: bash
       working-directory: ${{ inputs.working-directory }}
 

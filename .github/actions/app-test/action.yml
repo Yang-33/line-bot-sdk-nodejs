@@ -35,7 +35,6 @@ runs:
       run: sleep 10
       shell: bash
 
-
     - name: Test application
       run: |
         if [ "${{ inputs.method }}" = "POST" ]; then

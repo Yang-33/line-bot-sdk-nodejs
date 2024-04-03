@@ -57,12 +57,10 @@ jobs:
     #     node-version: ${{ matrix.node }}
     - name: Test building examples (CJS)
       run: |
-        pushd examples/echo-bot-ts-cjs
+        cd examples/echo-bot-ts-cjs
         npm run build-sdk
         npm install
         npm run build
-        pwd
-        ls
     - name: Test Node.js App (echo-bot-ts-cjs)
       uses: ./.github/actions/app-test
       with:
@@ -71,8 +69,7 @@ jobs:
         working-directory: examples/echo-bot-ts-cjs
     - name: Test building examples (ESM)
       run: |
-        popd
-        pushd examples/echo-bot-ts-esm
+        cd examples/echo-bot-ts-esm
         npm run build-sdk
         npm install
         npm run build

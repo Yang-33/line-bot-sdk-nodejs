@@ -58,7 +58,7 @@ jobs:
     #     node-version: ${{ matrix.node }}
     - name: Test building examples (JS + ESM)
       run: |
-        cd examples/echo-bot
+        cd examples/echo-bot-esm
         npm run build-sdk
         npm install
     - name: Test Node.js App (echo-bot-esm)

@@ -68,6 +68,7 @@ jobs:
       with:
         port: '3000'
         method: 'GET'
+        working-directory: examples/echo-bot-ts.cjs
     - name: Test building examples (ESM)
       run: |
         popd

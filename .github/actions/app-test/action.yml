@@ -15,6 +15,9 @@ inputs:
     description: 'Request body for POST method (optional)'
     required: false
     default: ""
+  working-directory:
+    description: 'Working directory of the Node.js app'
+    required: true
 
 runs:
   using: 'composite'
@@ -29,6 +32,7 @@ runs:
     - name: Start application
       run: npm start &
       shell: bash
+      working-directory: ${{ inputs.working-directory }}
 
     - name: Wait for application to start
       run: sleep 10

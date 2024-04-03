@@ -24,9 +24,9 @@ runs:
   steps:
     - name: Start application
       run: |
-        echo "hoge desu"
-        ls
-        pwd
+        # set dummy falue only for test
+        export CHANNEL_ACCESST_TOKEN=value1
+        export CHANNEL_SECRET=value2
         npm start &
       shell: bash
       working-directory: ${{ inputs.working-directory }}

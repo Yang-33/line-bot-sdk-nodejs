@@ -63,12 +63,12 @@ jobs:
         npm run build
         pwd
         ls
-    - name: Test Node.js App
+    - name: Test Node.js App (echo-bot-ts-cjs)
       uses: ./.github/actions/app-test
       with:
         port: '3000'
         method: 'GET'
-        working-directory: examples/echo-bot-ts.cjs
+        working-directory: examples/echo-bot-ts-cjs
     - name: Test building examples (ESM)
       run: |
         popd
@@ -76,3 +76,9 @@ jobs:
         npm run build-sdk
         npm install
         npm run build
+    - name: Test Node.js App (echo-bot-ts-esm)
+      uses: ./.github/actions/app-test
+      with:
+        port: '3000'
+        method: 'GET'
+        working-directory: examples/echo-bot-ts-esm

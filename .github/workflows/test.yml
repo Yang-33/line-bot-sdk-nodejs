@@ -16,51 +16,100 @@ jobs:
         node: [ '18', '20' ]
       fail-fast: false
 
-    name: Node.js ${{ matrix.node }}
+    name: Node.js ${{ matrix.node }} - test
 
     steps:
     - uses: actions/checkout@v4
       with:
         submodules: true
-    - name: actions/setup-java@v3
-      uses: actions/setup-java@v4
-      with:
-        distribution: 'temurin'
-        java-version: 17
-        architecture: x64
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
+    - name: Setup and Build
+      uses: ./.github/actions/setup-and-build
       with:
         node-version: ${{ matrix.node }}
-        cache: 'npm'
-    - name: Install Dependency
-      run: npm ci
-    - name: Test generator
-      run: cd generator; mvn package; cd ..
-    - name: Generate code
-      run: |
-        python3 generate-code.py
+
     - name: Test Project
       run: export NODE_OPTIONS=--max-old-space-size=6144; npm test
     - name: Test building apidocs
       run: export NODE_OPTIONS=--openssl-legacy-provider; npm run apidocs
     - name: Test building docs
       run: export NODE_OPTIONS=--openssl-legacy-provider; npm run docs:build
-    - name: Test building examples (CJS)
+
+    - name: publint
+      run: npx publint
+    - name: validate package
+      run: npx @arethetypeswrong/cli $(npm pack)
+
+  example:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # https://nodejs.org/en/about/releases/
+        node: [ '18', '20' ]
+      fail-fast: false
+    name: Node.js ${{ matrix.node }} - example
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: true
+    # TODO: Enable this again
+    # - name: Setup and Build
+    #   uses: ./.github/actions/setup-and-build
+    #   with:
+    #     node-version: ${{ matrix.node }}
+    - name: Test building examples (JS + ESM)
+      run: |
+        cd examples/echo-bot-esm
+        npm run build-sdk
+        npm install
+    - name: Test Node.js App (echo-bot-esm)
+      uses: ./.github/actions/app-test
+      with:
+        port: '3000'
+        method: 'GET'
+        working-directory: examples/echo-bot-esm
+        channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+        channel-secret: ${{ secrets.CHANNEL_SECRET }}
+
+    - name: Test building examples (TS + CJS)
       run: |
         cd examples/echo-bot-ts-cjs
         npm run build-sdk
         npm install
         npm run build
-        cd -
-    - name: Test building examples (ESM)
+    - name: Test Node.js App (echo-bot-ts-cjs)
+      uses: ./.github/actions/app-test
+      with:
+        port: '3000'
+        method: 'GET'
+        working-directory: examples/echo-bot-ts-cjs
+        channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+        channel-secret: ${{ secrets.CHANNEL_SECRET }}
+
+    - name: Test building examples (TS + ESM)
       run: |
         cd examples/echo-bot-ts-esm
         npm run build-sdk
         npm install
         npm run build
-        cd -
-    - name: publint
-      run: npx publint
-    - name: validate package
-      run: npx @arethetypeswrong/cli $(npm pack)
+    - name: Test Node.js App (echo-bot-ts-esm)
+      uses: ./.github/actions/app-test
+      with:
+        port: '3000'
+        method: 'GET'
+        working-directory: examples/echo-bot-ts-esm
+        channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+        channel-secret: ${{ secrets.CHANNEL_SECRET }}
+
+    - name: Test building examples (JS + CJS)
+      run: |
+        cd examples/echo-bot
+        npm run build-sdk
+        npm install
+    - name: Test Node.js App (echo-bot)
+      uses: ./.github/actions/app-test
+      with:
+        port: '3000'
+        method: 'GET'
+        working-directory: examples/echo-bot
+        channel-access-token: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+        channel-secret: ${{ secrets.CHANNEL_SECRET }}

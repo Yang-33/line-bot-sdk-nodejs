@@ -1,7 +1,5 @@
-'use strict';
-
-const line = require('@line/bot-sdk');
-const express = require('express');
+import { messagingApi, middleware } from '@line/bot-sdk';
+import express from 'express';
 
 // create LINE SDK config from env variables
 const config = {
@@ -10,7 +8,7 @@ const config = {
 };
 
 // create LINE SDK client
-const client = new line.messagingApi.MessagingApiClient({
+const client = new messagingApi.MessagingApiClient({
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 });
 
@@ -39,7 +37,7 @@ app.get(
 
 // register a webhook handler with middleware
 // about the middleware, please refer to doc
-app.post('/callback', line.middleware(config), (req, res) => {
+app.post('/callback', middleware(config), (req, res) => {
   Promise
     .all(req.body.events.map(handleEvent))
     .then((result) => res.json(result))

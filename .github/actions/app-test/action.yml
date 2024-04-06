@@ -1,0 +1,55 @@
+name: 'Start and Test Node.js App'
+description: 'Starts Node.js app, runs tests, and shuts it down'
+inputs:
+  port:
+    description: 'Port on which the Node.js app is running'
+    required: true
+  path:
+    description: 'Path to test with the HTTP request'
+    required: false
+    default: ""
+  method:
+    description: 'HTTP method to use for the test (GET, POST, etc.)'
+    required: true
+  body:
+    description: 'Request body for POST method (optional)'
+    required: false
+    default: ""
+  working-directory:
+    description: 'Working directory of the Node.js app'
+    required: true
+  channel-access-token:
+    description: 'Channel access token'
+    required: true
+  channel-secret:
+    description: 'Channel secret'
+    required: true
+
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Start application
+      run: |
+        export CHANNEL_ACCESS_TOKEN=${{ inputs.channel-access-token }}
+        export CHANNEL_SECRET=${{ inputs.channel-secret }}
+        npm start &
+      shell: bash
+      working-directory: ${{ inputs.working-directory }}
+
+    - name: Wait for application to start
+      run: sleep 3
+      shell: bash
+
+    - name: Test application
+      run: |
+        if [ "${{ inputs.method }}" = "POST" ]; then
+          curl --fail -X POST -d '${{ inputs.body }}' http://localhost:${{ inputs.port }}/${{ inputs.path }} || exit 1
+        else
+          curl --fail -X ${{ inputs.method }} http://localhost:${{ inputs.port }}/${{ inputs.path }} || exit 1
+        fi
+      shell: bash
+
+    - name: Kill application
+      run: pkill node
+      shell: bash

@@ -49,7 +49,7 @@ jobs:
       - if: ${{ github.event_name != 'pull_request' && env.DIFF_IS_EMPTY != 'true' }}
         run: |
           # Determine Change Type via Submodule Script
-          CHANGE_TYPE=$(npx zx ./scripts/determine-change-type.mjs)
+          CHANGE_TYPE=$(npx zx ./scripts/determin-change-type.mjs)
           echo "Determined change type: $CHANGE_TYPE"
 
           # Determine PR title and body

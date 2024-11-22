@@ -38,7 +38,7 @@ jobs:
       - run: |
           echo "a" > a.txt
           diff=$(git --no-pager diff --name-only)
-          echo "DIFF_IS_EMPTY=$([[ -z "$diff" ]] && echo 'true' || echo 'false')" >> $GITHUB_ENV
+          echo "DIFF_IS_EMPTY='false'" >> $GITHUB_ENV
           echo "CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
       ## Run if diff exists and pull request, and make CI status failure
       - if: ${{ github.event_name == 'pull_request' && env.DIFF_IS_EMPTY != 'true' }}

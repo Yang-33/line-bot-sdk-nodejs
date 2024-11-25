@@ -105,6 +105,7 @@ jobs:
           gh release create "${{ steps.calculate-version.outputs.new_version }}" \
             --title "${github.calculate-version.outputs.new_version} ${github.event.inputs.release_title}" \
             --notes "${{ steps.generate-release-notes.outputs.release_body }}" \
-            --draft
+            --draft \
+            --repo "${{ github.repository }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -91,7 +91,7 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: |
-            const releaseNotes = await github.rest.repos.generateReleaseNotes({
+            const { data: releaseNotes } = await github.rest.repos.generateReleaseNotes({
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: "${{ steps.calculate-version.outputs.new_version }}"

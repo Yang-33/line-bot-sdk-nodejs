@@ -95,10 +95,13 @@ jobs:
             const actor = context.actor;
             const noteToAdd = `**@${actor} 👈 TODO: Write detailed release note for this version before release**\n`;
 
+            const footer = `---\nThis release is prepared by @${actor}`;
+
             const modifiedBody = releaseNotes.body.replace(
               '## What\'s Changed',
               `## What's Changed\n\n${noteToAdd}`
-            );
+            )
+            .concat(`\n\n${footer}`);
 
             console.log(`releaseNotes (modified): ${JSON.stringify(modifiedBody, null, 2)}`);
             core.setOutput("release_body", modifiedBody);

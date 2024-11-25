@@ -60,7 +60,7 @@ jobs:
               core.setOutput('latest_tag', 'v0.0.0'); // Default for first release
             }
 
-      - name: Calculate New Version by github-script
+      - name: Calculate New Version
         id: calculate-version
         uses: actions/github-script@v6
         with:
@@ -96,14 +96,13 @@ jobs:
               repo: context.repo.repo,
               tag_name: "${{ steps.calculate-version.outputs.new_version }}"
             });
-            console.log(`releaseNotes: ${releaseNotes}`);
+            console.log(`releaseNotes: ${JSON.stringify(releaseNotes, null, 2)}`);
             core.setOutput("release_body", releaseNotes.body);
 
       - name: Create Draft Release
         run: |
-          gh release create "${nextVersion}" --generate-notes --draft --title "${nextVersion}"
           gh release create "${{ steps.calculate-version.outputs.new_version }}" \
-            --title "${github.calculate-version.outputs.new_version} ${github.event.inputs.release_title}" \
+            --title "${{ steps.calculate-version.outputs.new_version }} ${{ github.event.inputs.release_title }}" \
             --notes "${{ steps.generate-release-notes.outputs.release_body }}" \
             --draft \
             --repo "${{ github.repository }}"

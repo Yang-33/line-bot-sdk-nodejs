@@ -105,3 +105,5 @@ jobs:
           release_name: "${{ steps.calculate-version.outputs.new_version }} ${{ github.event.inputs.release_title }}"
           body: ${{ steps.generate-release-notes.outputs.release_body }}
           draft: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

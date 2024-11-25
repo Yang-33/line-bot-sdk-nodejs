@@ -99,11 +99,11 @@ jobs:
             core.setOutput("release_body", releaseNotes.body);
 
       - name: Create Draft Release
-        uses: actions/create-release@v1
-        with:
-          tag_name: ${{ steps.calculate-version.outputs.new_version }}
-          release_name: "${{ steps.calculate-version.outputs.new_version }} ${{ github.event.inputs.release_title }}"
-          body: ${{ steps.generate-release-notes.outputs.release_body }}
-          draft: true
+        run: |
+          gh release create "${nextVersion}" --generate-notes --draft --title "${nextVersion}"
+          gh release create ${{ steps.calculate-version.outputs.new_version }} \
+            --title "${github.calculate-version.outputs.new_version} ${github.event.inputs.release_title}" \
+            --notes "${{ steps.generate-release-notes.outputs.release_body }}" \
+            --draft
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

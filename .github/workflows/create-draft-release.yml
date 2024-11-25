@@ -43,6 +43,7 @@ jobs:
     needs: validate-input
 
     steps:
+      - uses: actions/checkout@v4
       - name: Fetch Latest Release
         id: get-latest-release
         uses: actions/github-script@v6

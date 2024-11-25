@@ -96,12 +96,13 @@ jobs:
               repo: context.repo.repo,
               tag_name: "${{ steps.calculate-version.outputs.new_version }}"
             });
+            console.log(`releaseNotes: ${releaseNotes}`);
             core.setOutput("release_body", releaseNotes.body);
 
       - name: Create Draft Release
         run: |
           gh release create "${nextVersion}" --generate-notes --draft --title "${nextVersion}"
-          gh release create ${{ steps.calculate-version.outputs.new_version }} \
+          gh release create "${{ steps.calculate-version.outputs.new_version }}" \
             --title "${github.calculate-version.outputs.new_version} ${github.event.inputs.release_title}" \
             --notes "${{ steps.generate-release-notes.outputs.release_body }}" \
             --draft

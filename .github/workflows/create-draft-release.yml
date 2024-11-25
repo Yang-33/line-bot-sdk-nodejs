@@ -92,7 +92,7 @@ jobs:
               tag_name: "${{ steps.calculate-version.outputs.new_version }}"
             });
 
-            const actor = process.env.GITHUB_ACTOR; // Workflowの実行者
+            const actor = context.actor;
             const noteToAdd = `**@${actor} 👈 TODO: Write detailed release note for this version before release**\n`;
 
             const modifiedBody = releaseNotes.body.replace(

@@ -16,12 +16,12 @@ on:
         required: true
         type: string
       acknowledge_draft:
-        description: "I understand that I must re-edit and finalize the draft release (Yes/No)"
+        description: "I understand that I must re-edit and finalize the draft release (Y/N)"
         required: true
         type: choice
         options:
-          - No
-          - Yes
+          - "No"
+          - "Yes"
 
 jobs:
   validate-input:

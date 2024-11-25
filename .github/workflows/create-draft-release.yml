@@ -81,11 +81,10 @@ jobs:
 
             core.setOutput('new_version', newVersion);
 
-      - name: Create New Tag
-        run: |
-          git tag ${{ steps.calculate-version.outputs.new_version }}
-          git push origin ${{ steps.calculate-version.outputs.new_version }}
-
+#      - name: Create New Tag
+#        run: |
+#          git tag ${{ steps.calculate-version.outputs.new_version }}
+#          git push origin ${{ steps.calculate-version.outputs.new_version }}
       - name: Generate Release Notes
         id: generate-release-notes
         uses: actions/github-script@v6

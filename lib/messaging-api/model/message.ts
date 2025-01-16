@@ -54,10 +54,3 @@ export type MessageBase = {
    */
   sender?: Sender /**/;
 };
-
-
-
-
-
-
-

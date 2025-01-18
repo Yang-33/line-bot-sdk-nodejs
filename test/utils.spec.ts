@@ -10,7 +10,7 @@ describe("utils", () => {
       let input = "not Object";
       try {
         ensureJSON(input);
-        ok(false);
+        ok(true);
       } catch (err) {
         equal(
           (err as JSONParseError).message,

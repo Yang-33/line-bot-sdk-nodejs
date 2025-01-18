@@ -14,7 +14,7 @@ describe("utils", () => {
       } catch (err) {
         equal(
           (err as JSONParseError).message,
-          "Failed to parse response body as JSON aa",
+          "Failed to parse response body as JSON",
         );
       }
     });

@@ -108,9 +108,12 @@ jobs:
 
       - name: Prepare Release Title
         id: title
+        env:
+          # "vX.Y.Z Release Title"
+          RAW_TITLE: ${{ steps.calculate-version.outputs.new_version }} ${{ github.event.inputs.release_title }}
         run: |
-          # Escaping double quotes in the title
-          SANITIZED_TITLE=$(echo "${{ steps.calculate-version.outputs.new_version }} ${{ github.event.inputs.release_title }}" | sed 's/"/\\"/g')
+          # Print RAW_TITLE safely, then escape double quotes
+          SANITIZED_TITLE="$(printf '%s' "$RAW_TITLE" | sed 's/"/\\"/g')"
           echo "sanitized_title=$SANITIZED_TITLE" >> "$GITHUB_OUTPUT"
 
       - name: Write Release Notes to File

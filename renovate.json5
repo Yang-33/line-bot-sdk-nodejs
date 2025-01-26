@@ -9,7 +9,7 @@
   "git-submodules": {
     "enabled": true
   },
-  "prHourlyLimit": 100
+  "prHourlyLimit": 100,
   "labels": [
     "dependency upgrade"
   ],

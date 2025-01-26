@@ -22,6 +22,10 @@
       "(^|/)examples/.+/package\\.json$"  // 追加で読みたいパターン
     ]
   },
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**"
+  ],
   "packageRules": [
     {
       "matchPackagePatterns": [

@@ -44,5 +44,33 @@
         "before 4am"
       ]
     },
+ {
+      // トップレベルの package.json/package-lock.json が更新されたときに発動する
+      "description": "When top-level is updated, also run npm install in all examples/*",
+      "matchPaths": [
+        "package.json",         // リポジトリ直下の package.json
+        "package-lock.json"     // 必要ならロックファイルをトリガーにすることも可能
+      ],
+
+      "postUpgradeTasks": {
+        // これらのコマンドが連続で実行される
+        "commands": [
+          // 1. トップレベルの package-lock.json を再生成
+          "npm install --package-lock-only",
+
+          // 2. すべてのサブディレクトリに対してロックファイルを再生成
+          //    bash 例: examples/* の各ディレクトリを回って package.json があるなら npm install
+          "for d in examples/*; do if [ -f \"$d/package.json\" ]; then cd \"$d\" && npm install --package-lock-only && cd -; fi; done"
+        ],
+
+        // コマンド実行後、コミットに含めるファイル
+        "fileFilters": [
+          // トップレベルの package-lock.json
+          "package-lock.json",
+          // examples 配下のすべての package-lock.json
+          "examples/**/package-lock.json"
+        ]
+      }
+    }
   ]
 }

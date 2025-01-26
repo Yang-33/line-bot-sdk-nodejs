@@ -62,12 +62,9 @@
           //    bash 例: examples/* の各ディレクトリを回って package.json があるなら npm install
           "for d in examples/*; do if [ -f \"$d/package.json\" ]; then cd \"$d\" && npm install --package-lock-only && cd -; fi; done"
         ],
-
-        // コマンド実行後、コミットに含めるファイル
         "fileFilters": [
-          // トップレベルの package-lock.json
+          "package.json",
           "package-lock.json",
-          // examples 配下のすべての package-lock.json
           "examples/**/package-lock.json"
         ]
       }

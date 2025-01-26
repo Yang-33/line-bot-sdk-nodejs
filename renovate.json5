@@ -13,6 +13,15 @@
   "labels": [
     "dependency upgrade"
   ],
+  // npm マネージャ固有の設定
+  "npm": {
+    // デフォルトはだいたい "(^|/)package\\.json$"
+    // ここにサブディレクトリを含むパターンを追加
+    "fileMatch": [
+      "(^|/)package\\.json$",              // 既定のパターン
+      "(^|/)examples/.+/package\\.json$"  // 追加で読みたいパターン
+    ]
+  },
   "packageRules": [
     {
       "matchPackagePatterns": [
@@ -31,14 +40,5 @@
         "before 4am"
       ]
     },
-    {
-      // npm の依存関係を扱う
-      "managers": ["npm"],
-      // どこを見にいくか
-      "paths": [
-        "package.json",
-        "examples/*/package.json"
-      ]
-    }
   ]
 }

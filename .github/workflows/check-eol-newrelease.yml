@@ -17,13 +17,13 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const checkEolAndNewReleases = require('.github/scripts/check-eol-newrelease.js');
+            const checkEolAndNewReleases = require('.github/scripts/check-eol-newrelease.cjs');
             await checkEolAndNewReleases({ github, context, core }, {
               languageName: 'Node.js',
               eolJsonUrl: 'https://endoflife.date/api/nodejs.json',
               eolViewUrl: 'https://endoflife.date/nodejs',
-              eolLookbackDays: 100,
-              newReleaseThresholdDays: 100,
+              eolLookbackDays: 1000,
+              newReleaseThresholdDays: 1000,
               ltsOnly: true,
               retryCount: 3,
               retryIntervalSec: 30

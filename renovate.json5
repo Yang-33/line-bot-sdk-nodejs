@@ -18,6 +18,22 @@
   constraints: {
     npm: "11.14.1"
   },
+  // config:recommended が examples を ignore するので、
+  // examples を外した ignorePaths を明示する
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**"
+  ],
+  // 深夜に、全 lockfile refresh
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["* 0-4 * * *"]
+  },
   packageRules: [
     {
       labels: [
@@ -35,20 +51,6 @@
       matchPackageNames: [
         "/line-openapi/"
       ],
-    },
-    {
-      matchFileNames: [
-        "examples/*"
-      ],
-      postUpgradeTasks: {
-        commands: [
-          "npm install"
-        ],
-        fileFilters: [
-          "package.json",
-          "package-lock.json"
-        ],
-      },
     },
   ],
 }
